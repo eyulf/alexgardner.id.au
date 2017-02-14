@@ -1,0 +1,63 @@
+<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+        {% if site.gpgkey %}
+		<li><a href="{{ site:url }}/{{ site.gpgkey }}" class="icon fa-key" target="_blank"><span class="label">GPG Key</span></a></li>
+		{% endif %} {% if site.email %}
+		<li><a href="mailto:{{ site.email }}" class="icon fa-envelope-o" ><span class="label">Email</span></a></li>
+		{% endif %} {% if site.twitter_url %}
+		<li><a href="{{ site.twitter_url }}" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+		{% endif %} {% if site.googleplus_url %}
+		<li><a href="{{ site.googleplus_url }}" class="icon fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
+		{% endif %} {% if site.facebook_url %}
+		<li><a href="{{ site.facebook_url }}" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+		{% endif %} {% if site.instagram_url %}
+		<li><a href="{{ site.instagram_url }}" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+		{% endif %} {% if site.pinterest_url %}
+		<li><a href="{{ site.pinterest_url }}" class="icon fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
+		{% endif %} {% if site.500px_url %}
+		<li><a href="{{ site.500px_url }}" class="icon fa-500px" target="_blank"><span class="label">500px</span></a></li>
+		{% endif %} {% if site.gitlab_url %}
+		<li><a href="{{ site.gitlab_url }}" class="icon fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
+		{% endif %} {% if site.github_url %}
+		<li><a href="{{ site.github_url }}" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+		{% endif %} {% if site.slack_url %}
+		<li><a href="{{ site.slack_url }}" class="icon fa-slack" target="_blank"><span class="label">Slack</span></a></li>
+		{% endif %} {% if site.linkedin_url %}
+		<li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+		{% endif %}
+	</ul>
+	<ul class="copyright">
+		<li>&copy; {{ site.title }} {{ site.time|date: "%Y" }}</li>
+	</ul>
+</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ "/assets/js/jquery.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/js/jquery.scrollex.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/js/jquery.scrolly.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/js/skel.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/js/util.js" | absolute_url }}"></script>
+<!--[if lte IE 8]><script src="{{ "/assets/js/ie/respond.min.js" | absolute_url }}"></script><![endif]-->
+<script src="{{ "/assets/js/main.js" | absolute_url }}"></script>
+
+<!-- Add jQuery library -->
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/assets/fancybox/source/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
+<script type="text/javascript" src="/assets/fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="/assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/assets/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/assets/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+</body>
+
+</html>
