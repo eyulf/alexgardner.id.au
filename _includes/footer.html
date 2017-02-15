@@ -2,7 +2,7 @@
 <footer id="footer">
 	<ul class="icons">
         {% if site.gpgkey %}
-		<li><a href="{{ site:url }}/{{ site.gpgkey }}" class="icon fa-key" target="_blank"><span class="label">GPG Key</span></a></li>
+		<li><span class="fa-stack fa-lg"><a href="{{ site:url }}/{{ site.gpgkey }}" class="icon fa-key fa-stack-1x" target="_blank"><i class="fa fa-envelope-o fa-stack-1x"><span class="label">GPG Key</span></a></span></li>
 		{% endif %} {% if site.email %}
 		<li><a href="mailto:{{ site.email }}" class="icon fa-envelope-o" ><span class="label">Email</span></a></li>
 		{% endif %} {% if site.twitter_url %}
