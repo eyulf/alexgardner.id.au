@@ -1,18 +1,20 @@
-# Site settings
 title: Alex Gardner
-author: Alex Gardner
 email: alex@alexgardner.id.au
-tagline: Sysadmin, Longbowman, Geek.
-description: >
-    I'm a Linux Systems Administrator, originally from Adelaide and currently living in Sydney. In my free time I shoot longbows and generally geek out.
-keywords: > 
-    alex,gardner,alexgardner,linux,systems,administrator,sysadmin,sydney,syd,adelaide,adl,archery,longbow,longbowman,medieval
-
+description: > 
+  I'm a Linux Systems Administrator, originally from Adelaide and currently living in Sydney. In my free time I shoot longbows and generally geek out.
 baseurl: ""
-url: "https://alexgardner.id.au"
+url: "https://preview.alexgardner.id.au"
+linkedin_url: https://www.linkedin.com/in/alexandergardner?rel=author
+gpgkey: alex-gardner-public-key.asc
 
 # Build settings
 markdown: kramdown
-
+#theme: spectral_jekyll_theme
 gems:
-    - jekyll-minifier
+  - jekyll-minifier
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+    sass_dir: _sass

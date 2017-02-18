@@ -1,0 +1,19 @@
+<!-- About -->
+<section id="about" class="wrapper alt style2">
+
+    {% for page in site.pages %}
+    {% if page.layout == 'default' %}{% continue %}{% endif %}
+    {% if page.url == '/assets/css/main.css' %}{% continue %}{% endif %}
+
+	<section class="spotlight">
+		<div class="image"></div>
+		<div class="content">
+			<h2><a href="{{ page.url | relative_url }}" class="link">{{ page.title }}</a></h2>
+			<p>{{ page.description }}</p>
+		</div>
+	</section>
+
+	{% endfor %}
+
+</section>
+
