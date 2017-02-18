@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://alexgardner.id.au/sitemap.xml 
+Sitemap: https://alexgardner.id.au/sitemap.xml 
