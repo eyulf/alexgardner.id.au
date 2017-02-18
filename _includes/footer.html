@@ -2,7 +2,7 @@
 <footer id="footer">
 	<ul class="icons">
         {% if site.gpgkey %}
-		<li><span class="fa-stack fa-lg"><a href="{{ site:url }}/{{ site.gpgkey }}" class="icon fa-key fa-stack-1x" target="_blank"><i class="fa fa-envelope-o fa-stack-1x"><span class="label">GPG Key</span></a></span></li>
+		<li><a href="{{ site:url }}/{{ site.gpgkey }}" class="icon fa-key" target="_blank"><span class="label">GPG Key</span></a></li>
 		{% endif %} {% if site.email %}
 		<li><a href="mailto:{{ site.email }}" class="icon fa-envelope-o" ><span class="label">Email</span></a></li>
 		{% endif %} {% if site.twitter_url %}
@@ -28,7 +28,7 @@
 		{% endif %}
 	</ul>
 	<ul class="copyright">
-		<li>&copy; {{ site.title }} {{ site.time|date: "%Y" }}</li>
+		<li>&copy; {{ site.title }} {{ site.time | date: "%Y" }}</li>
 	</ul>
 </footer>
 
@@ -42,21 +42,7 @@
 <script src="{{ "/assets/js/util.js" | absolute_url }}"></script>
 <!--[if lte IE 8]><script src="{{ "/assets/js/ie/respond.min.js" | absolute_url }}"></script><![endif]-->
 <script src="{{ "/assets/js/main.js" | absolute_url }}"></script>
-
-<!-- Add jQuery library -->
-<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
-
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="/assets/fancybox/source/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
-<script type="text/javascript" src="/assets/fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>
-
-<!-- Optionally add helpers - button, thumbnail and/or media -->
-<link rel="stylesheet" href="/assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-<script type="text/javascript" src="/assets/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-<script type="text/javascript" src="/assets/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-<link rel="stylesheet" href="/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-<script type="text/javascript" src="/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script async src="{{ "/assets/js/lightbox.min.js" | absolute_url }}"></script>
 
 </body>
 
