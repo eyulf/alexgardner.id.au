@@ -1,3 +1,4 @@
+# Site settings
 title: Alex Gardner
 email: alex@alexgardner.id.au
 description: > 
@@ -11,7 +12,7 @@ gpgkey: alex-gardner-public-key.asc
 
 # Build settings
 markdown: kramdown
-#theme: spectral_jekyll_theme
+
 gems:
   - jekyll-minifier
 exclude:
