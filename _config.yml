@@ -1,18 +1,28 @@
+# This website's theme is based on the Spectral theme for Jekyll located at the following URL:
+# https://github.com/andrewbanchich/spectral-jekyll-theme
+
 title: Alex Gardner
 email: alex@alexgardner.id.au
 description: > 
-    I am a Linux Systems Administrator, originally from Adelaide and now based in Sydney. In my free time I shoot longbows and generally geek out.
+    I am a Linux Systems Administrator, originally from Adelaide and now based in Sydney. In my free time I shoot longbows, blacksmith, and generally geek out.
 keywords: > 
-    alex,gardner,alexgardner,linux,systems,administrator,nix,sysadmin,sydney,syd,adelaide,adl,archer,archery,longbow,longbowman,arrows,fletching,medieval
+    alex,gardner,alexgardner,linux,systems,administrator,nix,sysadmin,sydney,syd,adelaide,adl,australia,archer,archery,longbow,longbowman,arrows,fletching,medieval,black,smith,blacksmith,blacksmithing,smithing
 baseurl: ""
-url: "https://preview.alexgardner.id.au"
+url: https://preview.alexgardner.id.au
 linkedin_url: https://www.linkedin.com/in/alexandergardner?rel=author
+github_url: https://github.com/ThorgrimA
 gpgkey: alex-gardner-public-key.asc
+
+year_start_sysadmin: 2015
+year_start_it: 2010
+year_start_homelab: 2011
+year_start_reenact: 2008
+year_start_blacksmith: 2017
 
 # Build settings
 markdown: kramdown
 #theme: spectral_jekyll_theme
-gems:
+plugins:
   - jekyll-minifier
 exclude:
   - Gemfile
