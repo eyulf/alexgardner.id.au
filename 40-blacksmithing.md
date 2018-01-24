@@ -1,15 +1,57 @@
 ---
 layout: page
 title: Blacksmithing
-description: Medieval Re-enactment has been one of my interests for many years.
+description: In my spare time I also impose my will onto steel.
 permalink: /blacksmith/
-published: false
+published: true
 ---
 
-<div><span class="image right"><img src="/assets/images/archery.jpg" alt="" /></span><p>Whilst I have previously been in groups that do live-steel re-enactment combat and living history, my current focus is historical archery. I am a member of the <a href="https://medievalarchery.org.au/">Medieval Archery Society</a>, which is based in Western Sydney.</p>
+<div><p>During my time <a href="/reenactment">re-enacting</a>, I found both the need and the spark for blacksmithing. Eventually over time, this passion grew to the point that I took a couple of professional classes. I am slowly becoming self sufficient, and intend on making all of the tools I use.</p>
 
-<p>As part of this hobby, I regularly attend various Medieval Festivals held throughout Australia. I also host and manage the websites of groups I am involved in.</p>
+<p>Blacksmithing is a hobby for me, and I do not see myself doing this full time. Part of the enjoyment I find in this comes from the satisfaction of creating things, and seeing them transform from raw material into the desired item.</p>
 
-<p>I currently portray a English longbowman, during the time of the Hundred Years War. My primary longbow is a 30 pound self bow made from Ash.</p>
+<p>Currently I do not own a forge, however this will soon change. One of my goals is establishing a mobile, historically accurate forge with tools and accessories.</p>
+</div>
 
-<p>In the near future my skill set will include fletching (making my own arrows), with an eventual goal of learning how to blacksmith and establishing a personal forge.</p></div>
+<section>
+    <div class="box alt">
+        <div class="row uniform 50%">
+            <div class="4u">
+                <span class="image fit">
+                    <a data-lightbox="homelab" data-title="Fire Poker and Clothes Hook" href="/assets/images/blacksmith/poker.jpg">
+                        <img src="/assets/images/blacksmith/poker-thumb.jpg" alt="Fire Poker and Clothes Hook" />
+                    </a>
+                </span>
+            </div>
+            <div class="4u">
+                <span class="image fit">
+                    <a data-lightbox="homelab" data-title="Various Tools" href="/assets/images/blacksmith/tools.jpg">
+                        <img src="/assets/images/blacksmith/tools-thumb.jpg" alt="Various Tools" />
+                    </a>
+                </span>
+            </div>
+            <div class="4u">
+                <span class="image fit">
+                    <a data-lightbox="homelab" data-title="Rounding Hammer" href="/assets/images/blacksmith/hammer.jpg">
+                        <img src="/assets/images/blacksmith/hammer-thumb.jpg" alt="Rounding Hammer" />
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="table-wrapper">
+<table class="table-centre">
+  <thread>
+    <tr>
+      <th><h4>Years Blacksmithing</h4></th>
+      <th><h4>Items Forged</h4></th>
+    </tr>
+  </thread>
+  <tr>
+    <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_blacksmith }}+</strong></td>
+    <td><strong>12</strong></td>
+  </tr>
+</table>
+</div>

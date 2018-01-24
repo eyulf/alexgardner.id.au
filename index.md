@@ -1,5 +1,5 @@
 ---
 layout: default
 title: Home
-description: Sysadmin, Longbowman, Geek.
+description: Sysadmin, Re-Enactor, Blacksmith, Geek.
 ---
