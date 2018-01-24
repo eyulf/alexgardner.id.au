@@ -10,7 +10,7 @@ published: true
 
 <p>Blacksmithing is a hobby for me, and I do not see myself doing this full time. Part of the enjoyment I find in this comes from the satisfaction of creating things, and seeing them transform from raw material into the desired item.</p>
 
-<p>Currently I do not own a forge, however this will soon change. One of my goals is establishing a mobile, historically accurate forge and accessories.</p>
+<p>Currently I do not own a forge, however this will soon change. One of my goals is establishing a mobile, historically accurate forge with tools and accessories.</p>
 </div>
 
 <section>
