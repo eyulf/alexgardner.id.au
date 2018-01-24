@@ -21,7 +21,6 @@ year_start_blacksmith: 2017
 
 # Build settings
 markdown: kramdown
-#theme: spectral_jekyll_theme
 plugins:
   - jekyll-minifier
 exclude:
