@@ -33,7 +33,7 @@ published: true
   </thread>
   <tr>
     <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_reenact }}+</strong></td>
-    <td><strong>33</strong></td>
+    <td><strong>{{ site.data.events | size }}</strong></td>
   </tr>
 </table>
 </div>

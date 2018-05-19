@@ -51,7 +51,7 @@ published: true
   </thread>
   <tr>
     <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_blacksmith }}+</strong></td>
-    <td><strong>12</strong></td>
+    <td><strong>{{ site.blacksmith_items }}</strong></td>
   </tr>
 </table>
 </div>

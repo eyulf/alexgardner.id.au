@@ -64,8 +64,8 @@ I am using the Microserver as my main VM hypervisor. It is being used to run var
   </thread>
   <tr>
     <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_homelab }}+</strong></td>
-    <td><strong>3</strong></td>
-    <td><strong>4612</strong></td>
+    <td><strong>{{ site.homelab_overhauls }}</strong></td>
+    <td><strong>{{ site.homelab_lines }}</strong></td>
   </tr>
 </table>
 </div>
