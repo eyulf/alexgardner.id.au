@@ -22,8 +22,8 @@ year_start_blacksmith: 2017
 
 # Metrics
 homelab_overhauls: 3
-homelab_lines: 4612
-blacksmith_items: 14
+homelab_lines: 4500
+blacksmith_items: 15
 
 # Build settings
 markdown: kramdown
