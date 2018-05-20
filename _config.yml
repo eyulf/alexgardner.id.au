@@ -13,11 +13,17 @@ linkedin_url: https://www.linkedin.com/in/alexandergardner?rel=author
 github_url: https://github.com/ThorgrimA
 gpgkey: alex-gardner-public-key.asc
 
+# When I started doing things
 year_start_sysadmin: 2015
 year_start_it: 2010
 year_start_homelab: 2011
 year_start_reenact: 2008
 year_start_blacksmith: 2017
+
+# Metrics
+homelab_overhauls: 3
+homelab_lines: 4500
+blacksmith_items: 15
 
 # Build settings
 markdown: kramdown
