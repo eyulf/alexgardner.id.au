@@ -5,6 +5,7 @@ date: 2013-09-23 20:39 +1100
 comments: true
 permalink: /blog/:title/
 categories: [Android, Guides, Password, Hacking]
+titleimage: resettingpinandroid.jpg
 ---
 
 So I recently got a new phone which I promptly re-flashed with CyagenMod. All was well until I set a PIN on it at work. Once at home I attempted to unlock the phone and found what I thought to be the PIN not working. This was quite a pain as I did not want to Factory Reset the phone.

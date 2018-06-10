@@ -6,7 +6,7 @@
     {% if page.url == '/assets/css/main.css' %}{% continue %}{% endif %}
 
     <section class="spotlight">
-        <div class="image"></div>
+        <div class="image">{% if page.image %}<img src="{{ page.image }}" />{% endif %}</div>
         <div class="content">
             <h2><a href="{{ page.url | relative_url }}" class="link">{{ page.title }}</a></h2>
             <p>{{ page.description }}</p>

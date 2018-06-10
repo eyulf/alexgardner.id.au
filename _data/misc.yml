@@ -1,0 +1,13 @@
+year_started:
+  sysadmin: 2015
+  it: 2010
+  homelab: 2011
+  reenactment: 2008
+  blacksmithing: 2017
+
+metrics:
+  homelab:
+    overhauls: 3
+    lines: 4500
+  blacksmith:
+    items: 15

@@ -4,7 +4,8 @@ title: "Home-Lab Part 2"
 date: 2014-03-13 20:39 +1100
 permalink: /blog/:title/
 comments: true
-categories: [Homelab, Networking]
+categories: [Homelab]
+titleimage: homelab2.jpg
 ---
 
 It's been a while since I've done an update on my HomeLab, and there have been changes. I've started migrating my OpenVZ containers over to CentOS, as this is something I need more experience in. I've also stopped using the Whitebox due to hardware issues, and have instead turned the microserver into the main VM host. This is the current setup.

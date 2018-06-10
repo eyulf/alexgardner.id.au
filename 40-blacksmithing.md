@@ -4,13 +4,14 @@ title: Blacksmithing
 description: In my spare time I also impose my will onto steel.
 permalink: /blacksmith/
 published: true
+image: /assets/images/titleimages/blacksmithing.jpg
 ---
 
-<div><p>During my time <a href="/reenactment">re-enacting</a>, I found both the need and the spark for blacksmithing. Eventually over time, this passion grew to the point that I took a couple of professional classes. I am slowly becoming self sufficient, and intend on making all of the tools I use.</p>
+<div><p>During my time <a href="/reenactment">re-enacting</a>, I found both the need and the spark for blacksmithing. Eventually over time, this passion grew to the point that I took a couple of professional classes. I am slowly becoming self sufficient, and intend on making the tools I use.</p>
 
-<p>Blacksmithing is a hobby for me, and I do not see myself doing this full time. Part of the enjoyment I find in this comes from the satisfaction of creating things, and seeing them transform from raw material into the desired item.</p>
+<p>Blacksmithing is a hobby for me, and I do not see myself doing this full time. Part of the enjoyment I find in this comes from the satisfaction of creating things, and seeing them transform from raw material into the desired item. </p>
 
-<p>Currently I do not own a forge, however this will soon change. One of my goals is establishing a mobile, historically accurate forge with tools and accessories.</p>
+<p>Currently my primary forge is gas powered, and I own a couple of 20kg Anvils. I am working on establishing a mobile, historically accurate forge complete with tools and accessories.</p>
 </div>
 
 <section>
@@ -50,8 +51,8 @@ published: true
     </tr>
   </thread>
   <tr>
-    <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_blacksmith }}+</strong></td>
-    <td><strong>12</strong></td>
+    <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.blacksmithing }}+</strong></td>
+    <td><strong>{{ site.data.misc.metrics.blacksmith.items }}+</strong></td>
   </tr>
 </table>
 </div>

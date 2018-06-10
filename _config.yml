@@ -8,16 +8,7 @@ description: >
 keywords: > 
     alex,gardner,alexgardner,linux,systems,administrator,nix,sysadmin,sydney,syd,adelaide,adl,australia,archer,archery,longbow,longbowman,arrows,fletching,medieval,black,smith,blacksmith,blacksmithing,smithing
 baseurl: ""
-url: "https://alexgardner.id.au"
-linkedin_url: https://www.linkedin.com/in/alexandergardner?rel=author
-github_url: https://github.com/ThorgrimA
-gpgkey: alex-gardner-public-key.asc
-
-year_start_sysadmin: 2015
-year_start_it: 2010
-year_start_homelab: 2011
-year_start_reenact: 2008
-year_start_blacksmith: 2017
+url: https://alexgardner.id.au
 
 # Build settings
 markdown: kramdown
