@@ -4,7 +4,8 @@ title: "Home-Lab Part 1"
 date: 2013-02-07 04:39 +1100
 comments: true
 permalink: /blog/:title/
-categories: [Homelab, Networking]
+categories: [Homelab]
+titleimage: homelab1.jpg
 ---
 
 Something I've been working on for the past year or so is getting a home-lab setup for playing around with stuff. This is the first post on what will hopefully become a semi regular update. This is currently what it looks like.

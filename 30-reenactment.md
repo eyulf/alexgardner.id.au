@@ -4,6 +4,7 @@ title: Re-enactment
 description: Medieval Re-enactment has been one of my interests for many years.
 permalink: /reenactment/
 published: true
+image: /assets/images/titleimages/reenactment.jpg
 ---
 
 <section>
@@ -32,7 +33,7 @@ published: true
     </tr>
   </thread>
   <tr>
-    <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_reenact }}+</strong></td>
+    <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }}+</strong></td>
     <td><strong>{{ site.data.events | size }}</strong></td>
   </tr>
 </table>

@@ -4,6 +4,7 @@ title: Homelab
 description: I maintain a home-lab setup which I use to practise my sysadmin skills.
 permalink: /homelab/
 published: true
+image: /assets/images/titleimages/homelab.jpg
 ---
 
 The long term goal of this at the moment is to create an enviroment that is at least semi-autonomous in maintaining itself. I currently use this for learning and experimenting with ideas, concepts and technologies.
@@ -63,9 +64,9 @@ I am using the Microserver as my main VM hypervisor. It is being used to run var
     </tr>
   </thread>
   <tr>
-    <td><strong>{{ site.time | date: '%Y' | minus: site.year_start_homelab }}+</strong></td>
-    <td><strong>{{ site.homelab_overhauls }}</strong></td>
-    <td><strong>{{ site.homelab_lines }}+</strong></td>
+    <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.homelab }}+</strong></td>
+    <td><strong>{{ site.data.misc.metrics.homelab.overhauls }}</strong></td>
+    <td><strong>{{ site.data.misc.metrics.homelab.lines }}+</strong></td>
   </tr>
 </table>
 </div>

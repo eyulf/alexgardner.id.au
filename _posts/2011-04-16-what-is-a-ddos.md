@@ -5,6 +5,7 @@ date: 2011-04-16 19:41 +1100
 categories: [Basics, Security]
 permalink: /blog/:title/
 published: true
+titleimage: loic.jpg
 ---
 
 A *distributed denial of service* (DDoS) is a method of attacking a website or service by preventing legitimate usage from using up the resources it has available. A DDoS is a denial of service (DoS) attack, but on a much larger scale, most commonly used to attack targets on the Internet.
