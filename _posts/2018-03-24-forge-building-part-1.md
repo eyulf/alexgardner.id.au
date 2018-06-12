@@ -32,7 +32,7 @@ Firstly I purchased a couple of 2.4m lengths of seasoned 190x45mm hardwood.
     </div>
 </div>
 
-Then I made liberal use of a big overhead router and table saw at a local maker space (aptly called [MakerSpace][makerspace]). My plan at this stage was to use sliding dovetails to fit the ends to the sides, however the receiving side ended up snapping on the first test fit so I propmtly scrapped that idea.
+Then I made liberal use of a big overhead router and table saw at a local maker space (aptly called [MakerSpace][makerspace]). My plan at this stage was to use sliding dovetails to fit the ends to the sides, however the receiving side ended up snapping on the first test fit so I promptly scrapped that idea.
 
 <div class="box alt">
     <div class="row uniform 50%">
@@ -44,7 +44,7 @@ Then I made liberal use of a big overhead router and table saw at a local maker 
     </div>
 </div>
 
-I then opted to use a regular dovetail join, on a scale large enough for the wood I was using. Following my first attempt at dovetailing, I got some practice in with my partner's parents while we were staying over for christmas.
+I then opted to use a regular dovetail join, on a scale large enough for the wood I was using. Following my first attempt at dovetailing, I got some practice in with my partner's parents while we were staying over for Christmas.
 
 <div class="box alt">
     <div class="row uniform 50%">
