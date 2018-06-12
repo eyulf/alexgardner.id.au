@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Home-Lab Part 3"
-date: 2018-06-10 12:39 +1100
+date: 2017-05-21 55:18 +1100
 permalink: /blog/:title/
 comments: true
 categories: [Homelab]
 titleimage: homelab3.jpg
 ---
 
-I've been running with my current physical setup for a year or 2 now, and have finally decided to cover the changes since my last [post][homelab-part2]. The main driving force for the move away from the rack was to save on physical space as I do not have much of it in my home. The current setup fits in half of my TV unit, taking minimal space, and making minimal noise. This is ideal and is very partner friendly.
+I've recently changed my homelab's physical setup, and ditched the Rack. Ther have been several major changes since my last [post][homelab-part2]. The main driving force for the move away from the rack was to save on physical space as I do not have much of it in my home. The current setup fits in half of my TV unit, taking minimal space, and making minimal noise. This is ideal and is very partner friendly.
 
 <div class="box alt">
     <div class="row uniform 50%">
