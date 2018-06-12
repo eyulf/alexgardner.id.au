@@ -8,7 +8,7 @@ description: >
 keywords: > 
     alex,gardner,alexgardner,linux,systems,administrator,nix,sysadmin,sydney,syd,adelaide,adl,australia,archer,archery,longbow,longbowman,arrows,fletching,medieval,black,smith,blacksmith,blacksmithing,smithing
 baseurl: ""
-url: https://preview.alexgardner.id.au
+url: https://alexgardner.id.au
 
 # Build settings
 markdown: kramdown
