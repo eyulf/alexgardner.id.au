@@ -5,9 +5,11 @@ description: Updates to my blog are highly irregular.
 permalink: /blog/
 published: true
 image: /assets/images/titleimages/blog.jpg
+pagination: 
+  enabled: true
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 
 <section class="spotlight">
     <div class="image">{% if post.titleimage %}<img src="{{ "" | absolute_url }}/assets/images/titleimages/{{ post.titleimage }}" alt="" />{% endif %}</div>
@@ -18,3 +20,22 @@ image: /assets/images/titleimages/blog.jpg
 
 {% endfor %}
 
+
+{% if paginator.total_pages > 1 %}
+<section class="spotlight">
+    <div class="blogpaginate">
+        <ul class="actions">
+        {% if paginator.previous_page %}
+            <li>
+                <a class="button special" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+            </li>
+        {% endif %}
+        {% if paginator.next_page %}
+            <li>
+                <a class="button special" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+            </li>
+        {% endif %}
+        </ul>
+    </div>
+</section>
+{% endif %}

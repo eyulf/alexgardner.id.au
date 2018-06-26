@@ -994,6 +994,14 @@
             width: 60%;
         }
 
+        .blogpaginate {
+            @include padding(2em, 2em);
+            @include vendor('order', '2');
+            width: 22em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         &:nth-child(2n) {
             @include vendor('flex-direction', 'row-reverse');
         }
