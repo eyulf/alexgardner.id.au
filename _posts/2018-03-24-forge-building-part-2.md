@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Forge Building Part 1 - The Firebox"
+title: "Forge Building Part 2 - The Firebox"
 date: 2018-03-24 14:39 +1100
 permalink: /blog/:title/
 comments: true
 categories: [Crafting Re-Enactment Blacksmithing]
-titleimage: forge1-firebox.jpg
+titleimage: forge-firebox.jpg
 ---
 
 For my historical forge, I wanted to ensure that it would be very resilient, portable and use historical construction techniques as much as possible. I also massively over engineered it, the firebox itself ended up weighing more then one of my smaller anvils. I started out with a rough idea of how I wanted to build it (after making and reworking several plans). I also started this with almost no experience in woodworking.
@@ -14,7 +14,7 @@ For my historical forge, I wanted to ensure that it would be very resilient, por
     <div class="row uniform 50%">
         <div class="12u centre">
             <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/forge1-plan.jpg" title="Draft Plans" alt="Draft Plans">
+                <img class="post-img centre" src="/assets/images/blog/forge-plan.jpg" title="Draft Plans" alt="Draft Plans">
             </span>
         </div>
     </div>
@@ -26,7 +26,7 @@ Firstly I purchased a couple of 2.4m lengths of seasoned 190x45mm hardwood.
     <div class="row uniform 50%">
         <div class="12u centre">
             <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/forge1-firebox1.jpg" title="The Hardwood" alt="The Hardwood">
+                <img class="post-img centre" src="/assets/images/blog/forge-firebox1.jpg" title="The Hardwood" alt="The Hardwood">
             </span>
         </div>
     </div>
@@ -38,7 +38,7 @@ Then I made liberal use of a big overhead router and table saw at a local maker 
     <div class="row uniform 50%">
         <div class="12u centre">
             <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/forge1-firebox2.jpg" title="Early Dry Fitting" alt="Early Dry Fitting">
+                <img class="post-img centre" src="/assets/images/blog/forge-firebox2.jpg" title="Early Dry Fitting" alt="Early Dry Fitting">
             </span>
         </div>
     </div>
@@ -50,7 +50,7 @@ I then opted to use a regular dovetail join, on a scale large enough for the woo
     <div class="row uniform 50%">
         <div class="12u centre">
             <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/forge1-firebox3.jpg" title="Dovetail Practise" alt="Dovetail Practise">
+                <img class="post-img centre" src="/assets/images/blog/forge-firebox3.jpg" title="Dovetail Practise" alt="Dovetail Practise">
             </span>
         </div>
     </div>
@@ -62,7 +62,7 @@ It took some time to make the dovetailing joins on the larger pieces, however I 
     <div class="row uniform 50%">
         <div class="12u centre">
             <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/forge1-firebox4.jpg" title="Inserting the Base" alt="Inserting the Base">
+                <img class="post-img centre" src="/assets/images/blog/forge-firebox4.jpg" title="Inserting the Base" alt="Inserting the Base">
             </span>
         </div>
     </div>
@@ -74,7 +74,7 @@ t took some effort and a false start, but the outcome is a solid firebox, that w
     <div class="row uniform 50%">
         <div class="12u centre">
             <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/forge1-firebox5.jpg" title="The finished Firebox" alt="The finished Firebox">
+                <img class="post-img centre" src="/assets/images/blog/forge-firebox5.jpg" title="The finished Firebox" alt="The finished Firebox">
             </span>
         </div>
     </div>
