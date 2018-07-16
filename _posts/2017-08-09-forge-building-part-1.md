@@ -14,11 +14,11 @@ The complete forging setup I'll be building contains 4 major parts. The first pa
 
 This post is simply detailing the sources I've used to inspire the design I'll be using. Other design considerations include ensuring the completed forge is resilient, as I have no desire to constantly repair this. A further consideration is portability, as I'll be transporting this to and from events.
 
-Many of the sources are from manuscripts, I've made liberal use of the [larsdatter website][larsdatter] for locating links to various sources. This list is not extensive, and may be updated form time to time as I discover new sources.
+Many of the sources are from manuscripts, I've made liberal use of the [larsdatter website][larsdatter] for locating links to various sources. This list is not extensive, and may be updated from time to time as I discover new sources.
 
 ## Forge/Firebox
 
-Most sources which depict blacksmithing only show permanent stone forges. The only sources for a portable forge I have found, show a large wooden table with large divider on one side. I've elected to be a bite more practical with my firebox, however I will try and incorporate these elements into the frame for the firebox.
+Most sources which depict blacksmithing only show permanent stone forges. The only sources for a portable forge I have found, show a large wooden table with large divider on one side. I've elected to be a bit more practical with my firebox, however I will try and incorporate these elements into the frame for the firebox.
 
 **Sources**
 
@@ -38,7 +38,7 @@ Most sources which depict blacksmithing only show permanent stone forges. The on
 
 ## Bellows
 
-The double lung bellows most people associate with blacksmithing does not appear in any sources for this period. I'll be using dual bellows, connected up with a swinging arm, that can raise them one at a time.
+The double lung bellows most people associate with blacksmithing does not appear in any sources for this period. I'll be using dual bellows, connected up with a swinging arm, which can raise them one at a time.
 
 **Sources**
 
@@ -62,7 +62,7 @@ The double lung bellows most people associate with blacksmithing does not appear
 
 ## Anvil
 
-Many of the sources are the same as the sources for the Bellows as the two usually go hand in hand when depicting blacksmithing. I will be opting to use a small stump anvil, and stump tools, with a larger piece of steel for heavier work if required.
+Many of the sources for the anvil are the same as the sources for the bellows, as the two usually go hand in hand when depicting blacksmithing. I will be opting to use a small stump anvil, and stump tools, with a larger anvil for heavier work if required.
 
 **Sources**
 
@@ -82,9 +82,9 @@ Many of the sources are the same as the sources for the Bellows as the two usual
     </div>
 </div>
 
-## Grind-Stone
+## Grindstone
 
-The depicted grind stones are all large, mounted in a wooden frame, and hand operated. Due to the size this would require an assistant. My plan is to design a system that can be used both by hand, and foot using a pedal.
+The depicted grindstones are all large, mounted in a wooden frame, and hand operated. Due to the size this would require an assistant. My plan is to use a smaller grindstone which can be used both by hand and foot.
 
 **Sources**
 - [A grindstone turned by two men while a third man sharpens a knife, the Luttrell Psalter][grind-1] (Brit. Lib. Add. 42130, fol. 78v), c. 1325-1340
@@ -101,17 +101,17 @@ The depicted grind stones are all large, mounted in a wooden frame, and hand ope
     </div>
 </div>
 
-[larsdatter]: http://larsdatter.com/
-[bellows-1]:  https://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_47682_f031r
-[bellows-2]:  https://www.bl.uk/catalogues/illuminatedmanuscripts/ILLUMIN.ASP?Size=mid&IllID=720
-[bellows-3]:  http://visualiseur.bnf.fr/ConsulterElementNum?O=IFN-08022375&E=JPEG&Deb=1&Fin=1&Param=C
-[anvil-1]:    http://classes.bnf.fr/ema/grands/ca001.htm
-[anvil-2]:    http://tarvos.imareal.oeaw.ac.at/server/images/7006143.JPG
-[anvil-3]:    http://www.anvilfire.com/anvils/donated_021.php
-[grind-1]:    https://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_42130_f078v
-[grind-2]:    http://bodley30.bodley.ox.ac.uk:8180/luna/servlet/detail/ODLodl~1~1~33665~120087:Romance-of-Alexander-
-[grind-3]:    http://tarvos.imareal.oeaw.ac.at/server/images/7006161.JPG
-[romance-alex-84r]: http://image.ox.ac.uk/images/bodleian/ms.bodl.264/84r.jpg
+[larsdatter]:        http://larsdatter.com/
+[bellows-1]:         https://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_47682_f031r
+[bellows-2]:         https://www.bl.uk/catalogues/illuminatedmanuscripts/ILLUMIN.ASP?Size=mid&IllID=720
+[bellows-3]:         http://visualiseur.bnf.fr/ConsulterElementNum?O=IFN-08022375&E=JPEG&Deb=1&Fin=1&Param=C
+[anvil-1]:           http://classes.bnf.fr/ema/grands/ca001.htm
+[anvil-2]:           http://tarvos.imareal.oeaw.ac.at/server/images/7006143.JPG
+[anvil-3]:           http://www.anvilfire.com/anvils/donated_021.php
+[grind-1]:           https://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_42130_f078v
+[grind-2]:           http://bodley30.bodley.ox.ac.uk:8180/luna/servlet/detail/ODLodl~1~1~33665~120087:Romance-of-Alexander-
+[grind-3]:           http://tarvos.imareal.oeaw.ac.at/server/images/7006161.JPG
+[romance-alex-84r]:  http://image.ox.ac.uk/images/bodleian/ms.bodl.264/84r.jpg
 [romance-alex-164v]: http://image.ox.ac.uk/images/bodleian/ms.bodl.264/164v.jpg
 [romance-alex-165r]: http://image.ox.ac.uk/images/bodleian/ms.bodl.264/165r.jpg
 [romance-alex-171v]: http://image.ox.ac.uk/images/bodleian/ms.bodl.264/171v.jpg

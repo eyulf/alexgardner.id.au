@@ -34,7 +34,7 @@ image: /assets/images/titleimages/reenactment.jpg
   </thread>
   <tr>
     <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }}+</strong></td>
-    <td><strong>{{ site.data.events | size }}</strong></td>
+    <td><strong>{{ site.data.events | size }}+</strong></td>
   </tr>
 </table>
 </div>
