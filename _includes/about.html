@@ -4,6 +4,7 @@
     {% for page in site.pages %}
     {% if page.layout == 'default' %}{% continue %}{% endif %}
     {% if page.url == '/assets/css/main.css' %}{% continue %}{% endif %}
+    {% if page.title contains 'Blog - page ' %}{% continue %}{% endif %}
 
     <section class="spotlight">
         <div class="image">{% if page.image %}<img src="{{ page.image }}" />{% endif %}</div>
@@ -14,6 +15,5 @@
     </section>
 
     {% endfor %}
-
 </section>
 

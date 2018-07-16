@@ -14,9 +14,16 @@ url: https://alexgardner.id.au
 markdown: kramdown
 plugins:
   - jekyll-minifier
+  - jekyll-paginate-v2
 exclude:
   - Gemfile
   - Gemfile.lock
 
 sass:
     sass_dir: _sass
+
+pagination:
+  enabled: true
+  per_page: 8
+  permalink: '/:num/'
+  sort_reverse: true

@@ -42,6 +42,12 @@ image: /assets/images/titleimages/blacksmithing.jpg
     </div>
 </section>
 
+{% assign forgeditems = 0 %}
+{% for item in site.data.forged %}
+{% assign forgeditems = forgeditems | plus: item[1] %}
+{% endfor %}
+
+
 <div class="table-wrapper">
 <table class="table-centre">
   <thread>
@@ -52,7 +58,7 @@ image: /assets/images/titleimages/blacksmithing.jpg
   </thread>
   <tr>
     <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.blacksmithing }}+</strong></td>
-    <td><strong>{{ site.data.misc.metrics.blacksmith.items }}+</strong></td>
+    <td><strong>{{ forgeditems }}+</strong></td>
   </tr>
 </table>
 </div>
