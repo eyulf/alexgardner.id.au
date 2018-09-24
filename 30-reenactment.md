@@ -20,7 +20,7 @@ image: /assets/images/titleimages/reenactment.jpg
 
     <p>As part of this hobby, I regularly attend, and camp at, various Medieval Festivals and other events held throughout Australia. I also host and manage the <a href="https://medievalarchery.org.au/">Medieval Archery Society</a> website.</p>
 
-    <p>I currently portray a English longbowman, during the time of the Hundred Years War. My primary longbow is a 30 pound self bow made from Ash.</p>
+    <p>I currently portray an English longbowman, during the time of the Hundred Years War. My primary longbow is a 48 pound self bow made from Osage Orange.</p>
 </div>
 </section>
 
