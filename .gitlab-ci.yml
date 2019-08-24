@@ -6,13 +6,9 @@ stages:
 
 build-jekyll:
   stage: build
-  tags:
-    - private
-    - jekyll
   before_script:
     - apt-get update -qq && apt-get install -y -qq nodejs
   script:
-    - apt-get update -qq && apt-get install -y -qq nodejs
     - bundle install
     - bundle exec jekyll build
   artifacts:
@@ -21,41 +17,12 @@ build-jekyll:
       - _site
     expire_in: 1 hour
 
-.deploy-jekyll:
+.deploy-to-s3:
+  image: python:latest
   stage: deploy
-  image: alpine:latest
-  tags:
-    - private
-    - jekyll
   before_script:
-    - apk update && apk add openssh-client bash rsync
+    - pip install awscli
   script:
-    - eval $(ssh-agent -s)
-    - bash -c  'ssh-add -q <(echo "${SSH_PRIVATE_KEY}"|tr -d "\r")'
-    - mkdir -p ~/.ssh
-    - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
-    - rsync -hrvz --delete _site/ "${SSH_WEBROOT_LOCATION}"
-    - ssh ${SSH_POST_DEPLOY_SCRIPT}
-    - cat ~/.ssh/known_hosts
-
+    - aws s3 cp _site s3://$AWS_S3_BUCKET/ --recursive
   dependencies:
     - build-jekyll
-
-deploy-staging:
-  extends: .deploy-jekyll
-  environment: staging
-  only:
-    - preview
-  variables:
-    SSH_WEBROOT_LOCATION: ${SSH_WEBROOT_LOCATION_STAGING}
-    SSH_POST_DEPLOY_SCRIPT: ${SSH_POST_DEPLOY_SCRIPT_STAGING}
-
-deploy-production:
-  extends: .deploy-jekyll
-  environment: production
-  only:
-    - master
-  variables:
-    SSH_WEBROOT_LOCATION: ${SSH_WEBROOT_LOCATION_PRODUCTION}
-    SSH_POST_DEPLOY_SCRIPT: ${SSH_POST_DEPLOY_SCRIPT_PRODUCTION}
-
