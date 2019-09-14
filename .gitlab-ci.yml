@@ -17,14 +17,24 @@ build-jekyll:
       - _site
     expire_in: 1 hour
 
-deploy-to-s3:
-  image: python:latest
+.deploy-jekyll:
   stage: deploy
+  image: python:latest
   before_script:
     - pip install awscli
-  script:
-    - aws s3 cp _site s3://$AWS_S3_BUCKET/ --recursive
   dependencies:
     - build-jekyll
+
+deploy-production:
+  extends: .deploy-jekyll
+  script:
+    - aws s3 cp _site s3://$AWS_S3_BUCKET_PROD/ --recursive
   only:
     - master
+
+deploy-staging:
+  extends: .deploy-jekyll
+  script:
+    - aws s3 cp _site s3://$AWS_S3_BUCKET_STAGING/ --recursive
+  only:
+    - staging
