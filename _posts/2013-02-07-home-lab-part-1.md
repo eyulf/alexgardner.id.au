@@ -46,4 +46,4 @@ Specs are as follows.
 
 Currently I am using the Proxmox whitebox as my main VM environment. I currently use it to run various network services including, but not limited to, DNS, DHCP, Monitoring, Log collection, Ticketing and Website development. I am planning on adding another VM server in at some point and build a Windows based lab environment (the current linux based systems will remain as my core network services).
 
-The Microserver is currently empty awaiting some time for me to repurpose it, I'll probably end up putting Security Onion onto it. I am considering creating a whitebox NAS to replace my current QNAP, 4 disks is not enough and I'd prefer something I can rackmount.
+The Microserver is currently empty awaiting some time for me to re-purpose it, I'll probably end up putting Security Onion onto it. I am considering creating a whitebox NAS to replace my current QNAP, 4 disks is not enough and I'd prefer something I can rackmount.

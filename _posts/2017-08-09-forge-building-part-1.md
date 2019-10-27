@@ -8,7 +8,7 @@ categories: [Crafting Re-Enactment Blacksmithing]
 titleimage: forge-research.jpg
 ---
 
-I've recently decided to build a blacksmithing forge, and wanted to make it as historically accurate as possible. This is so that I can use it at re-enactment events, showcasing how blacksmithing would have occured in that time period. Like most things re-enactment, the first port of call to build accuracy is through researching. My selected time period is approximately 1350-1370.
+I've recently decided to build a blacksmithing forge, and wanted to make it as historically accurate as possible. This is so that I can use it at re-enactment events, showcasing how blacksmithing would have occurred in that time period. Like most things re-enactment, the first port of call to build accuracy is through researching. My selected time period is approximately 1350-1370.
 
 The complete forging setup I'll be building contains 4 major parts. The first part is the forge itself, which contains a firebox used for the fire. The second is the bellows, which provides a constant stream of air to the firebox. The third is the Anvil used for performing the forging itself. And lastly a grind stone to further refine any blade edges or shapes as needed.
 

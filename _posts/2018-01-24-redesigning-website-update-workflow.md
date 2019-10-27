@@ -95,7 +95,7 @@ Buildbot does have a basic web GUI as well, and like most CI software details th
     </div>
 </div>
 
-Overall I'm quite happy with the change, as it greatly simplifies updating this website/blog. An added benifit is that it will allow my re-enactment group to update their website without needing to know the details of the technology that builds the website.
+Overall I'm quite happy with the change, as it greatly simplifies updating this website/blog. An added benefit is that it will allow my re-enactment group to update their website without needing to know the details of the technology that builds the website.
 
 [re-enactment]: {% link 30-reenactment.md %}
 [jekyll]:       https://jekyllrb.com/
