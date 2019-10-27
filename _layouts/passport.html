@@ -25,8 +25,8 @@
                             {% for image in page.item.images %}
                             <div class="4u">
                                 <span class="image fit">
-                                    <a data-lightbox="{{ page.item.name }}" data-title="{{ image.title }}" href="/assets/images{{ page.permalink }}/{{ image.name }}">
-                                        <img src="/assets/images{{ page.permalink }}/thumb-{{ image.name }}" alt="{{ image.title }}" />
+                                    <a data-lightbox="{{ page.item.name }}" data-title="{{ image.title }}" href="/assets/images{{ page.permalink }}{{ image.name }}">
+                                        <img src="/assets/images{{ page.permalink }}thumb-{{ image.name }}" alt="{{ image.title }}" />
                                     </a>
                                 </span>
                             </div>
@@ -75,8 +75,8 @@
                             {% if source.image %}
                             <div class="4u">
                                 <span class="image fit">
-                                    <a data-lightbox="{{ page.item.name }}" data-title="Source - {{ source.name }}" href="/assets/images{{ page.permalink }}/{{ source.image }}">
-                                        <img src="/assets/images{{ page.permalink }}/thumb-{{ source.image }}" alt="{{ source.name }}" />
+                                    <a data-lightbox="{{ page.item.name }}" data-title="Source - {{ source.name }}" href="/assets/images{{ page.permalink }}{{ source.image }}">
+                                        <img src="/assets/images{{ page.permalink }}thumb-{{ source.image }}" alt="{{ source.name }}" />
                                     </a>
                                 </span>
                             </div>
