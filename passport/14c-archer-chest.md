@@ -2,7 +2,7 @@
 layout: passport
 title: 14th Century Hutch Chest
 description: Re-enactment Passport (14th Century English Archer)
-permalink: /reenactment/passport/archer/chest
+permalink: /reenactment/passport/archer/chest/
 published: true
 
 item:

@@ -2,7 +2,7 @@
 layout: passport
 title: 14th Century Hose
 description: Re-enactment Passport (14th Century English Archer)
-permalink: /reenactment/passport/archer/hose
+permalink: /reenactment/passport/archer/hose/
 published: true
 
 item:

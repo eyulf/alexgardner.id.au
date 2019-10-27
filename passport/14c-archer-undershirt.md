@@ -2,7 +2,7 @@
 layout: passport
 title: 14th Century Under Shirt
 description: Re-enactment Passport (14th Century English Archer)
-permalink: /reenactment/passport/archer/undershirt
+permalink: /reenactment/passport/archer/undershirt/
 published: true
 
 item:
