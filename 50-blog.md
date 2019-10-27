@@ -1,5 +1,6 @@
 ---
 layout: page
+featured: true
 title: Blog
 description: Updates to my blog are highly irregular.
 permalink: /blog/

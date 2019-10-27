@@ -2,9 +2,8 @@
 <section id="about" class="wrapper alt style2">
 
     {% for page in site.pages %}
-    {% if page.layout == 'default' %}{% continue %}{% endif %}
-    {% if page.url == '/assets/css/main.css' %}{% continue %}{% endif %}
     {% if page.title contains 'Blog - page ' %}{% continue %}{% endif %}
+    {% if page.featured %}
 
     <section class="spotlight">
         <div class="image">{% if page.image %}<img src="{{ page.image }}" />{% endif %}</div>
@@ -13,7 +12,6 @@
             <p>{{ page.description }}</p>
         </div>
     </section>
-
+    {% endif %}
     {% endfor %}
 </section>
-
