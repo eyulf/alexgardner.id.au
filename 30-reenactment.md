@@ -1,8 +1,9 @@
 ---
 layout: page_stats
 featured: true
+children: true
 title: Re-enactment
-description: Medieval Re-enactment has been one of my interests for many years.
+description: "I have been a medieval re-enactor for over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }} years."
 permalink: /reenactment/
 published: true
 image: /assets/images/titleimages/reenactment.jpg
@@ -24,10 +25,16 @@ stats:
 
 {% include images.html %}
 
-Whilst I have previously been in groups that do live-steel re-enactment combat and living history, my current focus is historical archery. I am a member of the [Medieval Archery Society]({{ site.data.links.main.mas }}), which is based in South Western Sydney.
+Whilst I have previously been in groups that do live-steel re-enactment combat and living history, my current focus is historical archery and blacksmithing. I am a member of the [Medieval Archery Society]({{ site.data.links.main.mas }}), which is based in South Western Sydney.
 
-Re-enactment is what has introduced me to [blacksmithing]({% link 40-blacksmithing.md %}) and archery. I have also been getting more hands on with creating things for the hobby, including fletching (creating arrows), woodworking, and other random bits and pieces that I use for historical camping.
+I have outlined the kit/garb that I use for re-enactment in more detail on my [re-enactment "passport"]({% link 35-passport.md %}) page. This is essentially "living" documentation for my historical portrayals.
 
-As part of this hobby, I regularly attend, and camp at, various Medieval Festivals and other events held throughout Australia. I also host and manage the [Medieval Archery Society]({{ site.data.links.main.mas }}) website.
+Re-enactment is what introduced me to [blacksmithing]({% link 40-blacksmithing.md %}) and archery. I have also been getting more hands on with different arts and crafts in order to create things I need/use for the hobby. This has ranged from woodworking to sewing, as well as other random skills that have come up along the years.
 
-I currently portray an English longbowman, during the time of the Hundred Years War. My primary longbow is a 48 pound self bow made from Osage Orange.
+As part of this hobby, I regularly attend, and camp at, various Medieval Festivals and other events held throughout Australia. I also  host and manage the [Medieval Archery Society]({{ site.data.links.main.mas }}) website, in addition to performing the technical implementation of it's current design.
+
+<div class="box alt">
+    <div class="4u centre">
+        <a class="button fit" href="{% link 35-passport.md %}">Re-Enactment Passport</a>
+    </div>
+</div>

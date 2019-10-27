@@ -15,7 +15,7 @@
     <article id="main">
         <header>
             <h2>{{ page.title }}</h2>
-            <p>{{ page.description }}</p>
+            <p>{{ page.description | liquify }}</p>
         </header>
         <section class="wrapper style5">
             <div class="inner">

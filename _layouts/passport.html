@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+    Spectral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+
+    <!-- Main -->
+    <article id="main">
+        <header>
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.description }}</p>
+        </header>
+        <section class="wrapper style5">
+            <div class="inner">
+                <section>
+                    <div class="box alt">
+                        <div class="row uniform 50%">
+                            {% for image in page.item.images %}
+                            <div class="4u">
+                                <span class="image fit">
+                                    <a data-lightbox="{{ page.item.name }}" data-title="{{ image.title }}" href="/assets/images{{ page.permalink }}/{{ image.name }}">
+                                        <img src="/assets/images{{ page.permalink }}/thumb-{{ image.name }}" alt="{{ image.title }}" />
+                                    </a>
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <tr>
+                                <th><h4>Item</h4></th>
+                                <td><strong>{{ page.item.name }}</strong></td>
+                            </tr>
+                            <tr>
+                                <th><h4>Period</h4></th>
+                                <td><strong>{{ page.item.period }}</strong></td>
+                            </tr>
+                            <tr>
+                                <th><h4>Construction</h4></th>
+                                <td><strong>{{ page.item.construction }}</strong></td>
+                            </tr>
+                            <tr>
+                                <th><h4>Material</h4></th>
+                                <td><strong>{{ page.item.material }}</strong></td>
+                            </tr>
+                            <tr>
+                                <th><h4>Maker</h4></th>
+                                <td><strong><a href="{{ page.item.link }}">{{ page.item.source | liquify }}</a></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3"><h4>Sources</h4></th>
+                                <td>
+                                    <ol>
+                                        {% for source in page.item.sources %}
+                                        <li><a href="{{ source.link }}">{{ source.name }}</a></li>
+                                        {% endfor %}
+                                    </ol>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="box alt">
+                        <div class="row uniform 50%">
+                            {% for source in page.item.sources %}
+                            {% if source.image %}
+                            <div class="4u">
+                                <span class="image fit">
+                                    <a data-lightbox="{{ page.item.name }}" data-title="Source - {{ source.name }}" href="/assets/images{{ page.permalink }}/{{ source.image }}">
+                                        <img src="/assets/images{{ page.permalink }}/thumb-{{ source.image }}" alt="{{ source.name }}" />
+                                    </a>
+                                </span>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+
+                {{ content }}
+
+                <div class="box alt">
+                    <div class="4u centre">
+                        <a class="button fit" href="{% link 35-passport.md %}">Back to the Passport</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 layout: page_stats
 featured: true
 title: Homelab
-description: I maintain a home-lab setup which I use to practise my sysadmin skills.
+description: I maintain a home-lab setup which I use to practise my skills.
 permalink: /homelab/
 published: true
 image: /assets/images/titleimages/homelab.jpg
@@ -20,8 +20,6 @@ stats:
     value: "{{ site.time | date: '%Y' | minus: site.data.misc.year_started.homelab }}+"
   - name: Homelab Overhauls
     value: "{{ site.data.misc.stats.homelab.overhauls }}"
-  - name: Lines of Config Management Code
-    value: "{{ site.data.misc.stats.homelab.lines }}+"
 ---
 
 The long term goal of this at the moment is to create an environment that is at least semi-autonomous in maintaining itself. I currently use this for learning and experimenting with ideas, concepts and technologies.

@@ -2,7 +2,7 @@
 layout: page_stats
 featured: true
 title: About
-description: I'm a Linux Systems Administrator based in Sydney.
+description: "I'm a Linux Sysadmin with over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years experience, based in Sydney."
 permalink: /about/
 published: true
 image: /assets/images/titleimages/about.jpg
@@ -23,10 +23,10 @@ stats:
 
 {% include images.html %}
 
-In mid 2014 I made a massive change to my life and moved interstate, away from my friends and family in Adelaide, to Sydney in order to further my career. Since then I have stepped up and moved from Technical Support to System Administration.
+I have over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years of IT experience in general, and have worked in the Hosting and Telecommunication industries. I run a personal [homelab]({% link 20-homelab.md %}) which I use to practise and learn new things about technology and the art of automating almost everything.
 
-I have over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years of IT experience in general, and have worked in the Hosting and Telecommunication industries. I run a personal [homelab]({% link 20-homelab.md %}) which I use to learn new things about technology and practise the art of automating almost everything.
+In mid 2014 I made a massive change to my life and moved interstate, away from my existing friends and family in Adelaide, to Sydney in order to further my career. Since then I have been promoted a couple of time and am now performing the technical implementation and engineering of new products for the hosting company I work for.
 
-In my spare time I participate in [archery]({% link 30-reenactment.md %}) with the [Medieval Archery Society]({{ site.data.links.main.mas }}), and impose my will onto steel by [blacksmithing]({% link 40-blacksmithing.md %}).
+I have been a [historical re-enactor]({% link 30-reenactment.md %}) for over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }} years. In my spare time I participate in archery with the [Medieval Archery Society]({{ site.data.links.main.mas }}), and engage my creative spark onto steel by [blacksmithing]({% link 40-blacksmithing.md %}).
 
 My preferred method of contact is through [email](mailto:{{ site.email }}). I also have a [LinkedIn]({{ site.data.links.main.linkedin }}) page, but update it even less then this website.
