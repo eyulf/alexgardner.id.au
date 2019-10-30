@@ -5,7 +5,7 @@ title: Blacksmithing
 description: In my spare time I also engage my creativity onto steel.
 permalink: /blacksmith/
 published: true
-image: /titleimages/blacksmithing
+image: titleimages/blacksmithing
 
 image_row:
   - title: Forged Heart

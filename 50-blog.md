@@ -5,7 +5,7 @@ title: Blog
 description: Updates to my blog are highly irregular.
 permalink: /blog/
 published: true
-image: /titleimages/blog
+image: titleimages/blog
 pagination:
   enabled: true
 ---
