@@ -218,7 +218,7 @@
             position: relative;
             top: -0.25em;
         }
-        
+
         h1 {
             color: _palette(custom, header-name);
             text-shadow:
@@ -773,12 +773,12 @@
 
         &.table-centre {
             text-align: center;
-            
+
             th {
                 text-align: center;
             }
         }
-        
+
         &.alt {
             border-collapse: separate;
 
@@ -1430,7 +1430,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            
+
             text-shadow:
                 -1px -1px 0 #000000,
                 1px -1px 0 #000000,
@@ -1525,7 +1525,7 @@
             position: relative;
             z-index: 1;
             color: _palette(custom, banner-title);
-            
+
             text-shadow:
                 -1px -1px 0 #000000,
                 1px -1px 0 #000000,
@@ -1558,7 +1558,7 @@
             letter-spacing: _size(letter-spacing-alt);
             text-transform: uppercase;
             font-size: 1.1em;
-            
+
             color: _palette(custom, banner-tagline);
             text-shadow:
                 -1px -1px 0 #000000,
@@ -1722,7 +1722,6 @@
     #main {
         > header {
             @include padding(12em, 0);
-            @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
             background-attachment: fixed;
             background-position: center center;
             background-repeat: no-repeat;
@@ -1746,7 +1745,7 @@
                 text-transform: uppercase;
                 top: 0;
                 color: _palette(custom, page-tagline);
-                
+
                 text-shadow:
                     -1px -1px 0 #000000,
                     1px -1px 0 #000000,
@@ -1860,7 +1859,6 @@
 
     body.landing {
         #page-wrapper {
-            @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
             background-attachment: fixed;
             background-position: center center;
             background-repeat: no-repeat;
@@ -1881,7 +1879,6 @@
 
             #banner,
             .wrapper.style4 {
-                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -1897,4 +1894,76 @@
     .centre {
         margin-left: auto;
         margin-right: auto;
+    }
+
+
+/* WebP support */
+
+    html.no-js {
+        body.landing {
+            #page-wrapper {
+                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
+            }
+        }
+
+        body.is-mobile {
+            &.landing {
+                #banner,
+                .wrapper.style4 {
+                    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
+                }
+            }
+        }
+
+        #main {
+            > header {
+                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.webp")'));
+            }
+        }
+    }
+
+    html.no-webp {
+        body.landing {
+            #page-wrapper {
+                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
+            }
+        }
+
+        body.is-mobile {
+            &.landing {
+                #banner,
+                .wrapper.style4 {
+                    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
+                }
+            }
+        }
+
+        #main {
+            > header {
+                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.webp")'));
+            }
+        }
+    }
+
+    html.webp {
+        body.landing {
+            #page-wrapper {
+                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.webp")'));
+            }
+        }
+
+        body.is-mobile {
+            &.landing {
+                #banner,
+                .wrapper.style4 {
+                    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.webp")'));
+                }
+            }
+        }
+
+        #main {
+            > header {
+                @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.webp")'));
+            }
+        }
     }

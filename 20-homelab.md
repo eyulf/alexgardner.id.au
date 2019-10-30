@@ -5,15 +5,15 @@ title: Homelab
 description: I maintain a home-lab setup which I use to practise my skills.
 permalink: /homelab/
 published: true
-image: /assets/images/titleimages/homelab.jpg
+image: titleimages/homelab
 
 image_row:
   - title: Homelab Servers
-    name: closeup.jpg
+    name: closeup
   - title: Network Map
-    name: map.png
+    name: map
   - title: Power Usage
-    name: power.jpg
+    name: power
 
 stats:
   - name: Years Homelab-ing

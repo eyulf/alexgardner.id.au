@@ -5,21 +5,21 @@ title: Blacksmithing
 description: In my spare time I also engage my creativity onto steel.
 permalink: /blacksmith/
 published: true
-image: /assets/images/titleimages/blacksmithing.jpg
+image: /titleimages/blacksmithing
 
 image_row:
   - title: Forged Heart
-    name: heart.jpg
+    name: heart
   - title: My Forge and Workshop
-    name: workshop.jpg
+    name: workshop
   - title: Mokume Gane attempt 2 (It failed)
-    name: mokume-attempt.jpg
+    name: mokume-attempt
   - title: Fire Poker and Clothes Hook
-    name: poker.jpg
+    name: poker
   - title: Various Tools needed to make Rounding Hammer
-    name: tools.jpg
+    name: tools
   - title: Rounding Hammer
-    name: hammer.jpg
+    name: hammer
 
 stats:
   - name: Years Blacksmithing

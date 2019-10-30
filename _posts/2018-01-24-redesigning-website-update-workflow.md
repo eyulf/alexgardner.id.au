@@ -5,7 +5,7 @@ date: 2018-01-24 23:39 +1100
 permalink: /blog/:title/
 comments: true
 categories: [Website]
-titleimage: website-workflow.jpg
+titleimage: website-workflow
 ---
 
 Today I made a significant change to the workflow I use to update both this website, as well as the website for my [re-enactment][re-enactment] group. For context, the websites are hosted on a VPS, running nginx as it's web-server. Since I am using [jekyll][jekyll] to build the websites, I make all changes, as well as basic testing on my workstation. Once the desired update is ready, I use jekyll to generate the static html files.
@@ -85,15 +85,7 @@ c['builders'].append(
 
 Buildbot does have a basic web GUI as well, and like most CI software details the steps configured for a build.
 
-<div class="box alt">
-    <div class="row uniform 50%">
-        <div class="12u centre">
-            <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/website-workflow-1.jpg" title="The BuildBot Interface" alt="The BuildBot Interface">
-            </span>
-        </div>
-    </div>
-</div>
+{% include blog_image.html image="website-workflow-1" alt="The BuildBot Interface" %}
 
 Overall I'm quite happy with the change, as it greatly simplifies updating this website/blog. An added benefit is that it will allow my re-enactment group to update their website without needing to know the details of the technology that builds the website.
 

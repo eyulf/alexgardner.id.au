@@ -16,14 +16,14 @@ archer:
   - type: Torso
     items:
       - name: Under Shirt
-        link: 14c-archer-undershirt.md
+        link: 14c-archer-undershirt
       - name: Tunic
       - name: Belt
   - type: Legs
     items:
       - name: Braies
       - name: Hose
-        link: 14c-archer-hose.md
+        link: 14c-archer-hose
       - name: Boots
   - type: Weapons
     items:
@@ -45,7 +45,7 @@ archer:
       - name: Bedding
       - name: Bench
       - name: Chest
-        link: 14c-archer-chest.md
+        link: 14c-archer-chest
 ---
 
 This is my [re-enactment]({% link 30-reenactment.md %}) "passport", essentially it is the categorisation and documentation of the kit/garb (costume and equipment) that I wear and use at re-enactment events. This will be a "living" document, and updates will be made to it as I obtain more kit, or learn new sources. I first came across this concept through a post I saw on-line which I can no longer locate.
@@ -59,7 +59,10 @@ This is currently in the process of being filled out with what I currently have 
 <section>
     <h2>14th Century English Archer</h2>
     <span class="image left">
-        <p><img src="/assets/images/reenactment/passport/archer/14c-english-archer.jpg" alt="14th Century English Archer" /></p>
+        <p><picture>
+                <source srcset="/assets/images/reenactment/passport/archer/14c-english-archer.webp" type="image/webp">
+                <img src="/assets/images/reenactment/passport/archer/14c-english-archer.jpg" alt="14th Century English Archer">
+        </picture></p>
 
         An English Peasant Archer, serving in an English Free Company operating in France around 1365.
 
@@ -74,7 +77,7 @@ This is currently in the process of being filled out with what I currently have 
                     <ul>
                         {% for item in type.items %}
                         {% if item.link %}
-                        <li><a href="{% link passport/{{ item.link }} %}">{{ item.name }}</a></li>
+                        <li><a href="{% link passport/{{ item.link }}.md %}">{{ item.name }}</a></li>
                         {% else %}
                         <li>{{ item.name }}</li>
                         {% endif %}

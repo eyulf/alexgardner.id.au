@@ -6,11 +6,12 @@ title: Re-enactment
 description: "I have been a medieval re-enactor for over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }} years."
 permalink: /reenactment/
 published: true
-image: /assets/images/titleimages/reenactment.jpg
+image: titleimages/reenactment
 
 image_side:
   direction: right
-  path: /assets/images/archery.jpg
+  path: archery
+  alt: Alex Gardner
   attribution:
     name: Vanessa Marie Photography
     link: "{{ site.data.links.main.vanessa }}"
@@ -34,7 +35,9 @@ Re-enactment is what introduced me to [blacksmithing]({% link 40-blacksmithing.m
 As part of this hobby, I regularly attend, and camp at, various Medieval Festivals and other events held throughout Australia. I also  host and manage the [Medieval Archery Society]({{ site.data.links.main.mas }}) website, in addition to performing the technical implementation of it's current design.
 
 <div class="box alt">
+    <div class="4u centre"></div>
     <div class="4u centre">
-        <a class="button fit" href="{% link 35-passport.md %}">Re-Enactment Passport</a>
+        <a class="button" href="{% link 35-passport.md %}">View Passport</a>
     </div>
+    <div class="4u centre"></div>
 </div>

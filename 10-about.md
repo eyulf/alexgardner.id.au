@@ -5,11 +5,12 @@ title: About
 description: "I'm a Linux Sysadmin with over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years experience, based in Sydney."
 permalink: /about/
 published: true
-image: /assets/images/titleimages/about.jpg
+image: titleimages/about
 
 image_side:
   direction: left
-  path: /assets/images/alex-gardner.jpg
+  path: alex-gardner
+  alt: Alex Gardner
   attribution:
     name: Anthea Wright
     link: "{{ site.data.links.main.anthea }}"

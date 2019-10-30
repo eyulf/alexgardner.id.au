@@ -17,6 +17,7 @@ plugins:
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-liquify
+  - jekyll-webp
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -30,3 +31,15 @@ pagination:
   per_page: 8
   permalink: '/:num/'
   sort_reverse: true
+
+webp:
+  enabled: true
+  quality: 85
+  img_dir: ["/assets/images/"]
+  nested: true
+  formats: [".jpeg", ".jpg", ".png", ".tiff"]
+  gifs: [".gif"]
+  regenerate: false
+  webp_path: nil
+  exclude: []
+  append_ext: false

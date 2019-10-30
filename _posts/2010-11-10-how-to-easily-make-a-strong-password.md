@@ -5,7 +5,7 @@ date: 2010-11-10 15:46 +1100
 categories: [Basics, Security, Guides, Password]
 permalink: /blog/:title/
 published: true
-titleimage: password.jpg
+titleimage: password
 ---
 
 One problem with IT security is that users do not usually have strong passwords.
