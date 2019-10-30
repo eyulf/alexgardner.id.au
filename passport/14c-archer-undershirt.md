@@ -29,6 +29,8 @@ item:
     - name: Shirt of St. Louis (Notre Dame, Paris)
       image: source-3.jpg
       link: https://en.wikipedia.org/wiki/Shirt_of_Saint_Louis
+    - name: Another Look at St. Louis' Shirt by Heather Rose Jones
+      link: http://heatherrosejones.com/stlouisshirt/
     - name: The Medieval Tailor's Assistant (page 71)
       link: https://www.goodreads.com/book/show/1150151.The_Medieval_Tailor_s_Assistant
     - name: Medieval Costume in England and France (Chapter IX)
