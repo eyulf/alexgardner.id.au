@@ -1,0 +1,32 @@
+{% assign name = page.permalink | remove: "/" %}
+
+{% if page.image_row %}
+<section>
+    <div class="box alt">
+        <div class="row uniform 50%">
+            {% for image in page.image_row %}
+            <div class="4u">
+                <span class="image fit">
+                    <a data-lightbox="{{ name }}" data-title="{{image.title}}" href="/assets/images/{{ name }}/{{image.name}}.jpg">
+                        <picture>
+                            <source srcset="/assets/images/{{ name }}/thumb-{{image.name}}.webp" type="image/webp">
+                            <img src="/assets/images/{{ name }}/thumb-{{image.name}}.jpg" alt="{{image.title}}">
+                        </picture>
+                    </a>
+                </span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% else if page.image_side %}
+<section>
+  <span class="image {{ page.image_side.direction }}">
+    <picture>
+        <source srcset="/assets/images/{{ page.image_side.path }}.webp" type="image/webp">
+        <img src="/assets/images/{{ page.image_side.path }}.jpg" alt="{{ page.image_side.alt }}">
+    </picture>
+    Picture by <a href="{{ page.image_side.attribution.link | liquify }}">{{ page.image_side.attribution.name }}</a>.
+  </span>
+</section>
+{% endif %}

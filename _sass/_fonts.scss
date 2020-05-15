@@ -3,34 +3,40 @@
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(/assets/fonts/opensans.woff) format('woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(/assets/fonts/opensans-semibold.woff) format('woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
   src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(/assets/fonts/opensans-extrabold.woff) format('woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
   src: local('Open Sans Italic'), local('OpenSans-Italic'), url(/assets/fonts/opensans-italic.woff) format('woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 600;
   src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(/assets/fonts/opensans-italic.woff) format('woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 800;
   src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(/assets/fonts/opensans-extrabolditalic.woff) format('woff');
+  font-display: swap;
 }

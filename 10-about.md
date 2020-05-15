@@ -1,38 +1,33 @@
 ---
-layout: page
+layout: page_stats
+featured: true
 title: About
-description: I'm a Linux Systems Administrator based in Sydney.
+description: "I'm a Linux Sysadmin with over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years experience, based in Sydney."
 permalink: /about/
 published: true
-image: /assets/images/titleimages/about.jpg
+image: titleimages/about
+
+image_side:
+  direction: left
+  path: alex-gardner
+  alt: Alex Gardner
+  attribution:
+    name: Anthea Wright
+    link: "{{ site.data.links.main.anthea }}"
+
+stats:
+  - name: Years in IT
+    value: "{{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }}+"
+  - name: Years as a Sysadmin
+    value: "{{ site.time | date: '%Y' | minus: site.data.misc.year_started.sysadmin }}+"
 ---
 
-<div>
-    <span class="image left">
-        <img src="/assets/images/alex-gardner.jpg" alt="" />
-        <p>Picture by <a href="{{ site.data.links.main.anthea }}">Anthea Wright</a>.</p>
-    </span>
+{% include images.html %}
 
-    <p>In mid 2014 I made a massive change to my life and moved interstate, away from my friends and family in Adelaide, to Sydney in order to further my career. Since then I have stepped up and moved from Technical Support to System Administration.</p>
+I have over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years of IT experience in general, and have worked in the Hosting and Telecommunication industries. I run a personal [homelab]({% link 20-homelab.md %}) which I use to practise and learn new things about technology and the art of automating almost everything.
 
-    <p>I have over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }} years of IT experience in general, and have worked in the Hosting and Telecommunication industries. I run a personal <a href="/homelab">homelab</a> which I use to learn new things about technology and practise the art of automating almost everything.</p>
+In mid 2014 I made a massive change to my life and moved interstate, away from my existing friends and family in Adelaide, to Sydney in order to further my career. Since then I have been promoted a couple of time and am now performing the technical implementation and engineering of new products for the hosting company I work for.
 
-    <p>In my spare time I participate in <a href="/reenactment">archery</a> with the <a target="_blank" href="{{ site.data.links.main.mas }}">Medieval Archery Society</a>, and impose my will onto steel by <a href="/blacksmith">blacksmithing</a>.</p>
+I have been a [historical re-enactor]({% link 30-reenactment.md %}) for over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }} years. In my spare time I participate in archery with the [Medieval Archery Society]({{ site.data.links.main.mas }}), and engage my creative spark onto steel by [blacksmithing]({% link 40-blacksmithing.md %}).
 
-    <p>My preferred method of contact is through <a href="mailto:alex@alexgardner.id.au">email</a>. I also have a <a href="{{ site.data.links.main.linkedin }}">LinkedIn</a> page, but update it even less then this website.</p>
-</div>
-
-<div class="table-wrapper">
-<table class="table-centre">
-  <thread>
-    <tr>
-      <th><h4>Years in IT</h4></th>
-      <th><h4>Years as a Sysadmin</h4></th>
-    </tr>
-  </thread>
-  <tr>
-    <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.it }}+</strong></td>
-    <td><strong>{{ site.time | date: '%Y' | minus: site.data.misc.year_started.sysadmin }}+</strong></td>
-  </tr>
-</table>
-</div>
+My preferred method of contact is through [email](mailto:{{ site.email }}). I also have a [LinkedIn]({{ site.data.links.main.linkedin }}) page, but update it even less then this website.

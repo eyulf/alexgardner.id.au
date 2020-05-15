@@ -3,27 +3,43 @@
 
 title: Alex Gardner
 email: alex@alexgardner.id.au
-description: > 
-    I am a Linux Systems Administrator, originally from Adelaide and now based in Sydney. In my free time I shoot longbows, blacksmith, and generally geek out.
-keywords: > 
-    alex,gardner,alexgardner,linux,systems,administrator,nix,sysadmin,sydney,syd,adelaide,adl,australia,archer,archery,longbow,longbowman,arrows,fletching,medieval,black,smith,blacksmith,blacksmithing,smithing
+description: >
+  I am a Linux Systems Administrator, originally from Adelaide and now based in Sydney. In my free time I shoot longbows, blacksmith, and generally geek out.
+keywords: >
+  alex,gardner,alexgardner,linux,systems,administrator,nix,sysadmin,sydney,syd,adelaide,adl,australia,archer,archery,longbow,longbowman,arrows,fletching,medieval,black,smith,blacksmith,blacksmithing,smithing
 baseurl: ""
 url: https://alexgardner.id.au
+timezone: Australia/Sydney
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-minifier
   - jekyll-paginate-v2
+  - jekyll-liquify
+  - jekyll-webp
 exclude:
   - Gemfile
   - Gemfile.lock
 
 sass:
-    sass_dir: _sass
+  sass_dir: _sass
+  style: compressed
 
 pagination:
   enabled: true
   per_page: 8
   permalink: '/:num/'
   sort_reverse: true
+
+webp:
+  enabled: true
+  quality: 85
+  img_dir: ["/assets/images/"]
+  nested: true
+  formats: [".jpeg", ".jpg", ".png", ".tiff"]
+  gifs: [".gif"]
+  regenerate: false
+  webp_path: nil
+  exclude: []
+  append_ext: false

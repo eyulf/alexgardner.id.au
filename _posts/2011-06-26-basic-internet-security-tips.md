@@ -5,7 +5,7 @@ date: 2011-06-26 20:32 +1100
 categories: [Basics, Guides, Security]
 permalink: /blog/:title/
 published: true
-titleimage: security.jpg
+titleimage: security
 ---
 
 With the current state of the Internet, it is important to be as secure as you can while browsing it. I have listed some tips for people who need to start learning the basics. This is by no means technical or exhaustive (I'm writing this for friends as well) and is aimed primarily at windows users.

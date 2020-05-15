@@ -5,7 +5,7 @@ date: 2013-09-23 20:39 +1100
 comments: true
 permalink: /blog/:title/
 categories: [Android, Guides, Password, Hacking]
-titleimage: resettingpinandroid.jpg
+titleimage: resettingpinandroid
 ---
 
 So I recently got a new phone which I promptly re-flashed with CyagenMod. All was well until I set a PIN on it at work. Once at home I attempted to unlock the phone and found what I thought to be the PIN not working. This was quite a pain as I did not want to Factory Reset the phone.
@@ -56,15 +56,7 @@ Annoyed I hit the net, finding a [few][xda-developers-forum] [guides][spreitzenb
 
 Instead of this which the guides wanted. (lockscreen.password_type was missing)
 
-<div class="box alt">
-    <div class="row uniform 50%">
-        <div class="12u">
-            <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/expected-pin-db.jpg">
-            </span>
-        </div>
-    </div>
-</div>
+{% include blog_image.html image="expected-pin-db" alt="Expected Pin DB Layout" %}
 
 Attempting to fix this from another angle I then went looking for the password hash, if I couldn't set the lockscreen to slide unlock, I could at least try to bruteforce the PIN. I located the hash in /data/system/password.key. While looking for it I noticed something else...
 
@@ -81,7 +73,7 @@ gesture.key           packages.xml          users
 hdcp2                 password.key
 ```
 
-'locksettings.db' hmm, wonder whats in here. 
+'locksettings.db' hmm, wonder whats in here.
 
 ```
 sqlite> select * from locksettings;
@@ -108,7 +100,7 @@ sqlite> select * from locksettings;
 17|lockscreen.passwordhistory|0|
 ```
 
-Reboot the phone and bam, slide unlock! 
+Reboot the phone and bam, slide unlock!
 
 ## TL;DR
 
@@ -119,7 +111,7 @@ Reboot the phone and bam, slide unlock!
 
 ```
 adb shell
-sqlite3 /data/system/locksettings.db 
+sqlite3 /data/system/locksettings.db
 update locksettings set value=65536 where name='lockscreen.password_type';
 .exit
 exit

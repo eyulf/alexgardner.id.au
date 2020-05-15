@@ -2,18 +2,17 @@
 <section id="about" class="wrapper alt style2">
 
     {% for page in site.pages %}
-    {% if page.layout == 'default' %}{% continue %}{% endif %}
-    {% if page.url == '/assets/css/main.css' %}{% continue %}{% endif %}
     {% if page.title contains 'Blog - page ' %}{% continue %}{% endif %}
+    {% if page.parent %}{% continue %}{% endif %}
+    {% if page.featured %}
 
     <section class="spotlight">
-        <div class="image">{% if page.image %}<img src="{{ page.image }}" />{% endif %}</div>
+        <div class="image">{% if page.image %}<picture><source srcset="/assets/images/{{ page.image }}.webp" type="image/webp"><img src="/assets/images/{{ page.image }}.jpg" alt="{{ page.title }}"></picture>{% endif %}</div>
         <div class="content">
             <h2><a href="{{ page.url | relative_url }}" class="link">{{ page.title }}</a></h2>
-            <p>{{ page.description }}</p>
+            <p>{{ page.description | liquify }}</p>
         </div>
     </section>
-
+    {% endif %}
     {% endfor %}
 </section>
-

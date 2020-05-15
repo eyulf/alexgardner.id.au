@@ -5,7 +5,7 @@ date: 2019-09-07 16:00 +1100
 permalink: /blog/:title/
 comments: true
 categories: [Website AWS Terraform]
-titleimage: website-aws.jpg
+titleimage: website-aws
 ---
 
 I've recently made another significant change to this website, which is also not as visible as my previous [changes to the workflow][workflow]. The hosting has been moved from a self managed VPS to AWS, using Terraform for setup and Gitlab for CI.
@@ -578,15 +578,7 @@ deploy-to-s3:
     - master
 ```
 
-<div class="box alt">
-    <div class="row uniform 50%">
-        <div class="12u centre">
-            <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/website-aws-ci.jpg" title="Gitlab Pipelines Successful" alt="Gitlab Pipelines Successful">
-            </span>
-        </div>
-    </div>
-</div>
+{% include blog_image.html image="website-aws-ci" alt="Gitlab Pipelines Successful" %}
 
 These changes streamline the website even further and in my view is an example of where website development is currently heading, especially for websites with no dynamic content. Services such as [netlify][netlify] further cement my view on this, and are even easier to setup then what I’ve outlined here.
 

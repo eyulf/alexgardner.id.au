@@ -4,7 +4,8 @@
     html5up.net | @ajlkn
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html class="no-js">
+
 {% include head.html %}
 
 <body>
@@ -12,7 +13,7 @@
 
     <!-- Main -->
     <article id="main">
-        <header<!--{% if page.image %} style="background-image: url('{% if site.featured-image-source %}{{ page.image | prepend: site.featured-image-source | absolute_url }}{% else %}{{ "" | absolute_url }}/assets/images/{{ page.image }}{% endif %}');"{% endif %}-->>
+        <header>
             <h2>{{ page.title }}</h2>
             <p>{{ page.date | date: "%B %Y" }}</p>
         </header>
@@ -20,17 +21,16 @@
             <div class="inner">
 
                 {{ content }}
-                
+
                 <div class="box alt">
                     <div class="4u centre">
                         <a class="button fit" href="/blog/">Back to article list</a>
                     </div>
                 </div>
-
             </div>
         </section>
     </article>
-    
+
     {% include footer.html %}
 
 </body>

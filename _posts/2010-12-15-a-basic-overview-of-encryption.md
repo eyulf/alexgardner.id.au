@@ -5,7 +5,7 @@ date: 2010-12-15 17:12 +1100
 categories: [Basics, Security]
 permalink: /blog/:title/
 published: true
-titleimage: encryption.jpg
+titleimage: encryption
 ---
 
 Encryption is used to keep confidential  or privileged data confidential and privileged, in order to provide an understanding of encryption we first need to know what it is.

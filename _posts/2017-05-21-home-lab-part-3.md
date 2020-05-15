@@ -5,20 +5,12 @@ date: 2017-05-21 55:18 +1100
 permalink: /blog/:title/
 comments: true
 categories: [Homelab]
-titleimage: homelab3.jpg
+titleimage: homelab3
 ---
 
 I've recently changed my homelab's physical setup, and ditched the Rack. There have been several major changes since my last [post][homelab-part2]. The main driving force for the move away from the rack was to save on physical space as I do not have much of it in my home. The current setup fits in half of my TV unit, taking minimal space, and making minimal noise. This is ideal and is very partner friendly.
 
-<div class="box alt">
-    <div class="row uniform 50%">
-        <div class="12u centre">
-            <span class="image 12u">
-                <img class="post-img centre" src="/assets/images/blog/lab3.jpg" title="My current Home-Lab" alt="My current Home-Lab">
-            </span>
-        </div>
-    </div>
-</div>
+{% include blog_image.html image="lab3" alt="My current Home-Lab" %}
 
 Some time ago, the QNAP NAS's PUS failed, and this was the final nail in the coffin as I had been getting random reboots when using it, as well as performance issues. I replaced this with a whitebox NAS, built using off the shelf parts, this was done to ensure that any hardware faults are easy to resolve without being reliant on the vendor. It's current specs are listed below.
 
