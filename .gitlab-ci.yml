@@ -28,15 +28,15 @@ build-jekyll:
 deploy-production:
   extends: .deploy-jekyll
   script:
-    - aws s3 cp _site s3://$AWS_S3_BUCKET_PROD/ --recursive
-    - aws s3 cp _site/assets/ s3://$AWS_S3_BUCKET_STAGING/assets/ --recursive --cache-control 'public, max-age=86400, must-revalidate'
+    - aws s3 sync _site s3://$AWS_S3_BUCKET_PROD/
+    - aws s3 cp _site/assets/ s3://$AWS_S3_BUCKET_STAGING/assets/ --recursive --cache-control 'public, max-age=604800, must-revalidate'
   only:
     - master
 
 deploy-staging:
   extends: .deploy-jekyll
   script:
-    - aws s3 cp _site s3://$AWS_S3_BUCKET_STAGING/ --recursive
-    - aws s3 cp _site/assets/ s3://$AWS_S3_BUCKET_STAGING/assets/ --recursive --cache-control 'public, max-age=86400, must-revalidate'
+    - aws s3 sync _site s3://$AWS_S3_BUCKET_STAGING/
+    - aws s3 cp _site/assets/ s3://$AWS_S3_BUCKET_STAGING/assets/ --recursive --cache-control 'public, max-age=604800, must-revalidate'
   only:
     - staging
