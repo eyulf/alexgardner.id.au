@@ -2,10 +2,7 @@
 <footer id="footer">
     <ul class="icons">
         <li><a href="{{ site:url }}/{{ site.data.links.main.gpgkey }}" class="icon fa-key" target="_blank"><span class="label">GPG Key</span></a></li>
-        <li><a href="mailto:{{ site.email }}" class="icon fa-envelope-o" ><span class="label">Email</span></a></li>
-        {% if site.data.links.main.instagram %}
-        <li><a href="{{ site.data.links.main.instagram }}" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-        {% endif %}
+        <li><a href="mailto:{{ site.email }}" class="icon fa-envelope" ><span class="label">Email</span></a></li>
         <li><a href="{{ site.data.links.main.gitlab }}" class="icon fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
         <li><a href="{{ site.data.links.main.linkedin }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
     </ul>
@@ -23,7 +20,8 @@
 <script src="{{ "/assets/js/jquery.scrolly.min.js" | absolute_url }}"></script>
 <script src="{{ "/assets/js/skel.min.js" | absolute_url }}"></script>
 <script src="{{ "/assets/js/util.js" | absolute_url }}"></script>
-<!--[if lte IE 8]><script src="{{ "/assets/js/ie/respond.min.js" | absolute_url }}"></script><![endif]-->
 <script src="{{ "/assets/js/modernizr-webp.js" | absolute_url }}"></script>
 <script src="{{ "/assets/js/main.js" | absolute_url }}"></script>
-<script async src="{{ "/assets/js/lightbox.min.js" | absolute_url }}"></script>
+{% if page.image_row %}
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+{% endif %}
