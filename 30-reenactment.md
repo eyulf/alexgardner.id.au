@@ -26,7 +26,9 @@ stats:
 
 {% include images.html %}
 
-Whilst I have previously been in groups that do live-steel re-enactment combat and living history, my current focus is historical archery and blacksmithing. I am a member of the [Medieval Archery Society]({{ site.data.links.main.mas }}), which is based in South Western Sydney.
+Whilst I have previously been in groups that do live-steel re-enactment combat and living history, my current focus is historical archery and blacksmithing. Having said this I also do Historical European Martial Arts (HEMA), which primarily covers sword-fighting of various styles.
+
+I am a member of the [Medieval Archery Society]({{ site.data.links.main.mas }}), which is based in South Western Sydney. I am also a member of [Stocatta]({{ site.data.links.main.stocatta }}), which is based throughout NSW and Tasmania.
 
 I have outlined the kit/garb that I use for re-enactment in more detail on my [re-enactment "passport"]({% link 35-passport.md %}) page. This is essentially "living" documentation for my historical portrayals.
 
