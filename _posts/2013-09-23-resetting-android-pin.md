@@ -56,7 +56,7 @@ Annoyed I hit the net, finding a [few][xda-developers-forum] [guides][spreitzenb
 
 Instead of this which the guides wanted. (lockscreen.password_type was missing)
 
-{% include blog_image.html image="expected-pin-db" alt="Expected Pin DB Layout" %}
+{% include blog_image.html image="expected-pin-db" format="jpg" alt="Expected Pin DB Layout" %}
 
 Attempting to fix this from another angle I then went looking for the password hash, if I couldn't set the lockscreen to slide unlock, I could at least try to bruteforce the PIN. I located the hash in /data/system/password.key. While looking for it I noticed something else...
 

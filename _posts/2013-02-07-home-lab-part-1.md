@@ -10,7 +10,7 @@ titleimage: homelab1
 
 Something I've been working on for the past year or so is getting a home-lab setup for playing around with stuff. This is the first post on what will hopefully become a semi regular update. This is currently what it looks like.
 
-{% include blog_image.html image="lab1" alt="My current Home-Lab" %}
+{% include blog_image.html image="lab1" format="jpg" alt="My current Home-Lab" %}
 
 Specs are as follows.
 

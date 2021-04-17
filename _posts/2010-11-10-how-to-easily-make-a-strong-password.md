@@ -10,7 +10,7 @@ titleimage: password
 
 One problem with IT security is that users do not usually have strong passwords.
 
-There is no better proof of this then a real-word study, and a hack of Rockyou.com exposed 32 million passwords. This was a great opportunity to study password used in the real-world, and Impervia did just that.  The most common password? "123456", you might laugh at that but exactly 290,731 people thought that it was a good idea. The full report on this can be found at the following link.
+There is no better proof of this then a real-word study, and a hack of Rockyou.com exposed 32 million passwords. This was a great opportunity to study password used in the real-world, and Impervia did just that. The most common password? "123456", you might laugh at that but exactly 290,731 people thought that it was a good idea. The full report on this can be found at the following link.
 
 [Imperva Worst Practices - PDF][imperva-worst-practise]
 

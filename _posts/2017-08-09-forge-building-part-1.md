@@ -26,7 +26,7 @@ Most sources which depict blacksmithing only show permanent stone forges. The on
 - [The Romance of Alexander fol. 165r][romance-alex-165r] (Bodl. 264), 1338-1344
 - [The Romance of Alexander fol. 171v][romance-alex-171v] (Bodl. 264), 1338-1344
 
-{% include blog_image.html image="forge-research-forge" alt="Portable Forge shown in The Romance of Alexander fol. 165r" %}
+{% include blog_image.html image="forge-research-forge" format="jpg" alt="Portable Forge shown in The Romance of Alexander fol. 165r" %}
 
 ## Bellows
 
@@ -42,7 +42,7 @@ The double lung bellows most people associate with blacksmithing does not appear
 - [Two blacksmiths, Liber Astrologiae][bellows-2] (Brit. Lib. Sloane 3983, f. 5), second half of the 14th century
 - [The martyrdom of St. John, Bible][bellows-3] (BNF Ned. 3, fol. 1), 14th-15th century
 
-{% include blog_image.html image="forge-research-bellows" alt="Bellows shown in Hedroit makes the nails for the Crucifixion" %}
+{% include blog_image.html image="forge-research-bellows" format="jpg" alt="Bellows shown in Hedroit makes the nails for the Crucifixion" %}
 
 ## Anvil
 
@@ -56,7 +56,7 @@ Many of the sources for the anvil are the same as the sources for the bellows, a
 - [Detail from the February fresco at Castello Buonconsiglio][anvil-2], c. 1405-1410
 - [Small 14th to 17th Century Stump Anvil][anvil-3]
 
-{% include blog_image.html image="forge-research-anvil" alt="Anvil shown in Two blacksmiths, Liber Astrologiae" %}
+{% include blog_image.html image="forge-research-anvil" format="jpg" alt="Anvil shown in Two blacksmiths, Liber Astrologiae" %}
 
 ## Grindstone
 
@@ -67,7 +67,7 @@ The depicted grindstones are all large, mounted in a wooden frame, and hand oper
 - [Grinding a sword-blade - Romance of Alexander][grind-2] (Bodl. 264, fol. 113v), c. 1338-1344
 - [Detail from July in the frescoes at Castello Buonconsiglio][grind-3], c. 1405-1410
 
-{% include blog_image.html image="forge-research-grind" alt="Grind-stone shown in Grinding a sword-blade - Romance of Alexander" %}
+{% include blog_image.html image="forge-research-grind" format="jpg" alt="Grind-stone shown in Grinding a sword-blade - Romance of Alexander" %}
 
 [larsdatter]:        http://larsdatter.com/
 [bellows-1]:         https://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_47682_f031r

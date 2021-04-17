@@ -578,7 +578,7 @@ deploy-to-s3:
     - master
 ```
 
-{% include blog_image.html image="website-aws-ci" alt="Gitlab Pipelines Successful" %}
+{% include blog_image.html image="website-aws-ci" format="jpg" alt="Gitlab Pipelines Successful" %}
 
 These changes streamline the website even further and in my view is an example of where website development is currently heading, especially for websites with no dynamic content. Services such as [netlify][netlify] further cement my view on this, and are even easier to setup then what I’ve outlined here.
 

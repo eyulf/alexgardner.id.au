@@ -85,7 +85,7 @@ c['builders'].append(
 
 Buildbot does have a basic web GUI as well, and like most CI software details the steps configured for a build.
 
-{% include blog_image.html image="website-workflow-1" alt="The BuildBot Interface" %}
+{% include blog_image.html image="website-workflow-1" format="jpg" alt="The BuildBot Interface" %}
 
 Overall I'm quite happy with the change, as it greatly simplifies updating this website/blog. An added benefit is that it will allow my re-enactment group to update their website without needing to know the details of the technology that builds the website.
 
