@@ -1,4 +1,5 @@
 year_started:
+  cloud: 2020
   sysadmin: 2015
   it: 2010
   homelab: 2011
@@ -7,5 +8,4 @@ year_started:
 
 stats:
   homelab:
-    overhauls: 3
-    lines: 4500
+    overhauls: 4

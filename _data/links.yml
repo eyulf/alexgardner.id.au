@@ -1,8 +1,15 @@
 main:
   mas: https://medievalarchery.org.au
-  stocatta: https://stoccata.org/
+  stoccata: https://stoccata.org/
   linkedin: https://www.linkedin.com/in/alexandergardner?rel=author
-  gitlab: https://gitlab.com/ThorgrimA
+  gitlab: https://gitlab.com/eyulf
+  github: https://github.com/eyulf
   gpgkey: alex-gardner-public-key.asc
   anthea: http://antheawright.com/
   vanessa: https://www.facebook.com/VanessaMariePortraits/
+certs:
+  aws-sap: https://www.credly.com/badges/1d63df44-9258-41e4-82cf-975f8202ae88
+  tf-associate: https://www.credly.com/badges/0949abc1-3744-4858-85cb-7b1b30267a52
+  aws-saa: https://www.credly.com/badges/afea0c1f-c87e-4d50-ab00-b47184078d52
+  jncia-junos: https://www.credly.com/badges/d405c262-e087-4caa-bcd0-193a5c09ab68
+  rhcsa: https://rhtapps.redhat.com/verify?certId=180-123-812

@@ -1,6 +1,6 @@
 ---
 layout: page
-featured: true
+featured: false
 parent: /reenactment/
 title: Re-enactment - Passport
 description: "I have been a medieval re-enactor for over {{ site.time | date: '%Y' | minus: site.data.misc.year_started.reenactment }} years."

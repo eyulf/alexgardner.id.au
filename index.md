@@ -1,5 +1,5 @@
 ---
 layout: default
 title: Home
-description: Sysadmin, Re-Enactor, Blacksmith, Geek.
+description: Cloud Engineer, Re-Enactor, Geek.
 ---
