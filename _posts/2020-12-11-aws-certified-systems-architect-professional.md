@@ -10,11 +10,11 @@ titleimage: aws-sap
 
 {% include blog_image.html image="aws-sap" format="png" alt="AWS Certified Solutions Architect – Professional" %}
 
-On {{ page.date | date_to_long_string }} I passed the [AWS Certified Solutions Architect – Professional][aws-sap-exam] exam, and am now an [AWS Certified Systems Architect - Professional][aws-sap-cert].
+On {{ page.date | date_to_long_string }} I passed the [AWS Certified Solutions Architect – Professional][aws-sap-exam] exam, and am now an [AWS Certified Systems Architect - Professional][aws-sap-cert]. This follows me obtaining the [assocciate certification][aws-saa] in June.
 
-I found this exam was difficult and grueling! I started studying for this as soon as I had passed the [Terraform Associate][hc-ta] certification and was studying at every chance I got, in addition to working with AWS almost full time in a new role at work that I had started in August. My primary study material of choice for the exam was an excellent training course by [Adrian Cantrill][cantrill].
+I found this exam was difficult and grueling! I started studying in earnest for this as soon as I had passed the [Terraform Associate][hc-ta] certification and was studying at every chance I got, in addition to working with AWS almost full time in a new role at work that I had started in August. My primary study material of choice for the exam was an excellent training course by [Adrian Cantrill][cantrill].
 
-Some of the resources I used to help fill the knowledge gaps I needed to pass this exam were:
+Some of the resources I used to help provide the knowledge and skills I needed to pass this exam were:
 
 * Practical experience through working professionally with AWS
 * Adrian Cantrill's exam specific [AWS training course][cantrill-sap-course]
@@ -30,3 +30,4 @@ The exam covered many different topics, and near the end I found myself overthin
 [cantrill-sap-course]: https://learn.cantrill.io/p/aws-certified-solutions-architect-professional
 [tutorialsdojo-sap]: https://portal.tutorialsdojo.com/courses/aws-certified-solutions-architect-professional-practice-exams/
 [hc-ta]: {% link _posts/2020-10-19-hashicorp-certified-terraform-associate.md %}
+[aws-saa]: {% link _posts/2020-06-19-aws-certified-systems-architect-associate.md %}
