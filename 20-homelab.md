@@ -22,7 +22,7 @@ stats:
     value: "{{ site.data.misc.stats.homelab.overhauls }}"
 ---
 
-A homelab (in the context of IT) is a learning environment at home for IT equipment and systems that can be expermiented with safely. This can provide useful experience with technology that you might not otherwise be able to get in your current role and can provide personal growth as well as allowing you to run personal projects at home or even as a hobby in it's own right.
+A homelab (in the context of IT) is a learning environment at home for IT equipment and systems that can be experimented with safely. This can provide useful experience with technology that you might not otherwise be able to get in your current role and can provide personal growth as well as allowing you to run personal projects at home or even as a hobby in it's own right.
 
 In {{ site.data.misc.year_started.homelab }} I established a homelab primarily to help with my goal at the time of building my knowledge and skills to be able to move into a Systems Administration role which I met in {{ site.data.misc.year_started.sysadmin }}. The long term goal at the moment is to provide an environment that is at least semi-autonomous in maintaining itself. I currently use this primarily for running some home services, most notably being my personal data storage, but still use this for learning and experimenting with new technologies.
 
