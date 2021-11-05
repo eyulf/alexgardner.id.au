@@ -58,7 +58,7 @@ Instead of this which the guides wanted. (lockscreen.password_type was missing)
 
 {% include blog_image.html image="expected-pin-db" format="jpg" alt="Expected Pin DB Layout" %}
 
-Attempting to fix this from another angle I then went looking for the password hash, if I couldn't set the lockscreen to slide unlock, I could at least try to bruteforce the PIN. I located the hash in /data/system/password.key. While looking for it I noticed something else...
+Attempting to fix this from another angle I then went looking for the password hash, if I couldn't set the lock screen to slide unlock, I could at least try to brute-force the PIN. I located the hash in /data/system/password.key. While looking for it I noticed something else...
 
 ```
 ~ # ls /data/system
@@ -86,7 +86,7 @@ sqlite> select * from locksettings;
 17|lockscreen.passwordhistory|0|
 ```
 
-Sure enough I had found what I was looking for initially (and also the salt in case I really did want to bruteforce the PIN). So just update what I need and verify change.
+Sure enough, I had found what I was looking for initially (and also the salt in case I really did want to brute-force the PIN). So just update what I need and verify the change.
 
 ```
 sqlite> update locksettings set value=65536 where name='lockscreen.password_type';
@@ -104,10 +104,10 @@ Reboot the phone and bam, slide unlock!
 
 ## TL;DR
 
-1. Place Android based phone into debug mode ([CWM][clockwork-mod] helps)
+1. Place Android-based phone into debug mode ([CWM][clockwork-mod] helps)
 2. Mount /system at least
 3. Plug into computer running adb
-4. Run following commands
+4. Run the following commands
 
 ```
 adb shell
@@ -120,7 +120,7 @@ adb reboot
 
 Result: Slide-lock 'protected' phone
 
-Obligatory disclaimers: Don't use this on any device you don't have explicit authorization to do this on. Also this has only been tested with CyagenMod 10.1 on a Samsung Galaxy S3
+Obligatory disclaimers: Don't use this on any device you don't have explicit authorization to do this on. Also, this has only been tested with CyagenMod 10.1 on a Samsung Galaxy S3
 
 [xda-developers-forum]:   https://forum.xda-developers.com/showthread.php?t=1409304
 [spreitzenbarth-article]: https://forensics.spreitzenbarth.de/2012/02/28/cracking-pin-and-password-locks-on-android/

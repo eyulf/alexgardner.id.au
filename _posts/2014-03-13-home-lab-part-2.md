@@ -12,6 +12,6 @@ It's been a while since I've done an update on my HomeLab, and there have been c
 
 {% include blog_image.html image="lab2-rack" format="jpg" alt="My current Home-Lab Rack" %}
 
-The labels in the above picture are wrong as I've overhauled my internal domain. A recent addition is the UPS I purchased shortly after the last homelab post. Currently my lab is using ~90 watts power (~2.16 kWh/day). I've also made up a quick network map which is below.
+The labels in the above picture are wrong as I've overhauled my internal domain. A recent addition is the UPS I purchased shortly after the last homelab post. Currently, my lab is using ~90 watts of power (~2.16 kWh/day). I've also made up a quick network map which is below.
 
 {% include blog_image.html image="lab2-map" format="jpg" alt="My current Home-Lab Network" %}

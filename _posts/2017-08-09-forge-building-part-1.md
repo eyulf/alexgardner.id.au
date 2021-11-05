@@ -8,17 +8,17 @@ categories: [Crafting Re-Enactment Blacksmithing]
 titleimage: forge-research
 ---
 
-I've recently decided to build a blacksmithing forge, and wanted to make it as historically accurate as possible. This is so that I can use it at re-enactment events, showcasing how blacksmithing would have occurred in that time period. Like most things re-enactment, the first port of call to build accuracy is through researching. My selected time period is approximately 1350-1370.
+I've recently decided to build a blacksmithing forge and wanted to make it as historically accurate as possible. This is so that I can use it at re-enactment events, showcasing how blacksmithing would have occurred in that time period. Like most things re-enactment, the first port of call to build accuracy is through researching. My selected time period is approximately 1350-1370.
 
-The complete forging setup I'll be building contains 4 major parts. The first part is the forge itself, which contains a firebox used for the fire. The second is the bellows, which provides a constant stream of air to the firebox. The third is the Anvil used for performing the forging itself. And lastly a grind stone to further refine any blade edges or shapes as needed.
+The complete forging setup I'll be building contains 4 major parts. The first part is the forge itself, which contains a firebox used for the fire. The second is the bellows, which provides a constant stream of air to the firebox. The third is the Anvil used for performing the forging itself. And lastly, a grindstone to further refine any blade edges or shapes as needed.
 
-This post is simply detailing the sources I've used to inspire the design I'll be using. Other design considerations include ensuring the completed forge is resilient, as I have no desire to constantly repair this. A further consideration is portability, as I'll be transporting this to and from events.
+This post is simply detailing the sources I've used to inspire the design I'll be using. Other design considerations include ensuring the completed forge is resilient, as I have no desire to constantly repair this. A further consideration is its portability, as I'll be transporting this to events.
 
-Many of the sources are from manuscripts, I've made liberal use of the [larsdatter website][larsdatter] for locating links to various sources. This list is not extensive, and may be updated from time to time as I discover new sources.
+Many of the sources are from manuscripts, I've made liberal use of the [larsdatter website][larsdatter] for locating links to various sources. This list is not extensive and may be updated from time to time as I discover new sources.
 
 ## Forge/Firebox
 
-Most sources which depict blacksmithing only show permanent stone forges. The only sources for a portable forge I have found, show a large wooden table with large divider on one side. I've elected to be a bit more practical with my firebox, however I will try and incorporate these elements into the frame for the firebox.
+Most sources that depict blacksmithing only show permanent stone forges. The only sources for a portable forge I have found, show a large wooden table with a large divider on one side. I've elected to be a bit more practical with my firebox, however, I will try and incorporate these elements into the frame for the firebox.
 
 **Sources**
 
@@ -60,7 +60,7 @@ Many of the sources for the anvil are the same as the sources for the bellows, a
 
 ## Grindstone
 
-The depicted grindstones are all large, mounted in a wooden frame, and hand operated. Due to the size this would require an assistant. My plan is to use a smaller grindstone which can be used both by hand and foot.
+The depicted grindstones are all large, mounted in a wooden frame, and hand-operated. Due to the size, this would require an assistant. My plan is to use a smaller grindstone that can be used both by hand and foot.
 
 **Sources**
 - [A grindstone turned by two men while a third man sharpens a knife, the Luttrell Psalter][grind-1] (Brit. Lib. Add. 42130, fol. 78v), c. 1325-1340

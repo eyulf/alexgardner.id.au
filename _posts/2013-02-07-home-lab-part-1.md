@@ -8,7 +8,7 @@ categories: [Homelab]
 titleimage: homelab1
 ---
 
-Something I've been working on for the past year or so is getting a home-lab setup for playing around with stuff. This is the first post on what will hopefully become a semi regular update. This is currently what it looks like.
+Something I've been working on for the past year or so is getting a home-lab setup for playing around with stuff. This is the first post on what will hopefully become a semi-regular update. This is currently what it looks like.
 
 {% include blog_image.html image="lab1" format="jpg" alt="My current Home-Lab" %}
 
@@ -33,6 +33,6 @@ Specs are as follows.
 * Billion 7800N Modem/Router
     * Currently used as a Wireless access point
 
-Currently I am using the Proxmox whitebox as my main VM environment. I currently use it to run various network services including, but not limited to, DNS, DHCP, Monitoring, Log collection, Ticketing and Website development. I am planning on adding another VM server in at some point and build a Windows based lab environment (the current linux based systems will remain as my core network services).
+Currently, I am using the Proxmox white box as my main VM environment. I currently use it to run various network services including, but not limited to, DNS, DHCP, Monitoring, Log collection, Ticketing and Website development. I am planning on adding another VM server at some point and building a Windows-based lab environment (the current Linux based systems will remain as my core network services).
 
-The Microserver is currently empty awaiting some time for me to re-purpose it, I'll probably end up putting Security Onion onto it. I am considering creating a whitebox NAS to replace my current QNAP, 4 disks is not enough and I'd prefer something I can rackmount.
+The Microserver is currently empty awaiting some time for me to re-purpose it, I'll probably end up putting Security Onion onto it. I am considering creating a white box NAS to replace my current QNAP, 4 disks is not enough and I'd prefer something I can rackmount.
