@@ -23,6 +23,6 @@
 <script src="{{ "/assets/js/util.js" | absolute_url }}"></script>
 <script src="{{ "/assets/js/modernizr-webp.js" | absolute_url }}"></script>
 <script src="{{ "/assets/js/main.js" | absolute_url }}"></script>
-{% if page.image_row %}
+{% if page.image_row or page.pageimages %}
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" crossorigin="anonymous"></script>
 {% endif %}
