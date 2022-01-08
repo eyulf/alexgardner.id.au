@@ -31,6 +31,9 @@ These new hypervisors will serve as the basis for a future Kubernetes cluster, p
 
 This sort of sets up a mini series for the journey of this homelab refresh. I'll update this page with links to future posts so that this can serve as an index for these with the context above.
 
+1. [Home-Lab Refresh: Hypervisors][homelab-refresh-hypervisor]
+
 [homelab-part3]:  {% link _posts/2017-05-21-home-lab-part-3.md %}
 [sth-project-tmm]: https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
 [sth]: https://www.servethehome.com/
+[homelab-refresh-hypervisor]:  {% link _posts/2022-01-08-home-lab-refresh-hypervisor.md %}
