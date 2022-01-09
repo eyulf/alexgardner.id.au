@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Home-Lab Refresh: Hypervisors"
-date: 2022-01-08 15:24 +1100
+date: 2022-01-09 15:24 +1100
 permalink: /blog/:title/
 comments: true
 categories: [Homelab]
@@ -10,11 +10,15 @@ titleimage: homelab-refresh-hypervisor
 
 In the next step of my [Homelab Refresh][homelab-refresh], the Hardware neeeded to have an OS installed. I've normally used CentOS as my go-to server OS, however, following the [death of CentOS 8][centos-8-death], I thought I'd try my hand with Debian.
 
+## Debian
+
 I installed Debian manually off a USB on each node, setting up the bare minimum needed to SSH into a uniquely named host. For actual server configuration work, I used Ansible to configure the hosts as KVM hypervisors.
 
 Since there is currently no DNS server configured as part of this refresh, the KVM hypervisors are addressed directly by IPs, the IP addresses themselves are assigned via a DHCP server running on my Mikrotik router.
 
-I've published the [intial ansible configuration][ansible-commit] I made to setup KVM on these hosts. With this config, setting up a new SSH ready KVM node was quite easy.
+## Ansible
+
+I've settled on using Ansible to perform the majority of the configuration for the non transiant servers within the refreshed Homelab, Hypervisors included. I've published the [intial Ansible configuration][ansible-commit] that I used to setup KVM on these hosts. With this config, setting up a new SSH ready KVM node was quite easy.
 
 ```
 $ ansible-playbook kvm-hypervisors.yml -i production -l kvm3
@@ -157,8 +161,35 @@ PLAY RECAP *********************************************************************
 kvm3                       : ok=35   changed=21   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
 ```
 
-Once the ansible playbook was run, the hosts are ready to have VMs configured.
+Once the ansible playbook was run, the Hypervisors are _almost_ ready to run VMs.
+
+## Terraform
+
+The final KVM configuration steps are perform by Terraform. Since Terraform is being used to provision the VMs, it is ocnvinient to have Terraform perform the final tweaks for KVM to be usable, configuring the KVM pool, network and OS images.
+
+This allows Terraform to have easy access to these relevent bits of configuration when provisioning VMs. 've published the [intial Terraform configuration][terraform-commit] that I used, there is also a custom Terraform module to create the VMs, however this is not currently being used.
+
+```
+$ terraform1.1 plan
+libvirt_pool.kvm1: Refreshing state... [id=c68092b3-19f5-4f3b-b8d2-b1cd09ceee13]
+libvirt_network.kvm1: Refreshing state... [id=873acc52-5d6f-436d-b066-117171349b7a]
+libvirt_volume.kvm1_os_images["debian_10"]: Refreshing state... [id=/var/lib/libvirt/images/debian-10.qcow2]
+libvirt_volume.kvm1_os_images["centos_7"]: Refreshing state... [id=/var/lib/libvirt/images/centos-7.qcow2]
+libvirt_pool.kvm2: Refreshing state... [id=d4ab806c-1052-4970-b71c-90ef1e7a3337]
+libvirt_network.kvm2: Refreshing state... [id=b7db98a6-15f2-4de5-b303-25b97575901b]
+libvirt_volume.kvm2_os_images["centos_7"]: Refreshing state... [id=/var/lib/libvirt/images/centos-7.qcow2]
+libvirt_volume.kvm2_os_images["debian_10"]: Refreshing state... [id=/var/lib/libvirt/images/debian-10.qcow2]
+libvirt_pool.kvm3: Refreshing state... [id=ff2b87cf-09ec-4a5f-a86b-5fb3adb40ed2]
+libvirt_network.kvm3: Refreshing state... [id=1d72216a-6498-46f5-ab83-883ba6a06d4e]
+libvirt_volume.kvm3_os_images["centos_7"]: Refreshing state... [id=/var/lib/libvirt/images/centos-7.qcow2]
+libvirt_volume.kvm3_os_images["debian_10"]: Refreshing state... [id=/var/lib/libvirt/images/debian-10.qcow2]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+```
 
 [homelab-refresh]:  {% link _posts/2022-01-07-home-lab-refresh.md %}
 [centos-8-death]: https://arstechnica.com/gadgets/2020/12/centos-shifts-from-red-hat-unbranded-to-red-hat-beta/
-[ansible-commit]: https://github.com/eyulf/homelab-infrastructure/tree/282f387201a18f52cf4a2a9e77247b396ee0c378
+[ansible-commit]: https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/ansible
+[terraform-commit]: https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/terraform

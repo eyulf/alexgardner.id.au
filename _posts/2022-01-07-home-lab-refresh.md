@@ -36,4 +36,4 @@ This sort of sets up a mini series for the journey of this homelab refresh. I'll
 [homelab-part3]:  {% link _posts/2017-05-21-home-lab-part-3.md %}
 [sth-project-tmm]: https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
 [sth]: https://www.servethehome.com/
-[homelab-refresh-hypervisor]:  {% link _posts/2022-01-08-home-lab-refresh-hypervisor.md %}
+[homelab-refresh-hypervisor]:  {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
