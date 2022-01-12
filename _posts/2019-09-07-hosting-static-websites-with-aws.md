@@ -10,7 +10,7 @@ titleimage: website-aws
 
 I've recently made another significant change to this website, which is also not as visible as my previous [changes to the workflow][workflow]. The hosting has been moved from a self-managed VPS to AWS, using Terraform for setup and Gitlab for CI.
 
-To update from my workflow post, for the Continuous Integration (CI), I am using [Gitlab CI][gitlab-ci] instead of [Buildbot][buildbot]. This move was fairly simple, as I’m now using Gitlab for my git server needs, and am slowly moving away from my Self Managed instance to their SaaS offering for ease of use. The CI included in Gitlab (SaaS or Self Managed) is a lot easier to use, being defined entirely in yaml, I’ll get to the setup of this further in this post.
+To update from my workflow post, for the Continuous Integration (CI), I am using [Gitlab CI][gitlab-ci] instead of [Buildbot][buildbot]. This move was fairly simple, as I’m now using Gitlab for my git server needs, and am slowly moving away from my Self Managed instance to their SaaS offering for ease of use. The CI included in Gitlab (SaaS or Self Managed) is a lot easier to use, being defined entirely in yaml. I’ll get to the setup of this further in this post.
 
 The AWS hosting is a fairly standard setup for static websites, the files are on S3 buckets and I am using Cloudfront for both the domain and SSL, which is also provided by AWS. I decided that this would be a good chance to learn Terraform a bit deeper, and have provisioned the whole thing using Terraform. Both using AWS for static website hosting, and configuring it using Terraform has been documented quite a bit online, my own take on the Terraform configuration is below.
 

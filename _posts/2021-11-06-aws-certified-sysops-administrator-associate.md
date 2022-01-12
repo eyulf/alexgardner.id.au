@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AWS Certified SysOps Administrator - Associate"
-date: 2021-10-25 19:30 +1100
+date: 2022-11-06 19:30 +1100
 permalink: /blog/:title/
 comments: true
 categories: [AWS Cloud Certification]

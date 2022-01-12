@@ -8,7 +8,7 @@ categories: [Homelab]
 titleimage: homelab-refresh-hypervisor
 ---
 
-In the next step of my [Homelab Refresh][homelab-refresh], the Hardware neeeded to have an OS installed. I've normally used CentOS as my go-to server OS, however, following the [death of CentOS 8][centos-8-death], I thought I'd try my hand with Debian.
+In the next step of my [Homelab Refresh][homelab-refresh], the Hardware needed to have an OS installed. I've normally used CentOS as my go-to server OS, however, following the [death of CentOS 8][centos-8-death], I thought I'd try my hand with Debian.
 
 ## Debian
 
@@ -18,10 +18,10 @@ Since there is currently no DNS server configured as part of this refresh, the K
 
 ## Ansible
 
-I've settled on using Ansible to perform the majority of the configuration for the non transiant servers within the refreshed Homelab, Hypervisors included. I've published the [intial Ansible configuration][ansible-commit] that I used to setup KVM on these hosts. With this config, setting up a new SSH ready KVM node was quite easy.
+I've settled on using Ansible to perform the majority of the configuration for the non transient servers within the refreshed Homelab, Hypervisors included. I've published the [initial Ansible configuration][ansible-commit] that I used to set-up KVM on these hosts. With this configuration, setting up a new SSH ready KVM node was quite easy.
 
 ```
-$ ansible-playbook kvm-hypervisors.yml -i production -l kvm3
+[user@workstation ansible]$ ansible-playbook kvm-hypervisors.yml -i production -l kvm3
 
 PLAY [kvm_hypervisors] ************************************************************************************************
 
@@ -161,16 +161,16 @@ PLAY RECAP *********************************************************************
 kvm3                       : ok=35   changed=21   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
 ```
 
-Once the ansible playbook was run, the Hypervisors are _almost_ ready to run VMs.
+Once the Ansible playbook was run, the Hypervisors are _almost_ ready to run VMs.
 
 ## Terraform
 
-The final KVM configuration steps are perform by Terraform. Since Terraform is being used to provision the VMs, it is ocnvinient to have Terraform perform the final tweaks for KVM to be usable, configuring the KVM pool, network and OS images.
+The final KVM configuration steps are perform by Terraform. Since Terraform is being used to provision the VMs, it is convenient to have Terraform perform the final tweaks for KVM to be usable, configuring the KVM pool, network and OS images.
 
-This allows Terraform to have easy access to these relevent bits of configuration when provisioning VMs. 've published the [intial Terraform configuration][terraform-commit] that I used, there is also a custom Terraform module to create the VMs, however this is not currently being used.
+This allows Terraform to have easy access to these relevant bits of configuration when provisioning VMs. I've published the [initial Terraform configuration][terraform-commit] that I used, there is also a custom Terraform module to create the VMs, however this is not currently being used.
 
 ```
-$ terraform1.1 plan
+[user@workstation hypervisors]$ terraform1.1 plan
 libvirt_pool.kvm1: Refreshing state... [id=c68092b3-19f5-4f3b-b8d2-b1cd09ceee13]
 libvirt_network.kvm1: Refreshing state... [id=873acc52-5d6f-436d-b066-117171349b7a]
 libvirt_volume.kvm1_os_images["debian_10"]: Refreshing state... [id=/var/lib/libvirt/images/debian-10.qcow2]
@@ -189,7 +189,10 @@ No changes. Your infrastructure matches the configuration.
 Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
 ```
 
+Next up: [setting up DNS][homelab-dns]
+
 [homelab-refresh]:  {% link _posts/2022-01-07-home-lab-refresh.md %}
-[centos-8-death]: https://arstechnica.com/gadgets/2020/12/centos-shifts-from-red-hat-unbranded-to-red-hat-beta/
-[ansible-commit]: https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/ansible
+[centos-8-death]:   https://arstechnica.com/gadgets/2020/12/centos-shifts-from-red-hat-unbranded-to-red-hat-beta/
+[ansible-commit]:   https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/ansible
 [terraform-commit]: https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/terraform
+[homelab-dns]:      {% link _posts/2022-01-13-home-lab-refresh-dns.md %}

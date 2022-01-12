@@ -22,7 +22,7 @@ Some of the resources I used to help provide the knowledge and skills I needed t
 
 I paced myself well through the 3-hour exam, ended up with about 50 minutes of time for reviewing questions, and finished the exam with just under 20 minutes left on the clock. This was actually well ahead of my planned exam schedule to take 50 minutes per 25 questions with 30 minutes of review time.
 
-The exam covered many different topics, and near the end I found myself overthinking questions, generally doubting myself, and thought it very likely that I would fail to pass. It was a huge relief to learn that I passed, and I even got to celebrate it on the day at work's Christmas party.
+The exam covered many different topics, and near the end I found myself over thinking questions, generally doubting myself, and thought it very likely that I would fail to pass. It was a huge relief to learn that I passed, and I even got to celebrate it on the day at work's Christmas party.
 
 [aws-sap-exam]:        https://aws.amazon.com/certification/certified-solutions-architect-professional/
 [aws-sap-cert]:        {{ site.data.links.certs.aws-sap }}
