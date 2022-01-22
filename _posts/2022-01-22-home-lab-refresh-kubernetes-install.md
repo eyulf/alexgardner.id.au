@@ -1103,7 +1103,6 @@ admin_users:
 
 ansible/group_vars/[k8s_controllers.yml][k8s_controllers-yml]
 ```
-k8s_controllers.yml
 ---
 kubernetes_clients_hosts_list:
   - '192.168.12.100'

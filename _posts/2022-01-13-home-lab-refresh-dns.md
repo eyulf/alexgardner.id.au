@@ -30,8 +30,61 @@ Setting this up has a few steps:
 
 The first step for deploying the DNS servers is to provision them using the Terraform I previously made. This is fairly straight forward and is done using a new directory so that the Terraform state is separated. I've published the [Terraform configuration][terraform-commit] that I've used for deploying the DNS servers.
 
+### Variables
+
+terraform/infrastructure/core_services/[terraform.tfvars][terraform-tfvars]
 ```
-[user@workstation core_services]$ terraform1.1 apply
+hypervisor_hosts = {
+  "kvm1" = {
+    "ip"   = "192.168.10.21",
+    "user" = "root",
+  },
+  "kvm2" = {
+    "ip"   = "192.168.10.22",
+    "user" = "root",
+  },
+  "kvm3" = {
+    "ip"   = "192.168.10.23",
+    "user" = "root",
+  },
+}
+
+virtual_machines = {
+  "dns1" = {
+    "ip"   = "192.168.10.31",
+    "os"   = "debian_10"
+  },
+  "dns2" = {
+    "ip"   = "192.168.10.32",
+    "os"   = "debian_10"
+  },
+  "dns3" = {
+    "ip"   = "192.168.10.33",
+    "os"   = "debian_10"
+  },
+}
+
+domain = "example.domain.local"
+
+host_admin_users = {
+  "adminuser" = "ssh-rsa AAAAB[...truncated...]NZe19",
+}
+
+network_gateway_ip     = "192.168.10.1"
+network_nameserver_ips = "192.168.10.31, 192.168.10.32, 192.168.10.33"
+```
+
+### Commands
+```
+cd terraform/infrastructure/core_services
+terraform1.1 apply
+```
+
+<div class="blog_post_output hidden">
+
+<h3 id="output">Output</h3>
+<p>(Click to show/hide the output)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user@workstation core_services]$ terraform1.1 apply
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with
 the following symbols:
@@ -376,16 +429,75 @@ module.dns3.libvirt_domain.main: Creation complete after 1s [id=6c78f86b-efc3-42
 module.dns2.libvirt_domain.main: Creation complete after 1s [id=650d5c0a-cb0e-41aa-8846-92f06c8552e6]
 
 Apply complete! Resources: 12 added, 0 changed, 0 destroyed.
-```
+</code></pre></div></div>
+</div>
 
 ## Ansible - Node 1
 
-The next step is to run Ansible on the node selected to bootstrap the Galera cluster. I've published the [Ansible configuration][ansible-commit] that I used to do this. 
+The next step is to run Ansible on the node selected to bootstrap the Galera cluster. I've published the [Ansible configuration][ansible-commit] that I used to do this. This initial run also creates the PowerDNS database in MariaDB and imports the database schema.
 
-One thing to note here is that the server this initially runs on needs to have the `mariadb_galera_bootstrap_host` variable in the [ansible/group_vars/dns_servers.yml][ansible setting] file match the hostname reported by `ansible_facts.hostname`, as this prevents it from restarting MariaDB. This initial run also creates the PowerDNS database in MariaDB and imports the database schema.
+### Variables
 
+ansible/group_vars/[all.yml][all-yml]
 ```
-[user@workstation ansible]$ ansible-playbook dns-servers.yml -i production -l dns1
+---
+domain: example.domain.local
+email: adminuser@example.domain.local
+
+nameservers:
+  - '192.168.10.1'
+network_subnets:
+  - '192.168.10.0/24'
+  - '192.168.11.0/24'
+  - '192.168.12.0/24'
+
+firewall_servers_subnet: 192.168.10.0/24
+firewall_wireless_subnet: 192.168.11.0/24
+firewall_clients_subnet: 192.168.12.0/24
+
+timezone: Australia/Sydney
+
+admin_users:
+  - adminuser
+```
+
+ansible/group_vars/[dns_servers.yml][dns_servers-yml]
+```
+---
+debian_version: buster
+mariadb_version: mariadb-10.5
+mariadb_root_password: MySuperSecretPassword
+#checkov:skip=CKV_SECRET_6:Unencrypted secrets are git-ignored
+
+mariadb_galera_auth_user: mariabackup
+mariadb_galera_auth_password: MySuperSecretPassword
+#checkov:skip=CKV_SECRET_6:Unencrypted secrets are git-ignored
+mariadb_galera_bootstrap_host: dns1
+mariadb_galera_hosts_list:
+  - '192.168.10.31'
+  - '192.168.10.32'
+  - '192.168.10.33'
+
+powerdns_version: '45'
+powerdns_mysql_password: MySuperSecretPassword
+#checkov:skip=CKV_SECRET_6:Unencrypted secrets are git-ignored
+powerdns_forward_recursors: 192.168.10.1;1.0.0.1;1.1.1.1
+powerdns_foward_zones:
+  - 'example.domain.local'
+  - '10.168.192.in-addr.arpa'
+```
+
+### Commands
+```
+cd ansible
+ansible-playbook -i production dns-servers.yml -l dns1
+```
+
+<div class="blog_post_output hidden">
+
+<h3 id="output">Output</h3>
+<p>(Click to show/hide the output)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user@workstation ansible]$ ansible-playbook -i production dns-servers.yml -l dns1
 
 PLAY [dns_servers] ****************************************************************************************************
 
@@ -596,7 +708,8 @@ changed: [dns1]
 
 PLAY RECAP ************************************************************************************************************
 dns1                       : ok=56   changed=38   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
-```
+</code></pre></div></div>
+</div>
 
 ## Manually Bootstrap Galera
 
@@ -618,8 +731,17 @@ adminuser@dns1:~$ sudo mysql -e "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_s%';"
 
 Once Galera has been bootstrapped, Ansible can be run on the remaining hosts. Since the remaining hosts are not the bootstrap host, Ansible will restart MariaDB on them, which will bring them into the Galera cluster.
 
+### Commands
 ```
-[user@workstation ansible]$ ansible-playbook dns-servers.yml -i production
+cd ansible
+ansible-playbook -i production dns-servers.yml
+```
+
+<div class="blog_post_output hidden">
+
+<h3 id="output">Output</h3>
+<p>(Click to show/hide the output)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user@workstation ansible]$ ansible-playbook -i production dns-servers.yml
 
 PLAY [dns_servers] ****************************************************************************************************
 
@@ -997,7 +1119,8 @@ PLAY RECAP *********************************************************************
 dns1                       : ok=51   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 dns2                       : ok=50   changed=34   unreachable=0    failed=0    skipped=7    rescued=0    ignored=0   
 dns3                       : ok=50   changed=34   unreachable=0    failed=0    skipped=7    rescued=0    ignored=0   
-```
+</code></pre></div></div>
+</div>
 
 Once Ansible is completed, confirm that the Galera cluster is healthy.
 
@@ -1049,7 +1172,7 @@ dns1.example.domain.local. 900  IN  A 192.168.10.21
 ;; MSG SIZE  rcvd: 70
 ```
 
-Next up: [Kubernetes Installation][homelab-k8s-install]
+Next up: [Kubernetes Installation][homelab-refresh-k8s-install]
 
 [homelab-kvm]:                 {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
 [homelab-refresh]:             {% link _posts/2022-01-07-home-lab-refresh.md %}
@@ -1061,4 +1184,6 @@ Next up: [Kubernetes Installation][homelab-k8s-install]
 [ansible-commit]:   https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible
 [terraform-commit]: https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/terraform
 
-[ansible-settings]: https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible/group_vars/dns_servers.yml.enc
+[terraform-tfvars]: https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/terraform/infrastructure/core_services/terraform.tfvars.enc
+[all-yml]:          https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible/group_vars/all.yml.enc
+[dns_servers-yml]:  https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible/group_vars/dns_servers.yml.enc

@@ -20,8 +20,40 @@ Since there is currently no DNS server configured as part of this refresh, the K
 
 I've settled on using Ansible to perform the majority of the configuration for the non transient servers within the refreshed Homelab, Hypervisors included. I've published the [initial Ansible configuration][ansible-commit] that I used to set-up KVM on these hosts. With this configuration, setting up a new SSH ready KVM node was quite easy.
 
+### Variables
+ansible/group_vars/[all.yml][all-yml]
 ```
-[user@workstation ansible]$ ansible-playbook kvm-hypervisors.yml -i production -l kvm3
+---
+# Global variables
+domain: example.domain.local
+email: adminuser@example.domain.local
+
+# Nameservers
+nameservers:
+  - '192.168.10.1'
+
+# Client Subnet
+firewall_clients_subnet: 192.168.12.0/24
+
+# Timezone
+timezone: Australia/Sydney
+
+# Admin users
+admin_users:
+  - adminuser
+```
+
+### Commands
+```
+cd ansible
+ansible-playbook -i production kvm-hypervisors.yml -l kvm3
+```
+
+<div class="blog_post_output hidden">
+
+<h3 id="output">Output</h3>
+<p>(Click to show/hide the output)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user@workstation ansible]$ ansible-playbook -i production kvm-hypervisors.yml -l kvm3
 
 PLAY [kvm_hypervisors] ************************************************************************************************
 
@@ -159,7 +191,8 @@ changed: [kvm3]
 
 PLAY RECAP ************************************************************************************************************
 kvm3                       : ok=35   changed=21   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
-```
+</code></pre></div></div>
+</div>
 
 Once the Ansible playbook was run, the Hypervisors are _almost_ ready to run VMs.
 
@@ -169,8 +202,36 @@ The final KVM configuration steps are perform by Terraform. Since Terraform is b
 
 This allows Terraform to have easy access to these relevant bits of configuration when provisioning VMs. I've published the [initial Terraform configuration][terraform-commit] that I used, there is also a custom Terraform module to create the VMs, however this is not currently being used.
 
+### Variables
+terraform/infrastructure/hypervisors/[terraform.tfvars][terraform-tfvars]
 ```
-[user@workstation hypervisors]$ terraform1.1 plan
+hypervisor_hosts = {
+  "kvm1" = {
+    "ip"   = "192.168.10.21",
+    "user" = "root",
+  },
+  "kvm2" = {
+    "ip"   = "192.168.10.22",
+    "user" = "root",
+  },
+  "kvm3" = {
+    "ip"   = "192.168.10.23",
+    "user" = "root",
+  },
+}
+```
+
+### Commands
+```
+cd terraform/infrastructure/hypervisors
+terraform1.1 plan
+```
+
+<div class="blog_post_output hidden">
+
+<h3 id="output">Output</h3>
+<p>(Click to show/hide the output)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user@workstation hypervisors]$ terraform1.1 plan
 libvirt_pool.kvm1: Refreshing state... [id=c68092b3-19f5-4f3b-b8d2-b1cd09ceee13]
 libvirt_network.kvm1: Refreshing state... [id=873acc52-5d6f-436d-b066-117171349b7a]
 libvirt_volume.kvm1_os_images["debian_10"]: Refreshing state... [id=/var/lib/libvirt/images/debian-10.qcow2]
@@ -187,12 +248,18 @@ libvirt_volume.kvm3_os_images["debian_10"]: Refreshing state... [id=/var/lib/lib
 No changes. Your infrastructure matches the configuration.
 
 Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
-```
+</code></pre></div></div>
+</div>
 
-Next up: [setting up DNS][homelab-dns]
+Next up: [setting up DNS][homelab-refresh-dns]
 
-[homelab-refresh]:  {% link _posts/2022-01-07-home-lab-refresh.md %}
+[homelab-refresh]:     {% link _posts/2022-01-07-home-lab-refresh.md %}
+[homelab-refresh-dns]: {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
+
 [centos-8-death]:   https://arstechnica.com/gadgets/2020/12/centos-shifts-from-red-hat-unbranded-to-red-hat-beta/
+
 [ansible-commit]:   https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/ansible
 [terraform-commit]: https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/terraform
-[homelab-dns]:      {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
+
+[terraform-tfvars]:    https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/terraform/infrastructure/hypervisors/terraform.tfvars.enc
+[all-yml]:     https://github.com/eyulf/homelab-infrastructure/tree/6c2a5630bc11e927b8dcbde62a261c4e9ee52142/ansible/group_vars/all.yml.enc
