@@ -26,3 +26,6 @@
 {% if page.image_row or page.pageimages %}
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" crossorigin="anonymous"></script>
 {% endif %}
+{% if page.id %}
+<script src="{{ "/assets/js/hide-blog-post-output.js" | absolute_url }}"></script>
+{% endif %}

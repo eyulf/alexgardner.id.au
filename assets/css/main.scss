@@ -1967,3 +1967,14 @@
             }
         }
     }
+
+
+/* Hide blog post output */
+
+    div.hidden > div > div > pre > code {
+      display: none;
+    }
+
+    div.visible > div > div > pre > code {
+      display: block;
+    }

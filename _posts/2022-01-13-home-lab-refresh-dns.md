@@ -1049,12 +1049,16 @@ dns1.example.domain.local. 900  IN  A 192.168.10.21
 ;; MSG SIZE  rcvd: 70
 ```
 
-Next up: Kubernetes
+Next up: [Kubernetes Installation][homelab-k8s-install]
 
-[homelab-kvm]:      {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
-[homelab-refresh]:  {% link _posts/2022-01-07-home-lab-refresh.md %}
-[pdns-api]:         https://doc.powerdns.com/authoritative/http-api/index.html
-[k8s-ext-dns]:      https://github.com/kubernetes-sigs/external-dns
+[homelab-kvm]:                 {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
+[homelab-refresh]:             {% link _posts/2022-01-07-home-lab-refresh.md %}
+[homelab-refresh-k8s-install]: {% link _posts/2022-01-22-home-lab-refresh-kubernetes-install.md %}
+
+[pdns-api]:    https://doc.powerdns.com/authoritative/http-api/index.html
+[k8s-ext-dns]: https://github.com/kubernetes-sigs/external-dns
+
 [ansible-commit]:   https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible
-[ansible-settings]: https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible/group_vars/dns_servers.yml.enc
 [terraform-commit]: https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/terraform
+
+[ansible-settings]: https://github.com/eyulf/homelab-infrastructure/tree/080015ae25e9990a32d1da522206164374ff5061/ansible/group_vars/dns_servers.yml.enc

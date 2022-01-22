@@ -31,12 +31,14 @@ These new hypervisors will serve as the basis for a future Kubernetes cluster, p
 
 This sort of sets up a mini series for the journey of this homelab refresh. I'll update this page with links to future posts so that this can serve as an index for these with the context above. For the purposes of configuration examples throughout this, we will assume the following:
 
-- Domain: example.domain.local
-- Server Network: 192.168.10.0/24
-- wireless Network: 192.168.11.0/24
-- Client Network: 192.168.12.0/24
-- Server Gateway: 192.168.10.1
-- Admin User: adminuser
+```
+Domain:           example.domain.local
+Server Network:   192.168.10.0/24
+wireless Network: 192.168.11.0/24
+Client Network:   192.168.12.0/24
+Server Gateway:   192.168.10.1
+Admin User:       adminuser
+```
 
 The above values are just examples and are not actually used by my homelab.
 
@@ -44,9 +46,12 @@ Further posts in this 'mini series' are:
 
 1. [Home-Lab Refresh: Hypervisors][homelab-refresh-hypervisor]
 1. [Home-Lab Refresh: DNS][homelab-refresh-dns]
+1. [Home-Lab Refresh: Kubernetes Cluster Installation][homelab-refresh-k8s-install]
 
-[homelab-part3]:              {% link _posts/2017-05-21-home-lab-part-3.md %}
-[sth-project-tmm]:            https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
-[sth]:                        https://www.servethehome.com/
-[homelab-refresh-hypervisor]: {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
-[homelab-refresh-dns]:        {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
+[homelab-part3]:   {% link _posts/2017-05-21-home-lab-part-3.md %}
+[sth-project-tmm]: https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
+[sth]:             https://www.servethehome.com/
+
+[homelab-refresh-hypervisor]:  {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
+[homelab-refresh-dns]:         {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
+[homelab-refresh-k8s-install]: {% link _posts/2022-01-22-home-lab-refresh-kubernetes-install.md %}
