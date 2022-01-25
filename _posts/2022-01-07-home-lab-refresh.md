@@ -47,6 +47,7 @@ Further posts in this 'mini series' are:
 1. [Home-Lab Refresh: Hypervisors][homelab-refresh-hypervisor]
 1. [Home-Lab Refresh: DNS][homelab-refresh-dns]
 1. [Home-Lab Refresh: Kubernetes Cluster Installation][homelab-refresh-k8s-install]
+1. [Home-Lab Refresh: Kubernetes Cluster Gitops][homelab-refresh-k8s-gitops]
 
 [homelab-part3]:   {% link _posts/2017-05-21-home-lab-part-3.md %}
 [sth-project-tmm]: https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
@@ -55,3 +56,4 @@ Further posts in this 'mini series' are:
 [homelab-refresh-hypervisor]:  {% link _posts/2022-01-09-home-lab-refresh-hypervisor.md %}
 [homelab-refresh-dns]:         {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
 [homelab-refresh-k8s-install]: {% link _posts/2022-01-22-home-lab-refresh-kubernetes-install.md %}
+[homelab-refresh-k8s-gitops]:  {% link _posts/2022-01-25-home-lab-refresh-kubernetes-gitops.md %}

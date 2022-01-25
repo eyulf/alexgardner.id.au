@@ -2056,7 +2056,7 @@ k8s-worker-03              : ok=53   changed=33   unreachable=0    failed=0    s
 
 ## Kubernetes
 
-There is now a Kubernetes cluster with 3 controller nodes and 3 worker nodes. This is confirmed by going onto one of the controller nodes and running `kubectl get nodes`. Note that the status is showing as `NotReady`, this is because no CNI provider has been set up yet to provide .
+There is now a Kubernetes cluster with 3 controller nodes and 3 worker nodes. This is confirmed by going onto one of the controller nodes and running `kubectl get nodes`. Note that the status is showing as `NotReady`, this is because no CNI provider has been set up yet to provide pod connectivity.
 
 ```
 adminuser@k8s-controller-02:~$ sudo kubectl get nodes
@@ -2069,12 +2069,16 @@ k8s-worker-02       NotReady   <none>                 17s     v1.23.2
 k8s-worker-03       NotReady   <none>                 17s     v1.23.2
 ```
 
-This is ok though, as the cluster itself is up and the API can take commands, leading to the next step which is to set up the gitops workflow so that Kubernetes can be configured via git.
+~~This is ok though, as the cluster itself is up and the API can take commands, leading to the next step which is to set up the gitops workflow so that Kubernetes can be configured via git.~~
 
-Next up: Kubernetes Gitops
+\[Edit\]: This was _not_ actually ok and was a rookie mistake/assumption on my part. It was easy enough to fix though, which was the [first thing I did][homelab-refresh-k8s-network] while setting up the Gitops configuration.
 
-[homelab-refresh]:     {% link _posts/2022-01-07-home-lab-refresh.md %}
-[homelab-refresh-dns]: {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
+Next up: [Kubernetes Gitops][homelab-refresh-k8s-gitops]
+
+[homelab-refresh]:             {% link _posts/2022-01-07-home-lab-refresh.md %}
+[homelab-refresh-dns]:         {% link _posts/2022-01-13-home-lab-refresh-dns.md %}
+[homelab-refresh-k8s-gitops]:  {% link _posts/2022-01-25-home-lab-refresh-kubernetes-gitops.md %}
+[homelab-refresh-k8s-network]: {% link _posts/2022-01-25-home-lab-refresh-kubernetes-gitops.md %}#fixing-the-cluster-networking
 
 [gitops]:          https://about.gitlab.com/topics/gitops/
 [kubeadm-install]: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
