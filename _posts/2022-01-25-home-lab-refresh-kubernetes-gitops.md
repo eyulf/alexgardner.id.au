@@ -363,10 +363,10 @@ While we could use ansible to run this bootstrap process, I wanted to run it man
 ```
 root@k8s-controller-01:~# export GITHUB_TOKEN=supersecretgithubpersonalaccesstoken
 root@k8s-controller-01:~# flux bootstrap github \
->   --owner=eyulf \
->   --repository=homelab \
->   --path=clusters/homelab \
->   --personal
+> --owner=eyulf \
+> --repository=homelab \
+> --path=clusters/homelab \
+> --personal
 ► connecting to github.com
 ► cloning branch "main" from Git repository "https://github.com/eyulf/homelab.git"
 ✔ cloned repository
@@ -433,12 +433,13 @@ Date:   Tue Jan 25 20:31:12 2022
     Reorganise repo and install Flux
 ```
 
-We are now ready to start using flux to automatically deploy resources to Kubernetes. For the first Flux managed configuration we will setup Pi-Hole.
+We are now ready to start using flux to automatically deploy resources to Kubernetes. Before we can deploy any applications we first need to set the Cluster up to securely handle encrypted secrets.
 
-Next up: Kubernetes - Pi-Hole
+Next up: [Kubernetes - Secrets][homelab-refresh-k8s-secrets]
 
 [homelab-refresh]:             {% link _posts/2022-01-07-home-lab-refresh.md %}
 [homelab-refresh-k8s-install]: {% link _posts/2022-01-22-home-lab-refresh-kubernetes-install.md %}
+[homelab-refresh-k8s-secrets]: {% link _posts/2022-01-29-home-lab-refresh-kubernetes-secrets.md %}
 
 [flux]:                       https://fluxcd.io/
 [argo-cd]:                    https://argo-cd.readthedocs.io/en/stable/
