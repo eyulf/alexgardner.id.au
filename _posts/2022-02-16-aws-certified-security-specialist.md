@@ -10,7 +10,7 @@ titleimage: aws-scs
 
 {% include blog_image.html image="aws-scs" format="png" alt="AWS Certified Security - Specialty" %}
 
-On {{ page.date | date_to_long_string }}, I passed the [AWS Certified Security - Specialty][aws-scs-exam] exam, and am now an [AWS Certified Security - Specialty][aws-scs-cert].
+On {{ page.date | date_to_long_string }}, I passed the [AWS Certified Security - Specialty (SCS-C01)][aws-scs-exam] exam, and am now an [AWS Certified Security - Specialty][aws-scs-cert].
 
 Unlike my previous exams, I did not have one specific primary study material. Instead my study resources included formal classroom training, a non-specific training course by [Adrian Cantrill][cantrill], and labs from [Tutorials Dojo][tutorialsdojo]. The specific study resources used were:
 

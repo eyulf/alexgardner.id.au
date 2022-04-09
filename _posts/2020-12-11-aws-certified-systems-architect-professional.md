@@ -8,9 +8,9 @@ categories: [AWS Cloud Certification]
 titleimage: aws-sap
 ---
 
-{% include blog_image.html image="aws-sap" format="png" alt="AWS Certified Solutions Architect – Professional" %}
+{% include blog_image.html image="aws-sap" format="png" alt="AWS Certified Solutions Architect - Professional" %}
 
-On {{ page.date | date_to_long_string }} I passed the [AWS Certified Solutions Architect – Professional][aws-sap-exam] exam, and am now an [AWS Certified Systems Architect - Professional][aws-sap-cert]. This follows me obtaining the [associate certification][aws-saa] in June.
+On {{ page.date | date_to_long_string }} I passed the [AWS Certified Solutions Architect - Professional (SAP-C01)][aws-sap-exam] exam, and am now an [AWS Certified Systems Architect - Professional][aws-sap-cert]. This follows me obtaining the [associate certification][aws-saa] in June.
 
 I found this exam was difficult and gruelling! I started studying in earnest for this as soon as I had passed the [Terraform Associate][hc-ta] certification and was studying at every chance I got, in addition to working with AWS almost full time in a new role at work that I had started in August. My primary study material of choice for the exam was an excellent training course by [Adrian Cantrill][cantrill].
 

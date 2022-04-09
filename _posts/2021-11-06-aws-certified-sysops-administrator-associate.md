@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AWS Certified SysOps Administrator - Associate"
-date: 2022-11-06 19:30 +1100
+date: 2021-11-06 19:30 +1100
 permalink: /blog/:title/
 comments: true
 categories: [AWS Cloud Certification]
@@ -10,7 +10,7 @@ titleimage: aws-soa
 
 {% include blog_image.html image="aws-soa" format="png" alt="AWS Certified SysOps Administrator - Associate" %}
 
-On {{ page.date | date_to_long_string }}, I passed the [AWS Certified SysOps Administrator - Associate][aws-soa-exam] exam, and am now an [AWS Certified SysOps Administrator - Associate][aws-soa-cert]. I have been working towards the DevOps Professional Certification and this is the first concrete step in this process.
+On {{ page.date | date_to_long_string }}, I passed the [AWS Certified SysOps Administrator - Associate (SOA-C02)][aws-soa-exam] exam, and am now an [AWS Certified SysOps Administrator - Associate][aws-soa-cert]. I have been working towards the DevOps Professional Certification and this is the first concrete step in this process.
 
 As with my [last exam][aws-sap], in terms of formal study, my primary material of choice for the exam was the training course by [Adrian Cantrill][cantrill], supplemented with labs from [Tutorials Dojo][tutorialsdojo]. The specific study resources used were:
 

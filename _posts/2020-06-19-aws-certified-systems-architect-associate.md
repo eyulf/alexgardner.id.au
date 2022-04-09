@@ -8,9 +8,9 @@ categories: [AWS Cloud Certification]
 titleimage: aws-saa
 ---
 
-{% include blog_image.html image="aws-saa" format="png" alt="AWS Certified Solutions Architect – Associate" %}
+{% include blog_image.html image="aws-saa" format="png" alt="AWS Certified Solutions Architect - Associate" %}
 
-On {{ page.date | date_to_long_string }}, I passed the [AWS Certified Solutions Architect – Associate][aws-saa-exam] exam, and am now an [AWS Certified Systems Architect - Associate][aws-saa-cert].
+On {{ page.date | date_to_long_string }}, I passed the [AWS Certified Solutions Architect - Associate (SAA-C02)][aws-saa-exam] exam, and am now an [AWS Certified Systems Architect - Associate][aws-saa-cert].
 
 This certification marks the true start of my journey into the AWS Cloud and in one way serves as a milestone in my career. Before I started studying for this certification I had not used AWS or other cloud technologies very extensively, my only experience with AWS up until I started studying was hosting this website on S3 and Cloudfront.
 
