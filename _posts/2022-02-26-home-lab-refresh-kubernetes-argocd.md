@@ -2290,7 +2290,7 @@ Next up: Kubernetes - Pi-Hole
 [argocd-commit]:            https://github.com/eyulf/homelab/commit/07f587292ccda54d1e18dfe4961997c8d4b3bea0
 [ansible-argocd-commit]:    https://github.com/eyulf/homelab/commit/d9fc8796f68056bf3e2a824cd0061e90c0efa9ed
 [argocd-calico-commit]:     https://github.com/eyulf/homelab/commit/82ae65d9274102b1ee67c374fd82fee339d2a3e6
-[ansible-bootstrap-commit]: https://github.com/eyulf/homelab/commit/
+[ansible-bootstrap-commit]: https://github.com/eyulf/homelab/commit/8595897e03d5cee0772e08527a573dc247f34479
 
 [kubernetes-core-apps-chart-yaml]:                   https://github.com/eyulf/homelab/blob/07f587292ccda54d1e18dfe4961997c8d4b3bea0/kubernetes/core/apps/Chart.yaml
 [kubernetes-core-apps-templates-argocd-system-yaml]: https://github.com/eyulf/homelab/blob/07f587292ccda54d1e18dfe4961997c8d4b3bea0/kubernetes/core/apps/templates/argocd-system.yaml

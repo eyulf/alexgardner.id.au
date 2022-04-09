@@ -36,30 +36,30 @@ terraform/infrastructure/core_services/[terraform.tfvars][terraform-tfvars]
 ```
 hypervisor_hosts = {
   "kvm1" = {
-    "ip"   = "192.168.10.21",
+    "ip"   = "10.1.1.21",
     "user" = "root",
   },
   "kvm2" = {
-    "ip"   = "192.168.10.22",
+    "ip"   = "10.1.1.22",
     "user" = "root",
   },
   "kvm3" = {
-    "ip"   = "192.168.10.23",
+    "ip"   = "10.1.1.23",
     "user" = "root",
   },
 }
 
 virtual_machines = {
   "dns1" = {
-    "ip"   = "192.168.10.31",
+    "ip"   = "10.1.1.31",
     "os"   = "debian_10"
   },
   "dns2" = {
-    "ip"   = "192.168.10.32",
+    "ip"   = "10.1.1.32",
     "os"   = "debian_10"
   },
   "dns3" = {
-    "ip"   = "192.168.10.33",
+    "ip"   = "10.1.1.33",
     "os"   = "debian_10"
   },
 }
@@ -70,8 +70,8 @@ host_admin_users = {
   "adminuser" = "ssh-rsa AAAAB[...truncated...]NZe19",
 }
 
-network_gateway_ip     = "192.168.10.1"
-network_nameserver_ips = "192.168.10.31, 192.168.10.32, 192.168.10.33"
+network_gateway_ip     = "10.1.1.1"
+network_nameserver_ips = "10.1.1.31, 10.1.1.32, 10.1.1.33"
 ```
 
 ### Commands
@@ -146,10 +146,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.1/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.1/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.1 ]
+                   addresses: [ 10.1.1.1 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -232,10 +232,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.2/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.2/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.1 ]
+                   addresses: [ 10.1.1.1 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -318,10 +318,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.3/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.3/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.1 ]
+                   addresses: [ 10.1.1.1 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -445,15 +445,15 @@ domain: example.domain.local
 email: adminuser@example.domain.local
 
 nameservers:
-  - '192.168.10.1'
+  - '10.1.1.1'
 network_subnets:
-  - '192.168.10.0/24'
-  - '192.168.11.0/24'
-  - '192.168.12.0/24'
+  - '10.1.1.0/24'
+  - '10.1.2.0/24'
+  - '10.1.3.0/24'
 
-firewall_servers_subnet: 192.168.10.0/24
-firewall_wireless_subnet: 192.168.11.0/24
-firewall_clients_subnet: 192.168.12.0/24
+firewall_servers_subnet: 10.1.1.0/24
+firewall_wireless_subnet: 10.1.2.0/24
+firewall_clients_subnet: 10.1.3.0/24
 
 timezone: Australia/Sydney
 
@@ -474,17 +474,17 @@ mariadb_galera_auth_password: MySuperSecretPassword
 #checkov:skip=CKV_SECRET_6:Unencrypted secrets are git-ignored
 mariadb_galera_bootstrap_host: dns1
 mariadb_galera_hosts_list:
-  - '192.168.10.31'
-  - '192.168.10.32'
-  - '192.168.10.33'
+  - '10.1.1.31'
+  - '10.1.1.32'
+  - '10.1.1.33'
 
 powerdns_version: '45'
 powerdns_mysql_password: MySuperSecretPassword
 #checkov:skip=CKV_SECRET_6:Unencrypted secrets are git-ignored
-powerdns_forward_recursors: 192.168.10.1;1.0.0.1;1.1.1.1
+powerdns_forward_recursors: 10.1.1.1;1.0.0.1;1.1.1.1
 powerdns_foward_zones:
   - 'example.domain.local'
-  - '10.168.192.in-addr.arpa'
+  - '1.1.10.in-addr.arpa'
 ```
 
 ### Commands
@@ -611,15 +611,15 @@ TASK [db_server : database | allow mariadb inbound from network] ***************
 skipping: [dns1]
 
 TASK [db_server : database | allow galera inbound from mariadb servers] ***********************************************
-changed: [dns1] => (item=['4444', '192.168.10.21'])
-changed: [dns1] => (item=['4444', '192.168.10.22'])
-changed: [dns1] => (item=['4444', '192.168.10.23'])
-changed: [dns1] => (item=['4567', '192.168.10.21'])
-changed: [dns1] => (item=['4567', '192.168.10.22'])
-changed: [dns1] => (item=['4567', '192.168.10.23'])
-changed: [dns1] => (item=['4568', '192.168.10.21'])
-changed: [dns1] => (item=['4568', '192.168.10.22'])
-changed: [dns1] => (item=['4568', '192.168.10.23'])
+changed: [dns1] => (item=['4444', '10.1.1.31'])
+changed: [dns1] => (item=['4444', '10.1.1.32'])
+changed: [dns1] => (item=['4444', '10.1.1.33'])
+changed: [dns1] => (item=['4567', '10.1.1.31'])
+changed: [dns1] => (item=['4567', '10.1.1.32'])
+changed: [dns1] => (item=['4567', '10.1.1.33'])
+changed: [dns1] => (item=['4568', '10.1.1.31'])
+changed: [dns1] => (item=['4568', '10.1.1.32'])
+changed: [dns1] => (item=['4568', '10.1.1.33'])
 
 TASK [db_server : database | configure /etc/mysql/mariadb.conf.d/60-galera.cnf] ***************************************
 changed: [dns1]
@@ -687,9 +687,9 @@ TASK [dns_server : powerdns | enable and start powerdns recursor service] ******
 ok: [dns1]
 
 TASK [dns_server : powerdns | allow powerdns inbound from servers and clients] ****************************************
-changed: [dns1] => (item=192.168.10.0/24)
-changed: [dns1] => (item=192.168.11.0/24)
-changed: [dns1] => (item=192.168.12.0/24)
+changed: [dns1] => (item=10.1.1.0/24)
+changed: [dns1] => (item=10.1.2.0/24)
+changed: [dns1] => (item=10.1.3.0/24)
 
 RUNNING HANDLER [common : auto-updates | restart unattended-upgrades service] *****************************************
 changed: [dns1]
@@ -949,33 +949,33 @@ skipping: [dns2]
 skipping: [dns3]
 
 TASK [db_server : database | allow galera inbound from mariadb servers] ***********************************************
-changed: [dns2] => (item=['4444', '192.168.10.21'])
-changed: [dns3] => (item=['4444', '192.168.10.21'])
-ok: [dns1] => (item=['4444', '192.168.10.21'])
-changed: [dns2] => (item=['4444', '192.168.10.22'])
-changed: [dns3] => (item=['4444', '192.168.10.22'])
-ok: [dns1] => (item=['4444', '192.168.10.22'])
-changed: [dns2] => (item=['4444', '192.168.10.23'])
-ok: [dns1] => (item=['4444', '192.168.10.23'])
-changed: [dns3] => (item=['4444', '192.168.10.23'])
-ok: [dns1] => (item=['4567', '192.168.10.21'])
-changed: [dns2] => (item=['4567', '192.168.10.21'])
-changed: [dns3] => (item=['4567', '192.168.10.21'])
-ok: [dns1] => (item=['4567', '192.168.10.22'])
-changed: [dns2] => (item=['4567', '192.168.10.22'])
-changed: [dns3] => (item=['4567', '192.168.10.22'])
-ok: [dns1] => (item=['4567', '192.168.10.23'])
-changed: [dns2] => (item=['4567', '192.168.10.23'])
-changed: [dns3] => (item=['4567', '192.168.10.23'])
-ok: [dns1] => (item=['4568', '192.168.10.21'])
-changed: [dns2] => (item=['4568', '192.168.10.21'])
-changed: [dns3] => (item=['4568', '192.168.10.21'])
-ok: [dns1] => (item=['4568', '192.168.10.22'])
-changed: [dns2] => (item=['4568', '192.168.10.22'])
-changed: [dns3] => (item=['4568', '192.168.10.22'])
-ok: [dns1] => (item=['4568', '192.168.10.23'])
-changed: [dns2] => (item=['4568', '192.168.10.23'])
-changed: [dns3] => (item=['4568', '192.168.10.23'])
+changed: [dns2] => (item=['4444', '10.1.1.31'])
+changed: [dns3] => (item=['4444', '10.1.1.31'])
+ok: [dns1] => (item=['4444', '10.1.1.31'])
+changed: [dns2] => (item=['4444', '10.1.1.32'])
+changed: [dns3] => (item=['4444', '10.1.1.32'])
+ok: [dns1] => (item=['4444', '10.1.1.32'])
+changed: [dns2] => (item=['4444', '10.1.1.33'])
+ok: [dns1] => (item=['4444', '10.1.1.33'])
+changed: [dns3] => (item=['4444', '10.1.1.33'])
+ok: [dns1] => (item=['4567', '10.1.1.31'])
+changed: [dns2] => (item=['4567', '10.1.1.31'])
+changed: [dns3] => (item=['4567', '10.1.1.31'])
+ok: [dns1] => (item=['4567', '10.1.1.32'])
+changed: [dns2] => (item=['4567', '10.1.1.32'])
+changed: [dns3] => (item=['4567', '10.1.1.32'])
+ok: [dns1] => (item=['4567', '10.1.1.33'])
+changed: [dns2] => (item=['4567', '10.1.1.33'])
+changed: [dns3] => (item=['4567', '10.1.1.33'])
+ok: [dns1] => (item=['4568', '10.1.1.31'])
+changed: [dns2] => (item=['4568', '10.1.1.31'])
+changed: [dns3] => (item=['4568', '10.1.1.31'])
+ok: [dns1] => (item=['4568', '10.1.1.32'])
+changed: [dns2] => (item=['4568', '10.1.1.32'])
+changed: [dns3] => (item=['4568', '10.1.1.32'])
+ok: [dns1] => (item=['4568', '10.1.1.33'])
+changed: [dns2] => (item=['4568', '10.1.1.33'])
+changed: [dns3] => (item=['4568', '10.1.1.33'])
 
 TASK [db_server : database | configure /etc/mysql/mariadb.conf.d/60-galera.cnf] ***************************************
 ok: [dns1]
@@ -1089,15 +1089,15 @@ ok: [dns2]
 ok: [dns3]
 
 TASK [dns_server : powerdns | allow powerdns inbound from servers and clients] ****************************************
-ok: [dns1] => (item=192.168.10.0/24)
-changed: [dns3] => (item=192.168.10.0/24)
-changed: [dns2] => (item=192.168.10.0/24)
-ok: [dns1] => (item=192.168.11.0/24)
-changed: [dns3] => (item=192.168.11.0/24)
-changed: [dns2] => (item=192.168.11.0/24)
-ok: [dns1] => (item=192.168.12.0/24)
-changed: [dns3] => (item=192.168.12.0/24)
-changed: [dns2] => (item=192.168.12.0/24)
+ok: [dns1] => (item=10.1.1.0/24)
+changed: [dns3] => (item=10.1.1.0/24)
+changed: [dns2] => (item=10.1.1.0/24)
+ok: [dns1] => (item=10.1.2.0/24)
+changed: [dns3] => (item=10.1.2.0/24)
+changed: [dns2] => (item=10.1.2.0/24)
+ok: [dns1] => (item=10.1.3.0/24)
+changed: [dns3] => (item=10.1.3.0/24)
+changed: [dns2] => (item=10.1.3.0/24)
 
 RUNNING HANDLER [common : auto-updates | restart unattended-upgrades service] *****************************************
 changed: [dns3]
@@ -1145,9 +1145,9 @@ adminuser@dns1:~$ sudo pdnsutil create-zone example.domain.local
 Creating empty zone 'example.domain.local'
 adminuser@dns1:~$ sudo pdnsutil list-all-zones
 example.domain.local
-adminuser@dns1:~$ sudo pdnsutil add-record example.domain.local dns1 a 900 192.168.10.21
+adminuser@dns1:~$ sudo pdnsutil add-record example.domain.local dns1 a 900 10.1.1.31
 New rrset:
-test.example.test. 900 IN A 192.168.10.21
+test.example.test. 900 IN A 10.1.1.31
 adminuser@dns1:~$ dig dns1.example.domain.local @127.0.0.1
 
 ; <<>> DiG 9.11.5-P4-5.1+deb10u6-Debian <<>> dns1.example.domain.local @127.0.0.1
@@ -1164,7 +1164,7 @@ adminuser@dns1:~$ dig dns1.example.domain.local @127.0.0.1
 ;dns1.example.domain.local. IN  A
 
 ;; ANSWER SECTION:
-dns1.example.domain.local. 900  IN  A 192.168.10.21
+dns1.example.domain.local. 900  IN  A 10.1.1.31
 
 ;; Query time: 6 msec
 ;; SERVER: 127.0.0.1#53(127.0.0.1)

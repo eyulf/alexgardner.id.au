@@ -727,7 +727,7 @@ So now our secrets are encrypted at rest in the etcd cluster. While this will no
 
 Having said that our security posture is still not fantastic, as we have the raw encryption key stored on the controller in plain-text. To improve this we would need to use the `kms` EncryptionConfiguration provider with a cloud based solution. This would be required for use in a production environment, but for our homelab cluster, this is an acceptable risk.
 
-Now we can safely store secrets, we can start to use the Kubernetes cluster and will start by installing Pi-Hole .
+Now we can safely store secrets, we can start to use the Kubernetes cluster and will start by installing Pi-Hole.
 
 Next up: Kubernetes - Pi-Hole
 

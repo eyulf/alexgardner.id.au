@@ -49,42 +49,42 @@ terraform/infrastructure/kubernetes/[terraform.tfvars][terraform-tfvars]
 ```
 hypervisor_hosts = {
   "kvm1" = {
-    "ip"   = "192.168.10.21",
+    "ip"   = "10.1.1.21",
     "user" = "root",
   },
   "kvm2" = {
-    "ip"   = "192.168.10.22",
+    "ip"   = "10.1.1.22",
     "user" = "root",
   },
   "kvm3" = {
-    "ip"   = "192.168.10.23",
+    "ip"   = "10.1.1.23",
     "user" = "root",
   },
 }
 
 virtual_machines = {
   "k8s-controller-01" = {
-    "ip"   = "192.168.10.41",
+    "ip"   = "10.1.1.41",
     "os"   = "debian_10"
   },
   "k8s-controller-02" = {
-    "ip"   = "192.168.10.42",
+    "ip"   = "10.1.1.42",
     "os"   = "debian_10"
   },
   "k8s-controller-03" = {
-    "ip"   = "192.168.10.43",
+    "ip"   = "10.1.1.43",
     "os"   = "debian_10"
   },
   "k8s-worker-01" = {
-    "ip"   = "192.168.10.51",
+    "ip"   = "10.1.1.51",
     "os"   = "debian_10"
   },
   "k8s-worker-02" = {
-    "ip"   = "192.168.10.52",
+    "ip"   = "10.1.1.52",
     "os"   = "debian_10"
   },
   "k8s-worker-03" = {
-    "ip"   = "192.168.10.53",
+    "ip"   = "10.1.1.53",
     "os"   = "debian_10"
   },
 }
@@ -95,8 +95,8 @@ host_admin_users = {
   "adminuser" = "ssh-rsa AAAAB[...truncated...]NZe19",
 }
 
-network_gateway_ip     = "192.168.10.1"
-network_nameserver_ips = "192.168.10.31, 192.168.10.32, 192.168.10.33"
+network_gateway_ip     = "10.1.1.1"
+network_nameserver_ips = "10.1.1.31, 10.1.1.32, 10.1.1.33"
 ```
 
 ### Commands
@@ -216,10 +216,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.41/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.41/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.31, 192.168.10.32, 192.168.10.33 ]
+                   addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -302,10 +302,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.42/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.42/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.31, 192.168.10.32, 192.168.10.33 ]
+                   addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -388,10 +388,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.43/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.43/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.31, 192.168.10.32, 192.168.10.33 ]
+                   addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -474,10 +474,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.51/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.51/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.31, 192.168.10.32, 192.168.10.33 ]
+                   addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -560,10 +560,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.52/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.52/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.31, 192.168.10.32, 192.168.10.33 ]
+                   addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -646,10 +646,10 @@ Terraform will perform the following actions:
             ethernets:
               ens3:
                  dhcp4: false
-                 addresses: [ 192.168.10.53/24 ]
-                 gateway4: 192.168.10.1
+                 addresses: [ 10.1.1.53/24 ]
+                 gateway4: 10.1.1.1
                  nameservers:
-                   addresses: [ 192.168.10.31, 192.168.10.32, 192.168.10.33 ]
+                   addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
                    search: [ example.domain.local ]
         EOT
       + pool           = "default"
@@ -1082,18 +1082,18 @@ domain: example.domain.local
 email: adminuser@example.domain.local
 
 nameservers:
-  - '192.168.10.31'
-  - '192.168.10.32'
-  - '192.168.10.33'
-  - '192.168.10.1'
+  - '10.1.1.31'
+  - '10.1.1.32'
+  - '10.1.1.33'
+  - '10.1.1.1'
 network_subnets:
-  - '192.168.10.0/24'
-  - '192.168.11.0/24'
-  - '192.168.12.0/24'
+  - '10.1.1.0/24'
+  - '10.1.2.0/24'
+  - '10.1.3.0/24'
 
-firewall_servers_subnet: 192.168.10.0/24
-firewall_wireless_subnet: 192.168.11.0/24
-firewall_clients_subnet: 192.168.12.0/24
+firewall_servers_subnet: 10.1.1.0/24
+firewall_wireless_subnet: 10.1.2.0/24
+firewall_clients_subnet: 10.1.3.0/24
 
 timezone: Australia/Sydney
 
@@ -1105,7 +1105,7 @@ ansible/group_vars/[k8s_controllers.yml][k8s_controllers-yml]
 ```
 ---
 kubernetes_clients_hosts_list:
-  - '192.168.12.100'
+  - '10.1.3.100'
 kubernetes_cluster_name: kubernetes
 kubernetes_cluster_fqdn: k8s-controller.{% raw %}{{ domain }}{% endraw %}
 kubernetes_pod_network_cidr: 10.10.0.0/16
@@ -1116,7 +1116,7 @@ pacemaker_hosts_list: "{% raw %}{{ groups['k8s_controllers'] | map('extract',hos
 pacemaker_hosts: "{% raw %}{{ groups['k8s_controllers'] }}{% endraw %}"
 pacemaker_primary_host: "{% raw %}{{ groups['k8s_controllers'][0] }}{% endraw %}"
 pacemaker_cluster_name: k8s-controller
-pacemaker_cluster_ip: '192.168.10.40'
+pacemaker_cluster_ip: '10.1.1.40'
 ```
 
 ### Commands
@@ -1693,44 +1693,44 @@ ok: [k8s-controller-02] => (item=/homelab-infrastructure/ansible/roles/pacemaker
 ok: [k8s-controller-03] => (item=/homelab-infrastructure/ansible/roles/pacemaker/vars/default.yml)
 
 TASK [network | allow pacemaker tcp inbound from pacemaker servers] ***************************************************
-changed: [k8s-controller-02] => (item=['2224', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['2224', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['2224', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['2224', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['2224', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['2224', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['2224', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['2224', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['2224', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['3121', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['3121', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['3121', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['3121', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['3121', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['3121', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['3121', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['3121', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['3121', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['21064', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['21064', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['21064', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['21064', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['21064', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['21064', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['21064', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['21064', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['21064', '192.168.10.153'])
+changed: [k8s-controller-02] => (item=['2224', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['2224', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['2224', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['2224', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['2224', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['2224', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['2224', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['2224', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['2224', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['3121', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['3121', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['3121', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['3121', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['3121', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['3121', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['3121', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['3121', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['3121', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['21064', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['21064', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['21064', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['21064', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['21064', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['21064', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['21064', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['21064', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['21064', '10.1.1.43'])
 
 TASK [network | allow pacemaker udp inbound from pacemaker servers] ***************************************************
-changed: [k8s-controller-01] => (item=['5405', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['5405', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['5405', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['5405', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['5405', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['5405', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['5405', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['5405', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['5405', '192.168.10.153'])
+changed: [k8s-controller-01] => (item=['5405', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['5405', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['5405', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['5405', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['5405', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['5405', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['5405', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['5405', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['5405', '10.1.1.43'])
 
 TASK [packages | install pacemaker packages] **************************************************************************
 changed: [k8s-controller-02] => (item=pacemaker)
@@ -1785,82 +1785,82 @@ ok: [k8s-controller-02] => (item=/homelab-infrastructure/ansible/roles/kubernete
 ok: [k8s-controller-03] => (item=/homelab-infrastructure/ansible/roles/kubernetes_controller/vars/default.yml)
 
 TASK [kubernetes_controller : network | allow kubernetes ports inbound from kubernetes controllers] *******************
-changed: [k8s-controller-01] => (item=['2379', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['2379', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['2379', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['2379', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['2379', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['2379', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['2379', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['2379', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['2379', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['2380', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['2380', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['2380', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['2380', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['2380', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['2380', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['2380', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['2380', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['2380', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['10250', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['10250', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['10250', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['10250', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['10250', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['10250', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['10250', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['10250', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['10250', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['10251', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['10251', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['10251', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['10251', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['10251', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['10251', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['10251', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['10251', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['10251', '192.168.10.153'])
-changed: [k8s-controller-02] => (item=['10252', '192.168.10.151'])
-changed: [k8s-controller-01] => (item=['10252', '192.168.10.151'])
-changed: [k8s-controller-03] => (item=['10252', '192.168.10.151'])
-changed: [k8s-controller-02] => (item=['10252', '192.168.10.152'])
-changed: [k8s-controller-01] => (item=['10252', '192.168.10.152'])
-changed: [k8s-controller-03] => (item=['10252', '192.168.10.152'])
-changed: [k8s-controller-02] => (item=['10252', '192.168.10.153'])
-changed: [k8s-controller-01] => (item=['10252', '192.168.10.153'])
-changed: [k8s-controller-03] => (item=['10252', '192.168.10.153'])
+changed: [k8s-controller-01] => (item=['2379', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['2379', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['2379', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['2379', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['2379', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['2379', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['2379', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['2379', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['2379', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['2380', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['2380', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['2380', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['2380', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['2380', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['2380', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['2380', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['2380', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['2380', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['10250', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['10250', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['10250', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['10250', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['10250', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['10250', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['10250', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['10250', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['10250', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['10251', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['10251', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['10251', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['10251', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['10251', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['10251', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['10251', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['10251', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['10251', '10.1.1.43'])
+changed: [k8s-controller-02] => (item=['10252', '10.1.1.41'])
+changed: [k8s-controller-01] => (item=['10252', '10.1.1.41'])
+changed: [k8s-controller-03] => (item=['10252', '10.1.1.41'])
+changed: [k8s-controller-02] => (item=['10252', '10.1.1.42'])
+changed: [k8s-controller-01] => (item=['10252', '10.1.1.42'])
+changed: [k8s-controller-03] => (item=['10252', '10.1.1.42'])
+changed: [k8s-controller-02] => (item=['10252', '10.1.1.43'])
+changed: [k8s-controller-01] => (item=['10252', '10.1.1.43'])
+changed: [k8s-controller-03] => (item=['10252', '10.1.1.43'])
 
 TASK [kubernetes_controller : network | allow kubernetes api inbound from kubernetes servers] *************************
-changed: [k8s-controller-02] => (item=192.168.10.151)
-changed: [k8s-controller-01] => (item=192.168.10.151)
-changed: [k8s-controller-03] => (item=192.168.10.151)
-changed: [k8s-controller-01] => (item=192.168.10.152)
-changed: [k8s-controller-03] => (item=192.168.10.152)
-changed: [k8s-controller-02] => (item=192.168.10.152)
-changed: [k8s-controller-02] => (item=192.168.10.153)
-changed: [k8s-controller-01] => (item=192.168.10.153)
-changed: [k8s-controller-03] => (item=192.168.10.153)
-changed: [k8s-controller-01] => (item=192.168.10.161)
-changed: [k8s-controller-02] => (item=192.168.10.161)
-changed: [k8s-controller-03] => (item=192.168.10.161)
-changed: [k8s-controller-01] => (item=192.168.10.162)
-changed: [k8s-controller-03] => (item=192.168.10.162)
-changed: [k8s-controller-02] => (item=192.168.10.162)
-changed: [k8s-controller-01] => (item=192.168.10.163)
-changed: [k8s-controller-03] => (item=192.168.10.163)
-changed: [k8s-controller-02] => (item=192.168.10.163)
+changed: [k8s-controller-02] => (item=10.1.1.41)
+changed: [k8s-controller-01] => (item=10.1.1.41)
+changed: [k8s-controller-03] => (item=10.1.1.41)
+changed: [k8s-controller-01] => (item=10.1.1.42)
+changed: [k8s-controller-03] => (item=10.1.1.42)
+changed: [k8s-controller-02] => (item=10.1.1.42)
+changed: [k8s-controller-02] => (item=10.1.1.43)
+changed: [k8s-controller-01] => (item=10.1.1.43)
+changed: [k8s-controller-03] => (item=10.1.1.43)
+changed: [k8s-controller-01] => (item=10.1.1.51)
+changed: [k8s-controller-02] => (item=10.1.1.51)
+changed: [k8s-controller-03] => (item=10.1.1.51)
+changed: [k8s-controller-01] => (item=10.1.1.52)
+changed: [k8s-controller-03] => (item=10.1.1.52)
+changed: [k8s-controller-02] => (item=10.1.1.52)
+changed: [k8s-controller-01] => (item=10.1.1.53)
+changed: [k8s-controller-03] => (item=10.1.1.53)
+changed: [k8s-controller-02] => (item=10.1.1.53)
 
 TASK [kubernetes_controller : network | allow kubernetes api inbound from permitted clients] **************************
-changed: [k8s-controller-02] => (item=192.168.12.100)
-changed: [k8s-controller-03] => (item=192.168.12.100)
-changed: [k8s-controller-01] => (item=192.168.12.100)
+changed: [k8s-controller-02] => (item=10.1.3.100)
+changed: [k8s-controller-03] => (item=10.1.3.100)
+changed: [k8s-controller-01] => (item=10.1.3.100)
 
 TASK [kubernetes_controller : pacemaker | capture configured resources] ***********************************************
 ok: [k8s-controller-01]
 
 TASK [kubernetes_controller : pacemaker | create kubernetes-ip resource] **********************************************
-changed: [k8s-controller-01] => (item={'resource_id': 'kubernetes-ip', 'action': 'create', 'provider': 'ocf:heartbeat:IPaddr2', 'options': ['ip=192.168.10.150', 'cidr_netmask=24', 'nic=ens3'], 'op': 'monitor', 'op_options': ['interval=30s']})
+changed: [k8s-controller-01] => (item={'resource_id': 'kubernetes-ip', 'action': 'create', 'provider': 'ocf:heartbeat:IPaddr2', 'options': ['ip=10.1.1.150', 'cidr_netmask=24', 'nic=ens3'], 'op': 'monitor', 'op_options': ['interval=30s']})
 
 TASK [kubernetes_controller : pacemaker | pause to allow floating ip address to come online] **************************
 Pausing for 30 seconds
@@ -2003,35 +2003,35 @@ ok: [k8s-worker-02] => (item=/homelab-infrastructure/ansible/roles/kubernetes_wo
 ok: [k8s-worker-03] => (item=/homelab-infrastructure/ansible/roles/kubernetes_worker/vars/default.yml)
 
 TASK [kubernetes_worker : network | allow kubelet api inbound from kubernetes controllers] ****************************
-changed: [k8s-worker-01] => (item=192.168.10.151)
-changed: [k8s-worker-03] => (item=192.168.10.151)
-changed: [k8s-worker-02] => (item=192.168.10.151)
-changed: [k8s-worker-03] => (item=192.168.10.152)
-changed: [k8s-worker-01] => (item=192.168.10.152)
-changed: [k8s-worker-02] => (item=192.168.10.152)
-changed: [k8s-worker-03] => (item=192.168.10.153)
-changed: [k8s-worker-01] => (item=192.168.10.153)
-changed: [k8s-worker-02] => (item=192.168.10.153)
+changed: [k8s-worker-01] => (item=10.1.1.41)
+changed: [k8s-worker-03] => (item=10.1.1.41)
+changed: [k8s-worker-02] => (item=10.1.1.41)
+changed: [k8s-worker-03] => (item=10.1.1.42)
+changed: [k8s-worker-01] => (item=10.1.1.42)
+changed: [k8s-worker-02] => (item=10.1.1.42)
+changed: [k8s-worker-03] => (item=10.1.1.43)
+changed: [k8s-worker-01] => (item=10.1.1.43)
+changed: [k8s-worker-02] => (item=10.1.1.43)
 
 TASK [kubernetes_worker : network | allow nodeport services inbound from kubernetes servers] **************************
-changed: [k8s-worker-03] => (item=192.168.10.151)
-changed: [k8s-worker-01] => (item=192.168.10.151)
-changed: [k8s-worker-02] => (item=192.168.10.151)
-changed: [k8s-worker-03] => (item=192.168.10.152)
-changed: [k8s-worker-01] => (item=192.168.10.152)
-changed: [k8s-worker-02] => (item=192.168.10.152)
-changed: [k8s-worker-03] => (item=192.168.10.153)
-changed: [k8s-worker-01] => (item=192.168.10.153)
-changed: [k8s-worker-02] => (item=192.168.10.153)
-changed: [k8s-worker-03] => (item=192.168.10.161)
-changed: [k8s-worker-01] => (item=192.168.10.161)
-changed: [k8s-worker-02] => (item=192.168.10.161)
-changed: [k8s-worker-03] => (item=192.168.10.162)
-changed: [k8s-worker-01] => (item=192.168.10.162)
-changed: [k8s-worker-02] => (item=192.168.10.162)
-changed: [k8s-worker-03] => (item=192.168.10.163)
-changed: [k8s-worker-02] => (item=192.168.10.163)
-changed: [k8s-worker-01] => (item=192.168.10.163)
+changed: [k8s-worker-03] => (item=10.1.1.41)
+changed: [k8s-worker-01] => (item=10.1.1.41)
+changed: [k8s-worker-02] => (item=10.1.1.41)
+changed: [k8s-worker-03] => (item=10.1.1.42)
+changed: [k8s-worker-01] => (item=10.1.1.42)
+changed: [k8s-worker-02] => (item=10.1.1.42)
+changed: [k8s-worker-03] => (item=10.1.1.43)
+changed: [k8s-worker-01] => (item=10.1.1.43)
+changed: [k8s-worker-02] => (item=10.1.1.43)
+changed: [k8s-worker-03] => (item=10.1.1.51)
+changed: [k8s-worker-01] => (item=10.1.1.51)
+changed: [k8s-worker-02] => (item=10.1.1.51)
+changed: [k8s-worker-03] => (item=10.1.1.52)
+changed: [k8s-worker-01] => (item=10.1.1.52)
+changed: [k8s-worker-02] => (item=10.1.1.52)
+changed: [k8s-worker-03] => (item=10.1.1.53)
+changed: [k8s-worker-02] => (item=10.1.1.53)
+changed: [k8s-worker-01] => (item=10.1.1.53)
 
 TASK [kubernetes_worker : kubeadm | create join token] ****************************************************************
 changed: [k8s-worker-01 -> k8s-controller-01]

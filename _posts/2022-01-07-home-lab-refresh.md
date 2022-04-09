@@ -33,10 +33,10 @@ This sort of sets up a mini series for the journey of this homelab refresh. I'll
 
 ```
 Domain:           example.domain.local
-Server Network:   192.168.10.0/24
-wireless Network: 192.168.11.0/24
-Client Network:   192.168.12.0/24
-Server Gateway:   192.168.10.1
+Server Network:   10.1.1.0/24
+Wireless Network: 10.1.2.0/24
+Client Network:   10.1.3.0/24
+Server Gateway:   10.1.1.1
 Admin User:       adminuser
 ```
 

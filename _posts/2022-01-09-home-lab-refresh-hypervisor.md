@@ -30,10 +30,10 @@ email: adminuser@example.domain.local
 
 # Nameservers
 nameservers:
-  - '192.168.10.1'
+  - '10.1.1.1'
 
 # Client Subnet
-firewall_clients_subnet: 192.168.12.0/24
+firewall_clients_subnet: 10.1.3.0/24
 
 # Timezone
 timezone: Australia/Sydney
@@ -207,15 +207,15 @@ terraform/infrastructure/hypervisors/[terraform.tfvars][terraform-tfvars]
 ```
 hypervisor_hosts = {
   "kvm1" = {
-    "ip"   = "192.168.10.21",
+    "ip"   = "10.1.1.21",
     "user" = "root",
   },
   "kvm2" = {
-    "ip"   = "192.168.10.22",
+    "ip"   = "10.1.1.22",
     "user" = "root",
   },
   "kvm3" = {
-    "ip"   = "192.168.10.23",
+    "ip"   = "10.1.1.23",
     "user" = "root",
   },
 }
