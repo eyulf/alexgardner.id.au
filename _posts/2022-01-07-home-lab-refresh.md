@@ -49,8 +49,8 @@ Further posts in this 'mini series' are:
 1. [Home-Lab Refresh: Kubernetes Cluster Installation][homelab-refresh-k8s-install]
 1. [Home-Lab Refresh: Kubernetes Cluster Gitops][homelab-refresh-k8s-gitops]
 1. [Home-Lab Refresh: Kubernetes Cluster Secrets][homelab-refresh-k8s-secrets]
-1. [Home-Lab Refresh: Kubernetes Cluster Secrets][homelab-refresh-k8s-argocd]
-1. [Home-Lab Refresh: Kubernetes Cluster Secrets][homelab-refresh-k8s-pihole]
+1. [Home-Lab Refresh: Kubernetes Cluster ArgoCD][homelab-refresh-k8s-argocd]
+1. [Home-Lab Refresh: Kubernetes Cluster Pi-Hole][homelab-refresh-k8s-pihole]
 
 [homelab-part3]:   {% link _posts/2017-05-21-home-lab-part-3.md %}
 [sth-project-tmm]: https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
