@@ -51,6 +51,7 @@ Further posts in this 'mini series' are:
 1. [Home-Lab Refresh: Kubernetes Cluster Secrets][homelab-refresh-k8s-secrets]
 1. [Home-Lab Refresh: Kubernetes Cluster ArgoCD][homelab-refresh-k8s-argocd]
 1. [Home-Lab Refresh: Kubernetes Cluster Pi-Hole][homelab-refresh-k8s-pihole]
+1. [Home-Lab Refresh: Kubernetes Cluster Traefik][homelab-refresh-k8s-traefik]
 
 [homelab-part3]:   {% link _posts/2017-05-21-home-lab-part-3.md %}
 [sth-project-tmm]: https://www.servethehome.com/introducing-project-tinyminimicro-home-lab-revolution/
@@ -63,3 +64,4 @@ Further posts in this 'mini series' are:
 [homelab-refresh-k8s-secrets]: {% link _posts/2022-01-29-home-lab-refresh-kubernetes-secrets.md %}
 [homelab-refresh-k8s-argocd]:  {% link _posts/2022-02-26-home-lab-refresh-kubernetes-argocd.md %}
 [homelab-refresh-k8s-pihole]:  {% link _posts/2022-04-16-home-lab-refresh-kubernetes-pihole.md %}
+[homelab-refresh-k8s-traefik]: {% link _posts/2022-04-24-home-lab-refresh-kubernetes-traefik.md %}
