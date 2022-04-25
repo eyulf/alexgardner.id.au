@@ -603,20 +603,20 @@ random_password.k8s-controller-01: Refreshing state... [id=none]
 random_password.k8s-controller-03: Refreshing state... [id=none]
 random_password.k8s-controller-02: Refreshing state... [id=none]
 random_password.k8s-worker-03: Refreshing state... [id=none]
-module.k8s-controller-02.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-02.example.domain.local-cloudinit.iso;572dd86d-61a6-4fce-95c4-44798223d7bd]
-module.k8s-worker-02.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-02.example.domain.local.qcow2]
-module.k8s-controller-02.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-02.example.domain.local.qcow2]
-module.k8s-worker-02.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-02.example.domain.local-cloudinit.iso;47475e07-842b-4f92-87be-b5d4a02ae461]
+module.k8s-controller-02.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au-cloudinit.iso;572dd86d-61a6-4fce-95c4-44798223d7bd]
+module.k8s-worker-02.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au.qcow2]
+module.k8s-controller-02.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-02.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au-cloudinit.iso;47475e07-842b-4f92-87be-b5d4a02ae461]
 module.k8s-controller-02.libvirt_domain.main: Refreshing state... [id=952bc61e-8d33-49ce-9653-75dbd188b103]
 module.k8s-worker-02.libvirt_domain.main: Refreshing state... [id=1dc95e20-d55f-4c83-aaf4-3b5aced64196]
-module.k8s-controller-01.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-01.example.domain.local.qcow2]
-module.k8s-worker-01.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-01.example.domain.local-cloudinit.iso;8f970aa2-57c5-4c91-afc6-367ce34e58e6]
-module.k8s-worker-01.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-01.example.domain.local.qcow2]
-module.k8s-controller-01.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-01.example.domain.local-cloudinit.iso;bba61c65-519e-42a6-a6a3-bb88891b6753]
-module.k8s-worker-03.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-03.example.domain.local.qcow2]
-module.k8s-controller-03.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-03.example.domain.local-cloudinit.iso;284f8b5f-62ad-453f-aebc-c9fe6d3dbfc8]
-module.k8s-controller-03.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-03.example.domain.local.qcow2]
-module.k8s-worker-03.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-03.example.domain.local-cloudinit.iso;c54d422d-a53b-4813-9772-3907b7967ef0]
+module.k8s-controller-01.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-01.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au-cloudinit.iso;8f970aa2-57c5-4c91-afc6-367ce34e58e6]
+module.k8s-worker-01.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au.qcow2]
+module.k8s-controller-01.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au-cloudinit.iso;bba61c65-519e-42a6-a6a3-bb88891b6753]
+module.k8s-worker-03.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au.qcow2]
+module.k8s-controller-03.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au-cloudinit.iso;284f8b5f-62ad-453f-aebc-c9fe6d3dbfc8]
+module.k8s-controller-03.libvirt_volume.main: Refreshing state... [id=/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-03.libvirt_cloudinit_disk.cloudinit: Refreshing state... [id=/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au-cloudinit.iso;c54d422d-a53b-4813-9772-3907b7967ef0]
 module.k8s-controller-01.libvirt_domain.main: Refreshing state... [id=6fdb3e4d-01d5-46a8-90ef-95b4963fd498]
 module.k8s-worker-01.libvirt_domain.main: Refreshing state... [id=b4dc5c82-4136-4eaf-976f-39efe4a047c0]
 module.k8s-worker-03.libvirt_domain.main: Refreshing state... [id=f49d69a8-ecf9-4283-a090-81eb458124c2]
@@ -630,7 +630,7 @@ Terraform detected the following changes made outside of Terraform since the las
   ~ resource "libvirt_domain" "main" {
       + cmdline     = []
         id          = "6fdb3e4d-01d5-46a8-90ef-95b4963fd498"
-        name        = "k8s-controller-01.example.domain.local"
+        name        = "k8s-controller-01.lab.alexgardner.id.au"
         # (11 unchanged attributes hidden)
 
 
@@ -642,7 +642,7 @@ Terraform detected the following changes made outside of Terraform since the las
   ~ resource "libvirt_domain" "main" {
       + cmdline     = []
         id          = "952bc61e-8d33-49ce-9653-75dbd188b103"
-        name        = "k8s-controller-02.example.domain.local"
+        name        = "k8s-controller-02.lab.alexgardner.id.au"
         # (11 unchanged attributes hidden)
 
 
@@ -654,7 +654,7 @@ Terraform detected the following changes made outside of Terraform since the las
   ~ resource "libvirt_domain" "main" {
       + cmdline     = []
         id          = "ae6a8d0d-0245-4613-9a96-ca1834dd33e9"
-        name        = "k8s-controller-03.example.domain.local"
+        name        = "k8s-controller-03.lab.alexgardner.id.au"
         # (11 unchanged attributes hidden)
 
 
@@ -666,7 +666,7 @@ Terraform detected the following changes made outside of Terraform since the las
   ~ resource "libvirt_domain" "main" {
       + cmdline     = []
         id          = "b4dc5c82-4136-4eaf-976f-39efe4a047c0"
-        name        = "k8s-worker-01.example.domain.local"
+        name        = "k8s-worker-01.lab.alexgardner.id.au"
         # (11 unchanged attributes hidden)
 
 
@@ -678,7 +678,7 @@ Terraform detected the following changes made outside of Terraform since the las
   ~ resource "libvirt_domain" "main" {
       + cmdline     = []
         id          = "1dc95e20-d55f-4c83-aaf4-3b5aced64196"
-        name        = "k8s-worker-02.example.domain.local"
+        name        = "k8s-worker-02.lab.alexgardner.id.au"
         # (11 unchanged attributes hidden)
 
 
@@ -690,7 +690,7 @@ Terraform detected the following changes made outside of Terraform since the las
   ~ resource "libvirt_domain" "main" {
       + cmdline     = []
         id          = "f49d69a8-ecf9-4283-a090-81eb458124c2"
-        name        = "k8s-worker-03.example.domain.local"
+        name        = "k8s-worker-03.lab.alexgardner.id.au"
         # (11 unchanged attributes hidden)
 
 
@@ -720,14 +720,14 @@ Terraform will perform the following actions:
               ~ file         = "" -> null
               ~ scsi         = false -> null
               ~ url          = "" -> null
-              ~ volume_id    = "/var/lib/libvirt/images/k8s-controller-01.example.domain.local.qcow2" -> (known after apply)
+              ~ volume_id    = "/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au.qcow2" -> (known after apply)
               ~ wwn          = "" -> null
             },
         ]
       ~ emulator    = "/usr/bin/qemu-system-x86_64" -> (known after apply)
       ~ id          = "6fdb3e4d-01d5-46a8-90ef-95b4963fd498" -> (known after apply)
       ~ machine     = "pc" -> (known after apply)
-        name        = "k8s-controller-01.example.domain.local"
+        name        = "k8s-controller-01.lab.alexgardner.id.au"
         # (7 unchanged attributes hidden)
 
       ~ console {
@@ -755,8 +755,8 @@ Terraform will perform the following actions:
   # module.k8s-controller-01.libvirt_volume.main is tainted, so must be replaced
 -/+ resource "libvirt_volume" "main" {
       ~ format         = "qcow2" -> (known after apply)
-      ~ id             = "/var/lib/libvirt/images/k8s-controller-01.example.domain.local.qcow2" -> (known after apply)
-        name           = "k8s-controller-01.example.domain.local.qcow2"
+      ~ id             = "/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au.qcow2" -> (known after apply)
+        name           = "k8s-controller-01.lab.alexgardner.id.au.qcow2"
         # (3 unchanged attributes hidden)
     }
 
@@ -770,14 +770,14 @@ Terraform will perform the following actions:
               ~ file         = "" -> null
               ~ scsi         = false -> null
               ~ url          = "" -> null
-              ~ volume_id    = "/var/lib/libvirt/images/k8s-controller-02.example.domain.local.qcow2" -> (known after apply)
+              ~ volume_id    = "/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au.qcow2" -> (known after apply)
               ~ wwn          = "" -> null
             },
         ]
       ~ emulator    = "/usr/bin/qemu-system-x86_64" -> (known after apply)
       ~ id          = "952bc61e-8d33-49ce-9653-75dbd188b103" -> (known after apply)
       ~ machine     = "pc" -> (known after apply)
-        name        = "k8s-controller-02.example.domain.local"
+        name        = "k8s-controller-02.lab.alexgardner.id.au"
         # (7 unchanged attributes hidden)
 
       ~ console {
@@ -805,8 +805,8 @@ Terraform will perform the following actions:
   # module.k8s-controller-02.libvirt_volume.main is tainted, so must be replaced
 -/+ resource "libvirt_volume" "main" {
       ~ format         = "qcow2" -> (known after apply)
-      ~ id             = "/var/lib/libvirt/images/k8s-controller-02.example.domain.local.qcow2" -> (known after apply)
-        name           = "k8s-controller-02.example.domain.local.qcow2"
+      ~ id             = "/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au.qcow2" -> (known after apply)
+        name           = "k8s-controller-02.lab.alexgardner.id.au.qcow2"
         # (3 unchanged attributes hidden)
     }
 
@@ -820,14 +820,14 @@ Terraform will perform the following actions:
               ~ file         = "" -> null
               ~ scsi         = false -> null
               ~ url          = "" -> null
-              ~ volume_id    = "/var/lib/libvirt/images/k8s-controller-03.example.domain.local.qcow2" -> (known after apply)
+              ~ volume_id    = "/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au.qcow2" -> (known after apply)
               ~ wwn          = "" -> null
             },
         ]
       ~ emulator    = "/usr/bin/qemu-system-x86_64" -> (known after apply)
       ~ id          = "ae6a8d0d-0245-4613-9a96-ca1834dd33e9" -> (known after apply)
       ~ machine     = "pc" -> (known after apply)
-        name        = "k8s-controller-03.example.domain.local"
+        name        = "k8s-controller-03.lab.alexgardner.id.au"
         # (7 unchanged attributes hidden)
 
       ~ console {
@@ -855,8 +855,8 @@ Terraform will perform the following actions:
   # module.k8s-controller-03.libvirt_volume.main is tainted, so must be replaced
 -/+ resource "libvirt_volume" "main" {
       ~ format         = "qcow2" -> (known after apply)
-      ~ id             = "/var/lib/libvirt/images/k8s-controller-03.example.domain.local.qcow2" -> (known after apply)
-        name           = "k8s-controller-03.example.domain.local.qcow2"
+      ~ id             = "/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au.qcow2" -> (known after apply)
+        name           = "k8s-controller-03.lab.alexgardner.id.au.qcow2"
         # (3 unchanged attributes hidden)
     }
 
@@ -870,14 +870,14 @@ Terraform will perform the following actions:
               ~ file         = "" -> null
               ~ scsi         = false -> null
               ~ url          = "" -> null
-              ~ volume_id    = "/var/lib/libvirt/images/k8s-worker-01.example.domain.local.qcow2" -> (known after apply)
+              ~ volume_id    = "/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au.qcow2" -> (known after apply)
               ~ wwn          = "" -> null
             },
         ]
       ~ emulator    = "/usr/bin/qemu-system-x86_64" -> (known after apply)
       ~ id          = "b4dc5c82-4136-4eaf-976f-39efe4a047c0" -> (known after apply)
       ~ machine     = "pc" -> (known after apply)
-        name        = "k8s-worker-01.example.domain.local"
+        name        = "k8s-worker-01.lab.alexgardner.id.au"
         # (7 unchanged attributes hidden)
 
       ~ console {
@@ -905,8 +905,8 @@ Terraform will perform the following actions:
   # module.k8s-worker-01.libvirt_volume.main is tainted, so must be replaced
 -/+ resource "libvirt_volume" "main" {
       ~ format         = "qcow2" -> (known after apply)
-      ~ id             = "/var/lib/libvirt/images/k8s-worker-01.example.domain.local.qcow2" -> (known after apply)
-        name           = "k8s-worker-01.example.domain.local.qcow2"
+      ~ id             = "/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au.qcow2" -> (known after apply)
+        name           = "k8s-worker-01.lab.alexgardner.id.au.qcow2"
         # (3 unchanged attributes hidden)
     }
 
@@ -920,14 +920,14 @@ Terraform will perform the following actions:
               ~ file         = "" -> null
               ~ scsi         = false -> null
               ~ url          = "" -> null
-              ~ volume_id    = "/var/lib/libvirt/images/k8s-worker-02.example.domain.local.qcow2" -> (known after apply)
+              ~ volume_id    = "/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au.qcow2" -> (known after apply)
               ~ wwn          = "" -> null
             },
         ]
       ~ emulator    = "/usr/bin/qemu-system-x86_64" -> (known after apply)
       ~ id          = "1dc95e20-d55f-4c83-aaf4-3b5aced64196" -> (known after apply)
       ~ machine     = "pc" -> (known after apply)
-        name        = "k8s-worker-02.example.domain.local"
+        name        = "k8s-worker-02.lab.alexgardner.id.au"
         # (7 unchanged attributes hidden)
 
       ~ console {
@@ -955,8 +955,8 @@ Terraform will perform the following actions:
   # module.k8s-worker-02.libvirt_volume.main is tainted, so must be replaced
 -/+ resource "libvirt_volume" "main" {
       ~ format         = "qcow2" -> (known after apply)
-      ~ id             = "/var/lib/libvirt/images/k8s-worker-02.example.domain.local.qcow2" -> (known after apply)
-        name           = "k8s-worker-02.example.domain.local.qcow2"
+      ~ id             = "/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au.qcow2" -> (known after apply)
+        name           = "k8s-worker-02.lab.alexgardner.id.au.qcow2"
         # (3 unchanged attributes hidden)
     }
 
@@ -970,14 +970,14 @@ Terraform will perform the following actions:
               ~ file         = "" -> null
               ~ scsi         = false -> null
               ~ url          = "" -> null
-              ~ volume_id    = "/var/lib/libvirt/images/k8s-worker-03.example.domain.local.qcow2" -> (known after apply)
+              ~ volume_id    = "/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au.qcow2" -> (known after apply)
               ~ wwn          = "" -> null
             },
         ]
       ~ emulator    = "/usr/bin/qemu-system-x86_64" -> (known after apply)
       ~ id          = "f49d69a8-ecf9-4283-a090-81eb458124c2" -> (known after apply)
       ~ machine     = "pc" -> (known after apply)
-        name        = "k8s-worker-03.example.domain.local"
+        name        = "k8s-worker-03.lab.alexgardner.id.au"
         # (7 unchanged attributes hidden)
 
       ~ console {
@@ -1005,8 +1005,8 @@ Terraform will perform the following actions:
   # module.k8s-worker-03.libvirt_volume.main is tainted, so must be replaced
 -/+ resource "libvirt_volume" "main" {
       ~ format         = "qcow2" -> (known after apply)
-      ~ id             = "/var/lib/libvirt/images/k8s-worker-03.example.domain.local.qcow2" -> (known after apply)
-        name           = "k8s-worker-03.example.domain.local.qcow2"
+      ~ id             = "/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au.qcow2" -> (known after apply)
+        name           = "k8s-worker-03.lab.alexgardner.id.au.qcow2"
         # (3 unchanged attributes hidden)
     }
 
@@ -1018,17 +1018,17 @@ module.k8s-worker-01.libvirt_domain.main: Destroying... [id=b4dc5c82-4136-4eaf-9
 module.k8s-worker-02.libvirt_domain.main: Destroying... [id=1dc95e20-d55f-4c83-aaf4-3b5aced64196]
 module.k8s-controller-02.libvirt_domain.main: Destroying... [id=952bc61e-8d33-49ce-9653-75dbd188b103]
 module.k8s-controller-02.libvirt_domain.main: Destruction complete after 1s
-module.k8s-controller-02.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-controller-02.example.domain.local.qcow2]
+module.k8s-controller-02.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au.qcow2]
 module.k8s-worker-02.libvirt_domain.main: Destruction complete after 1s
-module.k8s-worker-02.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-worker-02.example.domain.local.qcow2]
+module.k8s-worker-02.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au.qcow2]
 module.k8s-controller-01.libvirt_domain.main: Destruction complete after 1s
 module.k8s-worker-03.libvirt_domain.main: Destruction complete after 1s
 module.k8s-controller-03.libvirt_domain.main: Destruction complete after 1s
-module.k8s-controller-01.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-controller-01.example.domain.local.qcow2]
-module.k8s-worker-03.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-worker-03.example.domain.local.qcow2]
-module.k8s-controller-03.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-controller-03.example.domain.local.qcow2]
+module.k8s-controller-01.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-03.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au.qcow2]
+module.k8s-controller-03.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au.qcow2]
 module.k8s-worker-01.libvirt_domain.main: Destruction complete after 1s
-module.k8s-worker-01.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-worker-01.example.domain.local.qcow2]
+module.k8s-worker-01.libvirt_volume.main: Destroying... [id=/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au.qcow2]
 module.k8s-controller-02.libvirt_volume.main: Destruction complete after 0s
 module.k8s-controller-02.libvirt_volume.main: Creating...
 module.k8s-controller-01.libvirt_volume.main: Destruction complete after 0s
@@ -1037,21 +1037,21 @@ module.k8s-worker-03.libvirt_volume.main: Creating...
 module.k8s-controller-01.libvirt_volume.main: Creating...
 module.k8s-worker-01.libvirt_volume.main: Destruction complete after 0s
 module.k8s-worker-01.libvirt_volume.main: Creating...
-module.k8s-controller-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-01.example.domain.local.qcow2]
+module.k8s-controller-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au.qcow2]
 module.k8s-controller-01.libvirt_domain.main: Creating...
-module.k8s-worker-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-01.example.domain.local.qcow2]
+module.k8s-worker-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au.qcow2]
 module.k8s-worker-01.libvirt_domain.main: Creating...
 module.k8s-worker-02.libvirt_volume.main: Destruction complete after 1s
 module.k8s-worker-02.libvirt_volume.main: Creating...
-module.k8s-controller-02.libvirt_volume.main: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-controller-02.example.domain.local.qcow2]
+module.k8s-controller-02.libvirt_volume.main: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au.qcow2]
 module.k8s-controller-02.libvirt_domain.main: Creating...
-module.k8s-worker-02.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-02.example.domain.local.qcow2]
+module.k8s-worker-02.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au.qcow2]
 module.k8s-worker-02.libvirt_domain.main: Creating...
 module.k8s-controller-03.libvirt_volume.main: Destruction complete after 1s
 module.k8s-controller-03.libvirt_volume.main: Creating...
-module.k8s-worker-03.libvirt_volume.main: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-worker-03.example.domain.local.qcow2]
+module.k8s-worker-03.libvirt_volume.main: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au.qcow2]
 module.k8s-worker-03.libvirt_domain.main: Creating...
-module.k8s-controller-03.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-03.example.domain.local.qcow2]
+module.k8s-controller-03.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au.qcow2]
 module.k8s-controller-03.libvirt_domain.main: Creating...
 module.k8s-controller-02.libvirt_domain.main: Creation complete after 1s [id=af0c9723-b9ae-4548-a795-47e7c77214e5]
 module.k8s-worker-02.libvirt_domain.main: Creation complete after 1s [id=f4fe94e2-911e-4fa1-b0fa-c000d36a1896]

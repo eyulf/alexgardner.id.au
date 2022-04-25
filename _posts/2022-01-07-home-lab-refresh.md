@@ -32,15 +32,13 @@ These new hypervisors will serve as the basis for a future Kubernetes cluster, p
 This sort of sets up a mini series for the journey of this homelab refresh. I'll update this page with links to future posts so that this can serve as an index for these with the context above. For the purposes of configuration examples throughout this, we will assume the following:
 
 ```
-Domain:           example.domain.local
+Domain:           lab.alexgardner.id.au
 Server Network:   10.1.1.0/24
 Wireless Network: 10.1.2.0/24
 Client Network:   10.1.3.0/24
 Server Gateway:   10.1.1.1
 Admin User:       adminuser
 ```
-
-The above values are just examples and are not actually used by my homelab.
 
 Further posts in this 'mini series' are:
 

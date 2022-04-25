@@ -64,7 +64,7 @@ virtual_machines = {
   },
 }
 
-domain = "example.domain.local"
+domain = "lab.alexgardner.id.au"
 
 host_admin_users = {
   "adminuser" = "ssh-rsa AAAAB[...truncated...]NZe19",
@@ -140,7 +140,7 @@ Terraform will perform the following actions:
   # module.dns1.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "dns1.example.domain.local-cloudinit.iso"
+      + name           = "dns1.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -150,7 +150,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.1 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -176,7 +176,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "dns1.example.domain.local"
+      + name        = "dns1.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 1
@@ -206,7 +206,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "dns1.example.domain.local"
+          + hostname     = "dns1.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -218,7 +218,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "dns1.example.domain.local.qcow2"
+      + name           = "dns1.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -226,7 +226,7 @@ Terraform will perform the following actions:
   # module.dns2.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "dns2.example.domain.local-cloudinit.iso"
+      + name           = "dns2.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -236,7 +236,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.1 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -262,7 +262,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "dns2.example.domain.local"
+      + name        = "dns2.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 1
@@ -292,7 +292,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "dns2.example.domain.local"
+          + hostname     = "dns2.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -304,7 +304,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "dns2.example.domain.local.qcow2"
+      + name           = "dns2.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -312,7 +312,7 @@ Terraform will perform the following actions:
   # module.dns3.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "dns3.example.domain.local-cloudinit.iso"
+      + name           = "dns3.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -322,7 +322,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.1 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -348,7 +348,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "dns3.example.domain.local"
+      + name        = "dns3.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 1
@@ -378,7 +378,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "dns3.example.domain.local"
+          + hostname     = "dns3.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -390,7 +390,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "dns3.example.domain.local.qcow2"
+      + name           = "dns3.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -411,18 +411,18 @@ random_password.dns2: Creation complete after 0s [id=none]
 random_password.dns1: Creation complete after 0s [id=none]
 random_password.dns3: Creation complete after 0s [id=none]
 module.dns1.libvirt_cloudinit_disk.cloudinit: Creating...
-module.dns1.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/dns1.example.domain.local.qcow2]
+module.dns1.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/dns1.lab.alexgardner.id.au.qcow2]
 module.dns3.libvirt_volume.main: Creating...
 module.dns3.libvirt_cloudinit_disk.cloudinit: Creating...
-module.dns1.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/dns1.example.domain.local-cloudinit.iso;5832db3f-7064-444a-b737-e64408a4abda]
+module.dns1.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/dns1.lab.alexgardner.id.au-cloudinit.iso;5832db3f-7064-444a-b737-e64408a4abda]
 module.dns1.libvirt_domain.main: Creating...
 module.dns2.libvirt_cloudinit_disk.cloudinit: Creating...
 module.dns2.libvirt_volume.main: Creating...
-module.dns3.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/dns3.example.domain.local.qcow2]
-module.dns2.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/dns2.example.domain.local.qcow2]
-module.dns3.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/dns3.example.domain.local-cloudinit.iso;d277b787-a506-4990-965d-c402237c73f7]
+module.dns3.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/dns3.lab.alexgardner.id.au.qcow2]
+module.dns2.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/dns2.lab.alexgardner.id.au.qcow2]
+module.dns3.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/dns3.lab.alexgardner.id.au-cloudinit.iso;d277b787-a506-4990-965d-c402237c73f7]
 module.dns3.libvirt_domain.main: Creating...
-module.dns2.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/dns2.example.domain.local-cloudinit.iso;cd84c59f-47dc-45c5-99c6-144573811a3b]
+module.dns2.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/dns2.lab.alexgardner.id.au-cloudinit.iso;cd84c59f-47dc-45c5-99c6-144573811a3b]
 module.dns2.libvirt_domain.main: Creating...
 module.dns1.libvirt_domain.main: Creation complete after 1s [id=0b0737a8-7bf3-4b0b-8482-d6b1fe8d4a4d]
 module.dns3.libvirt_domain.main: Creation complete after 1s [id=6c78f86b-efc3-42e3-83ea-593099b00e18]
@@ -441,8 +441,8 @@ The next step is to run Ansible on the node selected to bootstrap the Galera clu
 ansible/group_vars/[all.yml][all-yml]
 ```
 ---
-domain: example.domain.local
-email: adminuser@example.domain.local
+domain: lab.alexgardner.id.au
+email: alex+homelab@alexgardner.id.au
 
 nameservers:
   - '10.1.1.1'
@@ -483,7 +483,7 @@ powerdns_mysql_password: MySuperSecretPassword
 #checkov:skip=CKV_SECRET_6:Unencrypted secrets are git-ignored
 powerdns_forward_recursors: 10.1.1.1;1.0.0.1;1.1.1.1
 powerdns_foward_zones:
-  - 'example.domain.local'
+  - 'lab.alexgardner.id.au'
   - '1.1.10.in-addr.arpa'
 ```
 
@@ -1141,16 +1141,16 @@ You should now be able to add DNS records to PowerDNS.
 
 ```
 adminuser@dns1:~$ sudo pdnsutil list-all-zones
-adminuser@dns1:~$ sudo pdnsutil create-zone example.domain.local
-Creating empty zone 'example.domain.local'
+adminuser@dns1:~$ sudo pdnsutil create-zone lab.alexgardner.id.au
+Creating empty zone 'lab.alexgardner.id.au'
 adminuser@dns1:~$ sudo pdnsutil list-all-zones
-example.domain.local
-adminuser@dns1:~$ sudo pdnsutil add-record example.domain.local dns1 a 900 10.1.1.31
+lab.alexgardner.id.au
+adminuser@dns1:~$ sudo pdnsutil add-record lab.alexgardner.id.au dns1 a 900 10.1.1.31
 New rrset:
 test.example.test. 900 IN A 10.1.1.31
-adminuser@dns1:~$ dig dns1.example.domain.local @127.0.0.1
+adminuser@dns1:~$ dig dns1.lab.alexgardner.id.au @127.0.0.1
 
-; <<>> DiG 9.11.5-P4-5.1+deb10u6-Debian <<>> dns1.example.domain.local @127.0.0.1
+; <<>> DiG 9.11.5-P4-5.1+deb10u6-Debian <<>> dns1.lab.alexgardner.id.au @127.0.0.1
 ;; global options: +cmd
 ;; Got answer:
 ;; WARNING: .local is reserved for Multicast DNS
@@ -1161,10 +1161,10 @@ adminuser@dns1:~$ dig dns1.example.domain.local @127.0.0.1
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 4096
 ;; QUESTION SECTION:
-;dns1.example.domain.local. IN  A
+;dns1.lab.alexgardner.id.au. IN  A
 
 ;; ANSWER SECTION:
-dns1.example.domain.local. 900  IN  A 10.1.1.31
+dns1.lab.alexgardner.id.au. 900  IN  A 10.1.1.31
 
 ;; Query time: 6 msec
 ;; SERVER: 127.0.0.1#53(127.0.0.1)

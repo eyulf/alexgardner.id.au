@@ -89,7 +89,7 @@ virtual_machines = {
   },
 }
 
-domain = "example.domain.local"
+domain = "lab.alexgardner.id.au"
 
 host_admin_users = {
   "adminuser" = "ssh-rsa AAAAB[...truncated...]NZe19",
@@ -210,7 +210,7 @@ Terraform will perform the following actions:
   # module.k8s-controller-01.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "k8s-controller-01.example.domain.local-cloudinit.iso"
+      + name           = "k8s-controller-01.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -220,7 +220,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -246,7 +246,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "k8s-controller-01.example.domain.local"
+      + name        = "k8s-controller-01.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 2
@@ -276,7 +276,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "k8s-controller-01.example.domain.local"
+          + hostname     = "k8s-controller-01.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -288,7 +288,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "k8s-controller-01.example.domain.local.qcow2"
+      + name           = "k8s-controller-01.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -296,7 +296,7 @@ Terraform will perform the following actions:
   # module.k8s-controller-02.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "k8s-controller-02.example.domain.local-cloudinit.iso"
+      + name           = "k8s-controller-02.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -306,7 +306,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -332,7 +332,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "k8s-controller-02.example.domain.local"
+      + name        = "k8s-controller-02.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 2
@@ -362,7 +362,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "k8s-controller-02.example.domain.local"
+          + hostname     = "k8s-controller-02.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -374,7 +374,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "k8s-controller-02.example.domain.local.qcow2"
+      + name           = "k8s-controller-02.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -382,7 +382,7 @@ Terraform will perform the following actions:
   # module.k8s-controller-03.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "k8s-controller-03.example.domain.local-cloudinit.iso"
+      + name           = "k8s-controller-03.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -392,7 +392,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -418,7 +418,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "k8s-controller-03.example.domain.local"
+      + name        = "k8s-controller-03.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 2
@@ -448,7 +448,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "k8s-controller-03.example.domain.local"
+          + hostname     = "k8s-controller-03.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -460,7 +460,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "k8s-controller-03.example.domain.local.qcow2"
+      + name           = "k8s-controller-03.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -468,7 +468,7 @@ Terraform will perform the following actions:
   # module.k8s-worker-01.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "k8s-worker-01.example.domain.local-cloudinit.iso"
+      + name           = "k8s-worker-01.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -478,7 +478,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -504,7 +504,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "k8s-worker-01.example.domain.local"
+      + name        = "k8s-worker-01.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 2
@@ -534,7 +534,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "k8s-worker-01.example.domain.local"
+          + hostname     = "k8s-worker-01.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -546,7 +546,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "k8s-worker-01.example.domain.local.qcow2"
+      + name           = "k8s-worker-01.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -554,7 +554,7 @@ Terraform will perform the following actions:
   # module.k8s-worker-02.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "k8s-worker-02.example.domain.local-cloudinit.iso"
+      + name           = "k8s-worker-02.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -564,7 +564,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -590,7 +590,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "k8s-worker-02.example.domain.local"
+      + name        = "k8s-worker-02.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 2
@@ -620,7 +620,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "k8s-worker-02.example.domain.local"
+          + hostname     = "k8s-worker-02.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -632,7 +632,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "k8s-worker-02.example.domain.local.qcow2"
+      + name           = "k8s-worker-02.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -640,7 +640,7 @@ Terraform will perform the following actions:
   # module.k8s-worker-03.libvirt_cloudinit_disk.cloudinit will be created
   + resource "libvirt_cloudinit_disk" "cloudinit" {
       + id             = (known after apply)
-      + name           = "k8s-worker-03.example.domain.local-cloudinit.iso"
+      + name           = "k8s-worker-03.lab.alexgardner.id.au-cloudinit.iso"
       + network_config = <<-EOT
             version: 2
             ethernets:
@@ -650,7 +650,7 @@ Terraform will perform the following actions:
                  gateway4: 10.1.1.1
                  nameservers:
                    addresses: [ 10.1.1.31, 10.1.1.32, 10.1.1.33 ]
-                   search: [ example.domain.local ]
+                   search: [ lab.alexgardner.id.au ]
         EOT
       + pool           = "default"
       + user_data      = (sensitive)
@@ -676,7 +676,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
       + machine     = (known after apply)
       + memory      = 2048
-      + name        = "k8s-worker-03.example.domain.local"
+      + name        = "k8s-worker-03.lab.alexgardner.id.au"
       + qemu_agent  = false
       + running     = true
       + vcpu        = 2
@@ -706,7 +706,7 @@ Terraform will perform the following actions:
       + network_interface {
           + addresses    = (known after apply)
           + bridge       = "br0"
-          + hostname     = "k8s-worker-03.example.domain.local"
+          + hostname     = "k8s-worker-03.lab.alexgardner.id.au"
           + mac          = (known after apply)
           + network_id   = (known after apply)
           + network_name = (known after apply)
@@ -718,7 +718,7 @@ Terraform will perform the following actions:
       + base_volume_id = "/var/lib/libvirt/images/debian-10.qcow2"
       + format         = (known after apply)
       + id             = (known after apply)
-      + name           = "k8s-worker-03.example.domain.local.qcow2"
+      + name           = "k8s-worker-03.lab.alexgardner.id.au.qcow2"
       + pool           = "default"
       + size           = 21474826240
     }
@@ -753,25 +753,25 @@ module.k8s-worker-02.libvirt_volume.main: Creating...
 module.k8s-worker-01.libvirt_cloudinit_disk.cloudinit: Creating...
 module.k8s-controller-01.libvirt_cloudinit_disk.cloudinit: Creating...
 module.k8s-controller-01.libvirt_volume.main: Creating...
-module.k8s-worker-03.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-03.example.domain.local.qcow2]
+module.k8s-worker-03.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au.qcow2]
 module.k8s-controller-03.libvirt_cloudinit_disk.cloudinit: Creating...
-module.k8s-controller-02.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-02.example.domain.local.qcow2]
+module.k8s-controller-02.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au.qcow2]
 module.k8s-worker-02.libvirt_cloudinit_disk.cloudinit: Creating...
-module.k8s-worker-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-01.example.domain.local.qcow2]
-module.k8s-worker-03.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-03.example.domain.local-cloudinit.iso;255b1091-09db-4c72-aadb-3e841d3fb389]
+module.k8s-worker-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-03.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-03.lab.alexgardner.id.au-cloudinit.iso;255b1091-09db-4c72-aadb-3e841d3fb389]
 module.k8s-worker-03.libvirt_domain.main: Creating...
-module.k8s-controller-02.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-02.example.domain.local-cloudinit.iso;0514ce11-4053-4d5a-9500-a482952b1b29]
+module.k8s-controller-02.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-02.lab.alexgardner.id.au-cloudinit.iso;0514ce11-4053-4d5a-9500-a482952b1b29]
 module.k8s-controller-02.libvirt_domain.main: Creating...
-module.k8s-controller-03.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-03.example.domain.local.qcow2]
-module.k8s-worker-02.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-02.example.domain.local.qcow2]
-module.k8s-controller-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-01.example.domain.local.qcow2]
-module.k8s-worker-01.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-01.example.domain.local-cloudinit.iso;58c3f26a-6ae8-42ad-a35c-fdfee8f3d71a]
+module.k8s-controller-03.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-02.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au.qcow2]
+module.k8s-controller-01.libvirt_volume.main: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au.qcow2]
+module.k8s-worker-01.libvirt_cloudinit_disk.cloudinit: Creation complete after 0s [id=/var/lib/libvirt/images/k8s-worker-01.lab.alexgardner.id.au-cloudinit.iso;58c3f26a-6ae8-42ad-a35c-fdfee8f3d71a]
 module.k8s-worker-01.libvirt_domain.main: Creating...
-module.k8s-controller-01.libvirt_cloudinit_disk.cloudinit: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-controller-01.example.domain.local-cloudinit.iso;f8b2fb63-1c3e-411a-8904-d00f622ef3da]
+module.k8s-controller-01.libvirt_cloudinit_disk.cloudinit: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-controller-01.lab.alexgardner.id.au-cloudinit.iso;f8b2fb63-1c3e-411a-8904-d00f622ef3da]
 module.k8s-controller-01.libvirt_domain.main: Creating...
-module.k8s-controller-03.libvirt_cloudinit_disk.cloudinit: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-controller-03.example.domain.local-cloudinit.iso;834cef9e-4acb-4901-a68c-64f84917996d]
+module.k8s-controller-03.libvirt_cloudinit_disk.cloudinit: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-controller-03.lab.alexgardner.id.au-cloudinit.iso;834cef9e-4acb-4901-a68c-64f84917996d]
 module.k8s-controller-03.libvirt_domain.main: Creating...
-module.k8s-worker-02.libvirt_cloudinit_disk.cloudinit: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-worker-02.example.domain.local-cloudinit.iso;8fc840c6-26d4-4676-800e-b6444f8ddde3]
+module.k8s-worker-02.libvirt_cloudinit_disk.cloudinit: Creation complete after 1s [id=/var/lib/libvirt/images/k8s-worker-02.lab.alexgardner.id.au-cloudinit.iso;8fc840c6-26d4-4676-800e-b6444f8ddde3]
 module.k8s-worker-02.libvirt_domain.main: Creating...
 module.k8s-controller-02.libvirt_domain.main: Creation complete after 2s [id=0935acf4-9369-4242-ae8e-d259951a612e]
 module.k8s-worker-03.libvirt_domain.main: Creation complete after 2s [id=ea716172-7682-4d79-9ea9-2dba381e0232]
@@ -1078,8 +1078,8 @@ The next step is to run Ansible on all the nodes that are part of this cluster, 
 ansible/group_vars/[all.yml][all-yml]
 ```
 ---
-domain: example.domain.local
-email: adminuser@example.domain.local
+domain: lab.alexgardner.id.au
+email: alex+homelab@alexgardner.id.au
 
 nameservers:
   - '10.1.1.31'

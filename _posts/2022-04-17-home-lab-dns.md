@@ -27,7 +27,7 @@ Broadly, DNS traffic from clients (from both the wireless and client networks) i
 The configuration of the router is primarily what drives the effectiveness of this setup. Taking inspiration from a [blog post by Labzilla][labzilla-blog-force-dns] that raises the issue of devices ignoring DHCP provided DNS, I've used the router to force clients to use my configuration. Since this is a Mikrotik device, I can use the CLI to configure it. Firstly I have the router configured to use the PowerDNS servers as its upstream DNS. 
 
 ```
-[adminuser@router.example.domain.local] > /ip dns print
+[adminuser@router.lab.alexgardner.id.au] > /ip dns print
                       servers: 10.1.1.31,10.1.1.32,10.1.1.33
               dynamic-servers: 
                use-doh-server: 
@@ -48,7 +48,7 @@ The configuration of the router is primarily what drives the effectiveness of th
 I'm using Destination NAT (dst-nat) rules to redirect all DNS traffic from clients to the router. The `Clients` interface list contains both the wireless interface as well as the interfaces used exclusively by clients. To prevent any redirection issues from occurring, there is an address-list of approved IPs that can ignore these rules.
 
 ```
-[adminuser@router.example.domain.local] > /ip firewall address-list print where list="PrivateDNS"
+[adminuser@router.lab.alexgardner.id.au] > /ip firewall address-list print where list="PrivateDNS"
 Flags: X - disabled, D - dynamic 
  #   LIST                      ADDRESS                                       CREATION-TIME        TIMEOUT             
  0   PrivateDNS                10.1.1.70                                     dec/28/2020 15:55:25
@@ -58,7 +58,7 @@ Flags: X - disabled, D - dynamic
 ```
 
 ```
-[adminuser@router.example.domain.local] > /ip firewall nat print where chain=dstnat 
+[adminuser@router.lab.alexgardner.id.au] > /ip firewall nat print where chain=dstnat 
 Flags: X - disabled, I - invalid, D - dynamic 
  0    ;;; Allow Pihole DNS
       chain=dstnat action=accept src-address-list=PrivateDNS log=no log-prefix="" 
@@ -76,9 +76,9 @@ Flags: X - disabled, I - invalid, D - dynamic
 Additionally, I'm using firewall rules to block DNS traffic that is using DNS over TLS/HTTPS. This is done with another address-list using IPs sourced from [public-dns.info][public-dns-info] and a corresponding set of firewall rules.
 
 ```
-[adminuser@router.example.domain.local] > /ip firewall address-list print count-only where list="PublicDNS"
+[adminuser@router.lab.alexgardner.id.au] > /ip firewall address-list print count-only where list="PublicDNS"
 5953
-[adminuser@router.example.domain.local] > /ip firewall address-list print where list="PublicDNS"
+[adminuser@router.lab.alexgardner.id.au] > /ip firewall address-list print where list="PublicDNS"
 Flags: X - disabled, D - dynamic 
  #   LIST                      ADDRESS                                       CREATION-TIME        TIMEOUT             
  0   PublicDNS                 1.1.1.1                                       aug/09/2021 17:47:02
@@ -99,7 +99,7 @@ Flags: X - disabled, D - dynamic
 ```
 
 ```
-[adminuser@router.example.domain.local] > /ip firewall filter print where dst-address-list="PublicDNS"
+[adminuser@router.lab.alexgardner.id.au] > /ip firewall filter print where dst-address-list="PublicDNS"
 Flags: X - disabled, I - invalid, D - dynamic 
  0    ;;; Block HTTPS - PublicDNS list
       chain=forward action=reject reject-with=icmp-network-unreachable protocol=tcp src-address-list=!PrivateDNS dst-address-list=PublicDNS 
@@ -120,8 +120,8 @@ This results in clients not being able to connect to public DNS servers on eithe
 I ended up grabbing the [plaintext list][public-dns-info-plaintext-list] of public DNS servers, manually removing the IPV6 servers, and then using `sed` to build out a list of Mikrotik CLI commands (example below) to add each IP address individually to the address list.
 
 ```
-[adminuser@router.example.domain.local] > /ip firewall address-list add address=12.90.208.78 list=PublicDNS
-[adminuser@router.example.domain.local] >
+[adminuser@router.lab.alexgardner.id.au] > /ip firewall address-list add address=12.90.208.78 list=PublicDNS
+[adminuser@router.lab.alexgardner.id.au] >
 ```
 
 Yes, I did copy almost 6000 commands into my Mikrotik CLI! I obviously was not able to do this all at once and had to chunk it over a period of time. I'll likely automate this process when I get around to updating the list.
@@ -136,7 +136,7 @@ PowerDNS is configured as both an Authoritative server for local zones, as well 
 allow-from=127.0.0.0/8,10.1.1.0/24,10.1.2.0/24,10.1.3.0/24
 
 # forward-zones=
-forward-zones=example.domain.local=127.0.0.1:5300
+forward-zones=lab.alexgardner.id.au=127.0.0.1:5300
 forward-zones+=1.1.10.in-addr.arpa=127.0.0.1:5300
 
 # forward-zones-recurse=
@@ -203,20 +203,20 @@ As indicated, DNS requests that are not blocked by Pi-Hole are forwarded to Clou
 The outcome of all of this is that any DNS requests on port 53 from clients are transparently run through both PowerDNS and Pi-Hole before being forwarded to Cloudflare's public DNS resolvers if required, regardless of the DNS server specified.
 
 ```
-[user@workstation homelab]$ nslookup router.example.domain.local 1.1.1.1
+[user@workstation homelab]$ nslookup router.lab.alexgardner.id.au 1.1.1.1
 Server:   1.1.1.1
 Address:  1.1.1.1#53
 
 Non-authoritative answer:
-Name: router.example.domain.local
+Name: router.lab.alexgardner.id.au
 Address: 10.1.1.1
 
-[user@workstation homelab]$ nslookup router.example.domain.local 8.8.8.8
+[user@workstation homelab]$ nslookup router.lab.alexgardner.id.au 8.8.8.8
 Server:   8.8.8.8
 Address:  8.8.8.8#53
 
 Non-authoritative answer:
-Name: router.lab.example.domain.local
+Name: router.lab.lab.alexgardner.id.au
 Address: 10.1.1.1
 ```
 

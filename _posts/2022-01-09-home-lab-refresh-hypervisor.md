@@ -25,8 +25,8 @@ ansible/group_vars/[all.yml][all-yml]
 ```
 ---
 # Global variables
-domain: example.domain.local
-email: adminuser@example.domain.local
+domain: lab.alexgardner.id.au
+email: alex+homelab@alexgardner.id.au
 
 # Nameservers
 nameservers:
