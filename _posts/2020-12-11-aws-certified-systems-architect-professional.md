@@ -12,13 +12,13 @@ titleimage: aws-sap
 
 On {{ page.date | date_to_long_string }} I passed the [AWS Certified Solutions Architect - Professional (SAP-C01)][aws-sap-exam] exam, and am now an [AWS Certified Systems Architect - Professional][aws-sap-cert]. This follows me obtaining the [associate certification][aws-saa] in June.
 
-I found this exam was difficult and gruelling! I started studying in earnest for this as soon as I had passed the [Terraform Associate][hc-ta] certification and was studying at every chance I got, in addition to working with AWS almost full time in a new role at work that I had started in August. My primary study material of choice for the exam was an excellent training course by [Adrian Cantrill][cantrill].
+I found this exam was difficult and grueling! I started studying in earnest for this as soon as I had passed the [Terraform Associate][hc-ta] certification and was studying at every chance I got, in addition to working with AWS almost full time in a new role at work that I had started in August. My primary study material of choice for the exam was an excellent training course by [Adrian Cantrill][cantrill].
 
 Some of the resources I used to help provide the knowledge and skills I needed to pass this exam were:
 
 * Practical experience through working professionally with AWS
 * Adrian Cantrill's exam-specific [AWS training course][cantrill-sap-course]
-* [Practise Exams][tutorialsdojo-sap] by Tutorials Dojo
+* [Practice Exams][tutorialsdojo-sap] by Tutorials Dojo
 
 I paced myself well through the 3-hour exam, ended up with about 50 minutes of time for reviewing questions, and finished the exam with just under 20 minutes left on the clock. This was actually well ahead of my planned exam schedule to take 50 minutes per 25 questions with 30 minutes of review time.
 

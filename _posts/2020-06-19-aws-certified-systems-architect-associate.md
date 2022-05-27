@@ -20,7 +20,7 @@ The study process itself was fairly straightforward and took several months of o
 * Official AWS documentation and FAQs
 * A Cloud Guru's exam-specific [AWS training course][acg-saa-course]
 * Stephane Maarek's exam-specific [AWS training course][udemy-saa-course] on Udemy
-* [Practise Exams][whizlabs-saa] by Whizlabs
+* [Practice Exams][whizlabs-saa] by Whizlabs
 
 
 When first looking at practice exams, I found that the A Cloud Guru course was not enough on its own and further study was required. I then found the course by Stephane Maarek and discovered there were gaps between the two courses. Doing both of these courses combined with a leisurely study pace and reading up on AWS documentation were able to provide the knowledge that was tested by the exam.

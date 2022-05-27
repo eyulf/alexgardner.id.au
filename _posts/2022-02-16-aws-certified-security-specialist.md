@@ -16,7 +16,7 @@ Unlike my previous exams, I did not have one specific primary study material. In
 
 * Practical experience through working professionally with AWS
 * Adrian Cantrill's [Solutions Architect - Professional training course][cantrill-sap-course]
-* [Practise Exams][tutorialsdojo-scs] by Tutorials Dojo
+* [Practice Exams][tutorialsdojo-scs] by Tutorials Dojo
 * [Study Guide eBook][tutorialsdojo-scs-guide] by Tutorials Dojo
 * [Security Engineering on AWS][classroom-training] delivered by [Bespoke Training Services][bespoke]
 

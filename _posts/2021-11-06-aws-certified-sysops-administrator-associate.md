@@ -16,7 +16,7 @@ As with my [last exam][aws-sap], in terms of formal study, my primary material o
 
 * Practical experience through working professionally with AWS
 * Adrian Cantrill's exam-specific [AWS training course][cantrill-soa-course]
-* [Practise Exams][tutorialsdojo-soa] by Tutorials Dojo
+* [Practice Exams][tutorialsdojo-soa] by Tutorials Dojo
 
 I took the new exam format, which is a first for AWS exams included labs. My study and learning for this have been very sporadic over the last few months. In hindsight, I probably could have passed this exam several months ago and felt that I ended up over preparing for this.
 

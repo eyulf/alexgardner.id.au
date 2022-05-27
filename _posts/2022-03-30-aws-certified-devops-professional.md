@@ -21,7 +21,7 @@ In the first practice exam I took, I got around 78%, and then averaged around 71
 * Adrian Cantrill's [SysOps Administrator - Associate training course][cantrill-soa-course]
 * Stephane Maarek's [DevOps Engineer Professional training course][udemy-stephane-maarek]
 * Zeal Vora's [DevOps Engineer Professional training course][udemy-zeal-vora]
-* [Practise Exams][tutorialsdojo-dop] by Tutorials Dojo
+* [Practice Exams][tutorialsdojo-dop] by Tutorials Dojo
 * [Study Guide eBook][tutorialsdojo-dop-guide] by Tutorials Dojo
 
 The exam experience itself did not quite match the experience provided by the practice exams as I answered all 70 questions in approximately 100 minutes, and took advantage of the time left to thoroughly review my answers. I ended up finishing the exam with about 30 minutes left on the clock and unlike the SAP-C01 exam did not think that I would outright fail the exam.

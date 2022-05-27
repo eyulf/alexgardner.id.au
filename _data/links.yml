@@ -8,6 +8,8 @@ main:
   anthea: http://antheawright.com/
   vanessa: https://www.facebook.com/VanessaMariePortraits/
 certs:
+  aws-clf: https://www.credly.com/badges/209b1bb5-dfe5-45a9-a661-720663801209
+  aws-dva: https://www.credly.com/badges/c2bd6719-1ae0-4459-9f6c-e71222a32ca8
   aws-dop: https://www.credly.com/badges/eb66a8ed-40a8-4951-8709-294c30cf4052
   aws-scs: https://www.credly.com/badges/dddfac0a-1ba0-4898-8ebf-785ee8c40fb9
   aws-soa: https://www.credly.com/badges/c8a5fa98-66ce-46a2-a2a9-6e7df76fa602
