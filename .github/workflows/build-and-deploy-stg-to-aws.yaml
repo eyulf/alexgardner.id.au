@@ -11,10 +11,11 @@ permissions:
   contents: read
 
 jobs:
-  PublishProduction:
+  PublishStaging:
     runs-on: ubuntu-latest
-    environment: staging
-    url: https://staging.alexgardner.id.au
+    environment:
+      name: staging
+      url: https://staging.alexgardner.id.au
     steps:
       - name: Clone the repository to source
         uses: actions/checkout@v3

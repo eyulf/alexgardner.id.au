@@ -13,8 +13,9 @@ permissions:
 jobs:
   PublishProduction:
     runs-on: ubuntu-latest
-    environment: main
-    url: https://alexgardner.id.au
+    environment:
+      name: main
+      url: https://alexgardner.id.au
     steps:
       - name: Clone the repository to source
         uses: actions/checkout@v3
