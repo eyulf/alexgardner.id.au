@@ -1,18 +1,21 @@
-name: Build and Deploy to AWS
+name: Build and Deploy Staging to AWS
 
 on:
   push:
     branches:
-      main
-      staging
+      - staging
+  workflow_dispatch:
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  publish:
+  PublishStaging:
     runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.alexgardner.id.au
     steps:
       - name: Clone the repository to source
         uses: actions/checkout@v3
@@ -33,6 +36,10 @@ jobs:
       - name: Build Site
         run: bundle exec jekyll build
 
-      #- name: Upload to S3
-      #  run: |
-      #    aws s3 sync _site s3://${{ secrets.AWS_S3_BUCKET }}/ --delete
+      - name: Upload to S3
+        run: |
+          aws s3 sync _site s3://${{ secrets.AWS_S3_BUCKET }}/ --delete
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*"
