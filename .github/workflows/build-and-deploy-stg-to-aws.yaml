@@ -1,9 +1,8 @@
-name: Build and Deploy to AWS
+name: Build and Deploy Staging to AWS
 
 on:
   push:
     branches:
-      - main
       - staging
   workflow_dispatch:
 
@@ -12,9 +11,10 @@ permissions:
   contents: read
 
 jobs:
-  publish:
+  PublishProduction:
     runs-on: ubuntu-latest
-    environment: ${{ vars.GITHUB_REF_NAME }}
+    environment: staging
+    url: https://staging.alexgardner.id.au
     steps:
       - name: Clone the repository to source
         uses: actions/checkout@v3
