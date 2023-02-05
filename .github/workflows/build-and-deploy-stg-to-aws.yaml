@@ -4,21 +4,27 @@ on:
   push:
     branches:
       - staging
-  workflow_dispatch:
 
 permissions:
   id-token: write
   contents: read
+
+env:
+  URL: https://staging.alexgardner.id.au
 
 jobs:
   PublishStaging:
     runs-on: ubuntu-latest
     environment:
       name: staging
-      url: https://staging.alexgardner.id.au
+      url: ${{ env.URL }}
     steps:
       - name: Clone the repository to source
         uses: actions/checkout@v3
+
+      - name: Ensure Jekyll site url correctly set
+        run: |
+          sed -E 's|^url: .*$|url: ${{ env.URL }}|' -i _config.yml
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
