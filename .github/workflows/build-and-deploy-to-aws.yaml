@@ -14,6 +14,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: ${{ vars.GITHUB_REF_NAME }}
     steps:
       - name: Clone the repository to source
         uses: actions/checkout@v3
